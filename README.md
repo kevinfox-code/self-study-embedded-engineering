@@ -17,6 +17,7 @@ The repository is organized for traceability and professional documentation stan
 
 ## Course Syllabus Files
 
+The current syllabus documents are stored as Word (`.docx`) files. If they do not preview well in your browser, download and open them in Microsoft Word or LibreOffice. For easier review in pull requests, prefer exporting syllabus updates to PDF or Markdown alongside the `.docx` source when possible.
 - [ESE-301/ESE-301_Making-Embedded-Systems_Syllabus.docx](ESE-301/ESE-301_Making-Embedded-Systems_Syllabus.docx)
 - [ESE-311/ESE-311_Bare-Metal-Embedded-C-Programming_Syllabus.docx](ESE-311/ESE-311_Bare-Metal-Embedded-C-Programming_Syllabus.docx)
 - [ECE-452/ECE-452_Sensorless-FOC-STM32-Implementation-in-C_Syllabus.docx](ECE-452/ECE-452_Sensorless-FOC-STM32-Implementation-in-C_Syllabus.docx)
