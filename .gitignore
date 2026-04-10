@@ -1,0 +1,5 @@
+# macOS
+.DS_Store
+
+# Local reference material (keep private/local unless intentionally versioned)
+ECE-452/*.pdf

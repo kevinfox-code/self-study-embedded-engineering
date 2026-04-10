@@ -1,34 +1,42 @@
-# Self-Study Embedded Engineering Curriculum
+# Self-Study Embedded Engineering
 
-A self-administered, college-level curriculum covering embedded systems design,
-bare-metal ARM programming, and sensorless motor control. Each course follows a
-structured 16-week syllabus with weekly homework, lab deliverables, and major
-projects graded on a defined rubric.
+Self-directed, college-level embedded systems curriculum with a focus on:
 
----
+- practical firmware architecture
+- bare-metal ARM/C development
+- sensorless motor control implementation
 
-## Courses
+The repository is organized for traceability and professional documentation standards.
 
-### ESE 301 — Embedded Systems Design & Patterns
-**Text:** *Making Embedded Systems* — Elecia White  
-**Topics:** GPIO, interrupts, RTOS, state machines, memory optimization, design patterns  
-**Projects:** Interrupt-Driven Sensor Logger · RTOS-Based Control Application  
+## Contents
 
----
+- [ESE-301](ESE-301): Embedded systems design and engineering patterns
+- [ESE-311](ESE-311): Bare-metal embedded C programming on ARM Cortex-M
+- [ECE-452](ECE-452): Electric motor drives and field-oriented control
+- [embedded-engineering-course-schedule.ics](embedded-engineering-course-schedule.ics): course calendar
 
-### ESE 311 — Embedded Systems Programming: ARM Architecture
-**Text:** *Develop High-Performance Embedded Systems with C for ARM*  
-**Topics:** Bare-metal C, ARM Cortex-M startup, linker scripts, DMA, ADC/DAC, bootloader design  
-**Projects:** Register-Level Peripheral Stack · Bare-Metal FOC-Ready Motor Control Framework  
+## Course Syllabus Files
 
----
+The current syllabus documents are stored as Word (`.docx`) files. If they do not preview well in your browser, download and open them in Microsoft Word or LibreOffice. For easier review in pull requests, prefer exporting syllabus updates to PDF or Markdown alongside the `.docx` source when possible.
+- [ESE-301/ESE-301_Making-Embedded-Systems_Syllabus.docx](ESE-301/ESE-301_Making-Embedded-Systems_Syllabus.docx)
+- [ESE-311/ESE-311_Bare-Metal-Embedded-C-Programming_Syllabus.docx](ESE-311/ESE-311_Bare-Metal-Embedded-C-Programming_Syllabus.docx)
+- [ECE-452/ECE-452_Sensorless-FOC-STM32-Implementation-in-C_Syllabus.docx](ECE-452/ECE-452_Sensorless-FOC-STM32-Implementation-in-C_Syllabus.docx)
 
-### ECE 452 — Electric Motor Drives & Field-Oriented Control
-**Text:** *Permanent Magnet Synchronous and Brushless DC Motor Drives* — R. Krishnan (CRC Press, 2010)  
-**Hardware:** STM32 Nucleo-U575ZI-Q + DRV8323RS  
-**Topics:** PMSM physics, Clarke/Park transforms, SVPWM, PI current control, SMO, sensorless startup  
-**Projects:** FOC Current Loop · Sensorless Observer Stack · Complete Sensorless FOC Drive (Final)  
+## Naming Conventions
 
----
+This repository follows a simple, predictable naming scheme:
 
-## Repository Structure
+- Directories: `UPPER-###` for course identifiers (example: `ESE-301`)
+- Document files: `COURSEID_Descriptive-Name.ext`
+- Shared project files: lowercase kebab-case (example: `embedded-engineering-course-schedule.ics`)
+
+## License And Attribution
+
+- Project license: [LICENSE](LICENSE) (MIT)
+- AI transparency and attribution policy: [NOTICE.md](NOTICE.md)
+- Contribution expectations and content policy: [CONTRIBUTING.md](CONTRIBUTING.md)
+
+## Notes
+
+- This repository may include references to third-party books and course material for educational context.
+- Rights for third-party content remain with original owners.

@@ -1,0 +1,2223 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Embedded Self-Study//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Embedded Systems Courses
+X-WR-TIMEZONE:America/New_York
+BEGIN:VTIMEZONE
+TZID:America/New_York
+BEGIN:DAYLIGHT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+END:DAYLIGHT
+BEGIN:STANDARD
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:0482906d-c3d9-4d7e-8060-fccea948a539@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260410T180000
+DTEND;TZID=America/New_York:20260410T193000
+SUMMARY:📖 FOC Wk1: Reading - Motor Physics
+DESCRIPTION:Read Krishnan Ch. 1-2: Motor types and dq-axis model and torqu
+ e/flux equations\\n\\nCATCH-UP WEEKEND: Weeks 1-2 compressed into Apr 10
+ -12. All due by midnight Sun Apr 12.
+CATEGORIES:FOC - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:ec4dd965-6c40-4064-9cd3-2a174b503076@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260410T194000
+DTEND;TZID=America/New_York:20260410T205000
+SUMMARY:📖 MES Wk1: Reading - Embedded Systems Overview
+DESCRIPTION:Read Making Embedded Systems Ch. 1 (pp. 1-30)\\n\\nCATCH-UP WE
+ EKEND: Weeks 1-2 compressed into Apr 10-12. All due by midnight Sun Apr 1
+ 2.
+CATEGORIES:MES - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:f6a23df4-2709-4785-ad66-2016b56bd6ce@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260410T210000
+DTEND;TZID=America/New_York:20260410T221000
+SUMMARY:📖 BMC Wk1: Reading - ARM Cortex-M Architecture
+DESCRIPTION:Read Bare-Metal Embedded C Ch. 1 (pp. 1-28)\\n\\nCATCH-UP WEEK
+ END: Weeks 1-2 compressed into Apr 10-12. All due by midnight Sun Apr 12.
+CATEGORIES:BMC - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:b0110fb6-383a-4505-8ce6-597bdea58bf8@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260411T090000
+DTEND;TZID=America/New_York:20260411T103000
+SUMMARY:💻 MES HW1: Set up toolchain and blink LED
+DESCRIPTION:MES HW1: Set up toolchain and blink LED on target board\\n\\nC
+ ATCH-UP WEEKEND: Weeks 1-2 compressed into Apr 10-12. All due by midnight
+  Sun Apr 12.
+CATEGORIES:MES - Homework
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:c3b97a13-402a-40b3-b9f0-5953fa877084@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260411T104000
+DTEND;TZID=America/New_York:20260411T120000
+SUMMARY:💻 BMC HW1: Cortex-M memory map diagram
+DESCRIPTION:BMC HW1: Study Cortex-M programmer's model and draw memory map
+  diagram\\n\\nCATCH-UP WEEKEND: Weeks 1-2 compressed into Apr 10-12. All 
+ due by midnight Sun Apr 12.
+CATEGORIES:BMC - Homework
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:6e38de4e-51cf-4f88-a549-ead70570e08d@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260411T130000
+DTEND;TZID=America/New_York:20260411T150000
+SUMMARY:🔬 FOC Lab 1: Motor parameter verification
+DESCRIPTION:FOC Lab 1: Motor parameter verification. Measure Rs and Ls wit
+ h LCR meter. Verify against TI project values. Deliverable: Lab report wi
+ th parameter comparison table\\n\\nCATCH-UP WEEKEND: Weeks 1-2 compressed
+  into Apr 10-12. All due by midnight Sun Apr 12.
+CATEGORIES:FOC - Lab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:f2ef4f7e-3d52-4461-bca2-edefd8914a42@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260411T151000
+DTEND;TZID=America/New_York:20260411T163000
+SUMMARY:📖 MES Wk2: Reading - Memory Maps and Linker Scripts
+DESCRIPTION:Read Making Embedded Systems Ch. 2 (pp. 31-65)\\n\\nCATCH-UP W
+ EEKEND: Weeks 1-2 compressed into Apr 10-12. All due by midnight Sun Apr 
+ 12.
+CATEGORIES:MES - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:9606d2b2-f988-4514-b50a-83c3b7651f3c@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260411T190000
+DTEND;TZID=America/New_York:20260411T201000
+SUMMARY:📖 BMC Wk2: Reading - C Sizes Alignment Volatile
+DESCRIPTION:Read Bare-Metal Embedded C Ch. 2 (pp. 29-62)\\n\\nCATCH-UP WEE
+ KEND: Weeks 1-2 compressed into Apr 10-12. All due by midnight Sun Apr 12.
+CATEGORIES:BMC - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:9cc0de0c-80bc-4eb6-b630-15fe1ed6cda2@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260411T202000
+DTEND;TZID=America/New_York:20260411T220000
+SUMMARY:📖 FOC Wk2: Reading - Clarke/Park and Space Vectors
+DESCRIPTION:Read Krishnan Ch. 3: Clarke/Park transforms and space vector t
+ heory and stationary vs rotating frames\\n\\nCATCH-UP WEEKEND: Weeks 1-2 
+ compressed into Apr 10-12. All due by midnight Sun Apr 12.
+CATEGORIES:FOC - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:4e2b7749-48e1-4ff0-a07c-24fe17cf37c2@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260412T090000
+DTEND;TZID=America/New_York:20260412T104000
+SUMMARY:💻 MES HW2: Write linker script and analyze .map file
+DESCRIPTION:MES HW2: Write a linker script and analyze .map file\\n\\nCATC
+ H-UP WEEKEND: Weeks 1-2 compressed into Apr 10-12. All due by midnight Su
+ n Apr 12.
+CATEGORIES:MES - Homework
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:be90f718-30d1-4921-9967-1e79030692f1@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260412T130000
+DTEND;TZID=America/New_York:20260412T153000
+SUMMARY:🔬 FOC Lab 2: Clarke/Park C implementation + unit tests
+DESCRIPTION:FOC Lab 2: Hand-derive Clarke and Park matrices. Implement as 
+ standalone C functions (float32). Write unit tests for round-trip accurac
+ y. Deliverable: C source + test harness with UART output\\n\\nCATCH-UP WE
+ EKEND: Weeks 1-2 compressed into Apr 10-12. All due by midnight Sun Apr 1
+ 2.
+CATEGORIES:FOC - Lab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:46998ca8-7a84-4b80-b2f9-69c8ca23dbcb@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260412T154000
+DTEND;TZID=America/New_York:20260412T171000
+SUMMARY:💻 BMC HW2: sizeof quiz and volatile register macros
+DESCRIPTION:BMC HW2: sizeof quiz and write volatile register accessor macr
+ os\\n\\nCATCH-UP WEEKEND: Weeks 1-2 compressed into Apr 10-12. All due by
+  midnight Sun Apr 12.
+CATEGORIES:BMC - Homework
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:1925a97c-238c-43f8-9375-d0cb4c8bae9b@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260412T190000
+DTEND;TZID=America/New_York:20260412T200000
+SUMMARY:📝 Wk1 Review: Write reflections for all 3 courses
+DESCRIPTION:Write 3-5 sentence reflections for MES HW1 and BMC HW1 and FOC
+  Lab 1. Package README files.\\n\\nCATCH-UP WEEKEND: Weeks 1-2 compressed
+  into Apr 10-12. All due by midnight Sun Apr 12.
+CATEGORIES:All Courses - Review
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:bb5c5a3c-189b-48ef-806f-5223787243f7@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260412T201000
+DTEND;TZID=America/New_York:20260412T211000
+SUMMARY:📝 Wk2 Review: Write reflections for all 3 courses
+DESCRIPTION:Write 3-5 sentence reflections for MES HW2 and BMC HW2 and FOC
+  Lab 2. Package README files. Final submission check.\\n\\nCATCH-UP WEEKE
+ ND: Weeks 1-2 compressed into Apr 10-12. All due by midnight Sun Apr 12.
+CATEGORIES:All Courses - Review
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:f300af2c-46b8-4237-930c-6a4cadc95564@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260412T212000
+DTEND;TZID=America/New_York:20260412T225000
+SUMMARY:📝 Weeks 1-2 Final Review and Submission
+DESCRIPTION:Final pass on all Week 1 and Week 2 deliverables. Verify all c
+ ode compiles. Check all READMEs. Submit everything.\\n\\nCATCH-UP WEEKEND
+ : Weeks 1-2 compressed into Apr 10-12. All due by midnight Sun Apr 12.
+CATEGORIES:All Courses - Deadline
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:1fb45724-ffde-48f0-b163-3ff4bc42e39d@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260413T190000
+DTEND;TZID=America/New_York:20260413T213000
+SUMMARY:📖 FOC Wk3: Power Electronics & Inverter Topology
+DESCRIPTION:Read Krishnan Ch. 4: 3-phase VSI and switching states and dead
+ -time and gate drive requirements\\n\\nTopic: Power Electronics & Inverte
+ r Topology
+CATEGORIES:FOC - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:d09458e2-c0cf-4a2f-8942-f36ac3329f23@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260414T190000
+DTEND;TZID=America/New_York:20260414T210000
+SUMMARY:📖 MES Wk3: Getting Your Hands On the Hardware: GPIO & Periphe
+DESCRIPTION:Read Making Embedded Systems Ch. 3 (pp. 66-100)\\n\\nTopic: Ge
+ tting Your Hands On the Hardware: GPIO & Peripherals
+CATEGORIES:MES - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:b5e9a083-f2aa-4b32-807b-d6132d193ab5@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260415T190000
+DTEND;TZID=America/New_York:20260415T210000
+SUMMARY:📖 BMC Wk3: Startup Code & The Reset Handler
+DESCRIPTION:Read Bare-Metal Embedded C Ch. 3 (pp. 63-95)\\n\\nTopic: Start
+ up Code & The Reset Handler
+CATEGORIES:BMC - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:770b2205-42f0-43cc-9a2e-24389996799a@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260416T190000
+DTEND;TZID=America/New_York:20260416T220000
+SUMMARY:🔬 FOC Wk3: Lab Part 1
+DESCRIPTION:FOC Lab 3: Configure STM32 TIM1 for center-aligned 20 kHz comp
+ lementary PWM. Configure DRV8323RS SPI interface and gate drive registers
+ . Scope PWM output and dead-time. Deliverable: Annotated CubeIDE project\
+ \n\\nEvening session. Complete this evening if possible.
+CATEGORIES:FOC - Lab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:b3bac406-9ed3-497e-919c-3d377e563857@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260417T190000
+DTEND;TZID=America/New_York:20260417T210000
+SUMMARY:💻 MES Wk3: Start Homework
+DESCRIPTION:MES HW3: GPIO input/output and button interrupt handler
+CATEGORIES:MES - Homework
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:ed0f3e33-873a-4444-b25e-2b343e77c7bc@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260418T100000
+DTEND;TZID=America/New_York:20260418T123000
+SUMMARY:💻 MES Wk3: Homework
+DESCRIPTION:MES HW3: GPIO input/output and button interrupt handler
+CATEGORIES:MES - Homework
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:8f81c8aa-297b-418f-9b38-e49407311105@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260418T163000
+DTEND;TZID=America/New_York:20260418T190000
+SUMMARY:💻 BMC Wk3: Homework
+DESCRIPTION:BMC HW3: Write startup.s from scratch and trace execution to m
+ ain()
+CATEGORIES:BMC - Homework
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:ae6752d6-0da0-4745-abc0-350a51a958d0@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260419T090000
+DTEND;TZID=America/New_York:20260419T110000
+SUMMARY:🔬 FOC Wk3: Lab Review & Documentation
+DESCRIPTION:Review FOC lab work from this week. Clean up code and document
+  findings and prepare deliverable.\\n\\nTopic: Power Electronics & Invert
+ er Topology
+CATEGORIES:FOC - Lab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:f0fb7b69-c178-4c9e-88ff-215f97c547f1@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260419T130000
+DTEND;TZID=America/New_York:20260419T153000
+SUMMARY:📝 Wk3: Catch-up & Submission Prep
+DESCRIPTION:Finish incomplete HW or lab work.\\n\\nMES: Getting Your Hands
+  On the Hardware: GPIO & Peripherals\\nBMC: Startup Code & The Reset Hand
+ ler\\nFOC: Power Electronics & Inverter Topology\\n\\nWrite reflections (
+ 3-5 sentences each). Package submissions with README.
+CATEGORIES:All Courses - Review
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:141e258a-80bf-4a41-9973-8decdec63afb@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260419T210000
+DTEND;TZID=America/New_York:20260419T213000
+SUMMARY:⏰ Week 3 SUBMISSIONS DUE
+DESCRIPTION:All Week 3 deliverables due tonight.\\n\\nMES: MES HW3: GPIO i
+ nput/output and button interrupt handler\\nBMC: BMC HW3: Write startup.s 
+ from scratch and trace execution to main()\\nFOC: FOC Lab 3: Configure ST
+ M32 TIM1 for center-aligned 20 kHz complementary PWM. Configure DRV8323RS
+  SPI interface and gate drive registers. Scope PWM output and dead-time. 
+ Deliverable: Annotated CubeIDE project
+CATEGORIES:All Courses - Deadline
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:367d19c0-056b-4ac3-8d6b-e60774f53b62@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260420T190000
+DTEND;TZID=America/New_York:20260420T210000
+SUMMARY:📖 FOC Wk4: Space Vector PWM (SVPWM)
+DESCRIPTION:Read Krishnan Ch. 4 (SVPWM section) + ST AN4220 Sec. 3\\n\\nTo
+ pic: Space Vector PWM (SVPWM)
+CATEGORIES:FOC - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:2c6cbc65-a5b1-4c10-8e3d-657b7f193ef4@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260421T190000
+DTEND;TZID=America/New_York:20260421T210000
+SUMMARY:📖 MES Wk4: I/O Patterns: Polling Interrupts DMA
+DESCRIPTION:Read Making Embedded Systems Ch. 4 (pp. 101-135)\\n\\nTopic: I
+ /O Patterns: Polling Interrupts DMA
+CATEGORIES:MES - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:4503ba7c-3882-4a59-a628-c731f0674362@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260422T190000
+DTEND;TZID=America/New_York:20260422T210000
+SUMMARY:📖 BMC Wk4: Linker Scripts & Memory Sections In Depth
+DESCRIPTION:Read Bare-Metal Embedded C Ch. 4 (pp. 96-128)\\n\\nTopic: Link
+ er Scripts & Memory Sections In Depth
+CATEGORIES:BMC - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:2aaece29-d9fb-4d1d-8169-42d475fceedd@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260423T190000
+DTEND;TZID=America/New_York:20260423T220000
+SUMMARY:🔬 FOC Wk4: Lab Part 1
+DESCRIPTION:FOC Lab 4: Implement SVPWM from scratch. Sector detection and 
+ T1/T2/T0 calculation and compare register writes. Validate duty cycles ag
+ ainst hand-calculated values. Deliverable: SVPWM C module + scope capture
+ \\n\\nEvening session. Continues Saturday morning.
+CATEGORIES:FOC - Lab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:ccf68b82-f6ab-48a7-a7d7-2ee794630e5b@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260424T190000
+DTEND;TZID=America/New_York:20260424T210000
+SUMMARY:💻 MES Wk4: Start Homework
+DESCRIPTION:MES HW4: UART transmit/receive with interrupt vs polling compa
+ rison
+CATEGORIES:MES - Homework
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:50e2bfdf-d82c-4c98-ad63-8e24f1a38c5c@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260425T090000
+DTEND;TZID=America/New_York:20260425T093000
+SUMMARY:🔬 FOC Wk4: Lab Part 2
+DESCRIPTION:FOC Lab 4: Implement SVPWM from scratch. Sector detection and 
+ T1/T2/T0 calculation and compare register writes. Validate duty cycles ag
+ ainst hand-calculated values. Deliverable: SVPWM C module + scope capture
+ \\n\\nContinued from Thursday evening.
+CATEGORIES:FOC - Lab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:eecbc6ae-e22a-4ada-9b5d-087101d8eaca@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260425T130000
+DTEND;TZID=America/New_York:20260425T153000
+SUMMARY:💻 MES Wk4: Homework
+DESCRIPTION:MES HW4: UART transmit/receive with interrupt vs polling compa
+ rison
+CATEGORIES:MES - Homework
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:7107c7b1-9a6f-46a3-8224-fbe301f008eb@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260425T163000
+DTEND;TZID=America/New_York:20260425T190000
+SUMMARY:💻 BMC Wk4: Homework
+DESCRIPTION:BMC HW4: Create custom sections and verify placement with objd
+ ump
+CATEGORIES:BMC - Homework
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:2b3c500f-80e9-4d7a-a44f-19162b069a24@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260426T090000
+DTEND;TZID=America/New_York:20260426T110000
+SUMMARY:🔬 FOC Wk4: Lab Review & Documentation
+DESCRIPTION:Review FOC lab work from this week. Clean up code and document
+  findings and prepare deliverable.\\n\\nTopic: Space Vector PWM (SVPWM)
+CATEGORIES:FOC - Lab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:04302a74-7657-493d-8b56-d69ce5bc1ac8@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260426T130000
+DTEND;TZID=America/New_York:20260426T153000
+SUMMARY:📝 Wk4: Catch-up & Submission Prep
+DESCRIPTION:Finish incomplete HW or lab work.\\n\\nMES: I/O Patterns: Poll
+ ing Interrupts DMA\\nBMC: Linker Scripts & Memory Sections In Depth\\nFOC
+ : Space Vector PWM (SVPWM)\\n\\nWrite reflections (3-5 sentences each). P
+ ackage submissions with README.
+CATEGORIES:All Courses - Review
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:8e7cdf9a-be22-4d7f-b480-74df8d68189d@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260426T210000
+DTEND;TZID=America/New_York:20260426T213000
+SUMMARY:⏰ Week 4 SUBMISSIONS DUE
+DESCRIPTION:All Week 4 deliverables due tonight.\\n\\nMES: MES HW4: UART t
+ ransmit/receive with interrupt vs polling comparison\\nBMC: BMC HW4: Crea
+ te custom sections and verify placement with objdump\\nFOC: FOC Lab 4: Im
+ plement SVPWM from scratch. Sector detection and T1/T2/T0 calculation and
+  compare register writes. Validate duty cycles against hand-calculated va
+ lues. Deliverable: SVPWM C module + scope capture
+CATEGORIES:All Courses - Deadline
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:e0d3ff79-6897-4d54-8418-2d2798eb1036@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260427T190000
+DTEND;TZID=America/New_York:20260427T210000
+SUMMARY:📖 FOC Wk5: 3-Shunt Current Sensing (PROJECT 1 START)
+DESCRIPTION:Read Krishnan Ch. 5: current sensing methods + DRV8323RS datas
+ heet Sec. 7\\n\\nTopic: 3-Shunt Current Sensing (PROJECT 1 START)
+CATEGORIES:FOC - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:92d9df92-2f38-4cf0-a481-96c6d86634e2@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260428T190000
+DTEND;TZID=America/New_York:20260428T204000
+SUMMARY:📖 MES Wk5: Interrupts & State Machines
+DESCRIPTION:Read Making Embedded Systems Ch. 5 (pp. 136-165)\\n\\nTopic: I
+ nterrupts & State Machines
+CATEGORIES:MES - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:e5cbc609-8e03-4a3a-a7f6-5f2e9fba7c54@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260429T190000
+DTEND;TZID=America/New_York:20260429T210000
+SUMMARY:📖 BMC Wk5: GPIO Without HAL: Register-Level Programming
+DESCRIPTION:Read Bare-Metal Embedded C Ch. 5 (pp. 129-162)\\n\\nTopic: GPI
+ O Without HAL: Register-Level Programming
+CATEGORIES:BMC - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:afc9244d-f77a-479d-bbcf-a67437008ef5@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260430T190000
+DTEND;TZID=America/New_York:20260430T220000
+SUMMARY:🔬 FOC Wk5: Lab Part 1
+DESCRIPTION:FOC Lab 5 / Project 1 Start: Configure injected ADC triggered 
+ by PWM underflow. Implement 3-phase current reconstruction. Add DC offset
+  calibration. Verify Ia+Ib+Ic=0. Deliverable: ADC/current sensing module 
+ + Kirchhoff validation plot\\n\\nEvening session. Continues Saturday morn
+ ing.
+CATEGORIES:FOC - Lab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:54d6e537-c6a6-4d1b-81cd-37f52a27724f@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260501T190000
+DTEND;TZID=America/New_York:20260501T210000
+SUMMARY:💻 MES Wk5: Start Homework
+DESCRIPTION:MES HW5: Implement a multi-state state machine with events
+CATEGORIES:MES - Homework
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:8ba87099-4b43-4435-b2a7-698322b45b52@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260502T090000
+DTEND;TZID=America/New_York:20260502T093000
+SUMMARY:🔬 FOC Wk5: Lab Part 2
+DESCRIPTION:FOC Lab 5 / Project 1 Start: Configure injected ADC triggered 
+ by PWM underflow. Implement 3-phase current reconstruction. Add DC offset
+  calibration. Verify Ia+Ib+Ic=0. Deliverable: ADC/current sensing module 
+ + Kirchhoff validation plot\\n\\nContinued from Thursday evening.
+CATEGORIES:FOC - Lab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:75798262-c403-49d4-8c83-b18a40962119@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260502T130000
+DTEND;TZID=America/New_York:20260502T153000
+SUMMARY:💻 MES Wk5: Homework
+DESCRIPTION:MES HW5: Implement a multi-state state machine with events
+CATEGORIES:MES - Homework
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:c8a797a3-bba3-4525-acff-57eb6fa72752@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260502T163000
+DTEND;TZID=America/New_York:20260502T190000
+SUMMARY:💻 BMC Wk5: Homework
+DESCRIPTION:BMC HW5: Toggle GPIO at register level and measure toggle freq
+ uency on scope
+CATEGORIES:BMC - Homework
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:a4f4a5f7-e63c-4f8b-b964-8e4f0fda08ef@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260503T090000
+DTEND;TZID=America/New_York:20260503T110000
+SUMMARY:🔬 FOC Wk5: Lab Review & Documentation
+DESCRIPTION:Review FOC lab work from this week. Clean up code and document
+  findings and prepare deliverable.\\n\\nTopic: 3-Shunt Current Sensing (P
+ ROJECT 1 START)
+CATEGORIES:FOC - Lab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:d594ed0e-384c-4d30-b380-f3937ada6867@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260503T130000
+DTEND;TZID=America/New_York:20260503T153000
+SUMMARY:📝 Wk5: Catch-up & Submission Prep
+DESCRIPTION:Finish incomplete HW or lab work.\\n\\nMES: Interrupts & State
+  Machines\\nBMC: GPIO Without HAL: Register-Level Programming\\nFOC: 3-Sh
+ unt Current Sensing (PROJECT 1 START)\\n\\nWrite reflections (3-5 sentenc
+ es each). Package submissions with README.
+CATEGORIES:All Courses - Review
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:6bea75be-6232-47be-9075-ae2be3b5db02@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260503T210000
+DTEND;TZID=America/New_York:20260503T213000
+SUMMARY:⏰ Week 5 SUBMISSIONS DUE
+DESCRIPTION:All Week 5 deliverables due tonight.\\n\\nMES: MES HW5: Implem
+ ent a multi-state state machine with events\\nBMC: BMC HW5: Toggle GPIO a
+ t register level and measure toggle frequency on scope\\nFOC: FOC Lab 5 /
+  Project 1 Start: Configure injected ADC triggered by PWM underflow. Impl
+ ement 3-phase current reconstruction. Add DC offset calibration. Verify I
+ a+Ib+Ic=0. Deliverable: ADC/current sensing module + Kirchhoff validation
+  plot
+CATEGORIES:All Courses - Deadline
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:89c701ba-996a-4c5c-8a6f-b459da90a2a3@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260504T190000
+DTEND;TZID=America/New_York:20260504T210000
+SUMMARY:📖 FOC Wk6: Clarke & Park in the Control Loop
+DESCRIPTION:Read Krishnan Ch. 5 (continued) + NXP DRM148 Sec. 3\\n\\nTopic
+ : Clarke & Park in the Control Loop
+CATEGORIES:FOC - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:c9ed2270-5ee0-4c71-b7a8-4280db0d9d17@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260505T190000
+DTEND;TZID=America/New_York:20260505T210000
+SUMMARY:📖 MES Wk6: Managing the Flow: Scheduling & RTOS Basics
+DESCRIPTION:Read Making Embedded Systems Ch. 6 (pp. 166-200)\\n\\nTopic: M
+ anaging the Flow: Scheduling & RTOS Basics
+CATEGORIES:MES - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:08da7443-2e45-42f7-8866-78a3121c6edb@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260506T190000
+DTEND;TZID=America/New_York:20260506T210000
+SUMMARY:📖 BMC Wk6: Clocks PLLs and System Initialization
+DESCRIPTION:Read Bare-Metal Embedded C Ch. 6 (pp. 163-198)\\n\\nTopic: Clo
+ cks PLLs and System Initialization
+CATEGORIES:BMC - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:6de4730f-b3d1-4e30-8d8d-dfd34a13ee14@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260507T190000
+DTEND;TZID=America/New_York:20260507T220000
+SUMMARY:🔬 FOC Wk6: Lab Part 1
+DESCRIPTION:FOC Lab 6: Wire transforms into ISR. Log Id/Iq during open-loo
+ p d-axis injection. Verify Id rises and Iq stays near zero. Deliverable: 
+ ISR timing analysis + Id/Iq data log\\n\\nEvening session. Complete this 
+ evening if possible.
+CATEGORIES:FOC - Lab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:1333a4a5-2df9-4aa0-b5b4-894268563f17@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260508T190000
+DTEND;TZID=America/New_York:20260508T210000
+SUMMARY:💻 MES Wk6: Start Homework
+DESCRIPTION:MES HW6: Task prioritization exercise and context-switch traci
+ ng
+CATEGORIES:MES - Homework
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:f4f6e0bb-41d8-48bb-ad42-2a202fb94111@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260509T100000
+DTEND;TZID=America/New_York:20260509T123000
+SUMMARY:💻 MES Wk6: Homework
+DESCRIPTION:MES HW6: Task prioritization exercise and context-switch traci
+ ng
+CATEGORIES:MES - Homework
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:a9408e4c-ab65-474d-b2c6-f3d37a5e9334@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260509T163000
+DTEND;TZID=America/New_York:20260509T190000
+SUMMARY:💻 BMC Wk6: Homework
+DESCRIPTION:BMC HW6: Configure PLL to target frequency and verify with Sys
+ Tick
+CATEGORIES:BMC - Homework
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:88f61b40-b8b1-4ab6-86e1-7d0750f95f6b@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260510T090000
+DTEND;TZID=America/New_York:20260510T110000
+SUMMARY:🔬 FOC Wk6: Lab Review & Documentation
+DESCRIPTION:Review FOC lab work from this week. Clean up code and document
+  findings and prepare deliverable.\\n\\nTopic: Clarke & Park in the Contr
+ ol Loop
+CATEGORIES:FOC - Lab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:cf110027-27c2-4517-aded-42996748fefa@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260510T130000
+DTEND;TZID=America/New_York:20260510T153000
+SUMMARY:📝 Wk6: Catch-up & Submission Prep
+DESCRIPTION:Finish incomplete HW or lab work.\\n\\nMES: Managing the Flow:
+  Scheduling & RTOS Basics\\nBMC: Clocks PLLs and System Initialization\\n
+ FOC: Clarke & Park in the Control Loop\\n\\nWrite reflections (3-5 senten
+ ces each). Package submissions with README.
+CATEGORIES:All Courses - Review
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:c31ec38e-8e54-4957-981d-4ccc2cac8ea0@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260510T210000
+DTEND;TZID=America/New_York:20260510T213000
+SUMMARY:⏰ Week 6 SUBMISSIONS DUE
+DESCRIPTION:All Week 6 deliverables due tonight.\\n\\nMES: MES HW6: Task p
+ rioritization exercise and context-switch tracing\\nBMC: BMC HW6: Configu
+ re PLL to target frequency and verify with SysTick\\nFOC: FOC Lab 6: Wire
+  transforms into ISR. Log Id/Iq during open-loop d-axis injection. Verify
+  Id rises and Iq stays near zero. Deliverable: ISR timing analysis + Id/I
+ q data log
+CATEGORIES:All Courses - Deadline
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:707c41f7-7fca-4178-a13b-a8f82bb5a2e5@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260511T190000
+DTEND;TZID=America/New_York:20260511T213000
+SUMMARY:📖 FOC Wk7: PI Current Controllers
+DESCRIPTION:Read Krishnan Ch. 6: PI theory and discrete-time implementatio
+ n and anti-windup and decoupling\\n\\nTopic: PI Current Controllers
+CATEGORIES:FOC - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:16edbe5d-639a-4224-8961-a99e9f5e1a8d@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260512T190000
+DTEND;TZID=America/New_York:20260512T205000
+SUMMARY:📖 MES Wk7: Doing More With Less: Memory Optimization
+DESCRIPTION:Read Making Embedded Systems Ch. 7 (pp. 201-232)\\n\\nTopic: D
+ oing More With Less: Memory Optimization
+CATEGORIES:MES - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:3a81a46e-6b41-4d70-9168-b0000718e45c@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260513T190000
+DTEND;TZID=America/New_York:20260513T210000
+SUMMARY:📖 BMC Wk7: Timers: Basic PWM and Input Capture
+DESCRIPTION:Read Bare-Metal Embedded C Ch. 7 (pp. 199-232)\\n\\nTopic: Tim
+ ers: Basic PWM and Input Capture
+CATEGORIES:BMC - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:7bdc76ce-823b-4156-9c99-9fd79bf157b9@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260514T190000
+DTEND;TZID=America/New_York:20260514T220000
+SUMMARY:🔬 FOC Wk7: Lab Part 1
+DESCRIPTION:FOC Lab 7: Derive Id/Iq PI gains from Rs and Ls and Ts. Implem
+ ent discrete PI with back-calculation anti-windup. Close Id loop in open-
+ loop electrical angle mode. Deliverable: Step response plots for Id contr
+ oller\\n\\nEvening session. Continues Saturday morning.
+CATEGORIES:FOC - Lab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:0c0f1a1b-539c-4c9b-949e-3c8f92257a34@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260515T190000
+DTEND;TZID=America/New_York:20260515T210000
+SUMMARY:💻 MES Wk7: Start Homework
+DESCRIPTION:MES HW7: Audit RAM/ROM usage and apply const/static optimizati
+ ons
+CATEGORIES:MES - Homework
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:f7394001-b045-44b5-b833-116e969e58b6@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260516T090000
+DTEND;TZID=America/New_York:20260516T093000
+SUMMARY:🔬 FOC Wk7: Lab Part 2
+DESCRIPTION:FOC Lab 7: Derive Id/Iq PI gains from Rs and Ls and Ts. Implem
+ ent discrete PI with back-calculation anti-windup. Close Id loop in open-
+ loop electrical angle mode. Deliverable: Step response plots for Id contr
+ oller\\n\\nContinued from Thursday evening.
+CATEGORIES:FOC - Lab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:9f2d390b-25c6-4db3-82a8-2ac0bec86359@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260516T130000
+DTEND;TZID=America/New_York:20260516T153000
+SUMMARY:💻 MES Wk7: Homework
+DESCRIPTION:MES HW7: Audit RAM/ROM usage and apply const/static optimizati
+ ons
+CATEGORIES:MES - Homework
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:f278fdb4-4a2c-4685-9499-ef20ee92625a@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260516T163000
+DTEND;TZID=America/New_York:20260516T190000
+SUMMARY:💻 BMC Wk7: Homework
+DESCRIPTION:BMC HW7: Generate 20 kHz PWM and measure dead-band and duty cy
+ cle
+CATEGORIES:BMC - Homework
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:37060e44-7095-48dd-a4ce-048cfaba7d9b@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260517T090000
+DTEND;TZID=America/New_York:20260517T110000
+SUMMARY:🔬 FOC Wk7: Lab Review & Documentation
+DESCRIPTION:Review FOC lab work from this week. Clean up code and document
+  findings and prepare deliverable.\\n\\nTopic: PI Current Controllers
+CATEGORIES:FOC - Lab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:3d6ed8e0-d855-4346-a0a5-6fcb70172c35@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260517T130000
+DTEND;TZID=America/New_York:20260517T153000
+SUMMARY:📝 Wk7: Catch-up & Submission Prep
+DESCRIPTION:Finish incomplete HW or lab work.\\n\\nMES: Doing More With Le
+ ss: Memory Optimization\\nBMC: Timers: Basic PWM and Input Capture\\nFOC:
+  PI Current Controllers\\n\\nWrite reflections (3-5 sentences each). Pack
+ age submissions with README.
+CATEGORIES:All Courses - Review
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:697f4080-e26f-40ee-b16b-2fb907a34565@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260517T210000
+DTEND;TZID=America/New_York:20260517T213000
+SUMMARY:⏰ Week 7 SUBMISSIONS DUE
+DESCRIPTION:All Week 7 deliverables due tonight.\\n\\nMES: MES HW7: Audit 
+ RAM/ROM usage and apply const/static optimizations\\nBMC: BMC HW7: Genera
+ te 20 kHz PWM and measure dead-band and duty cycle\\nFOC: FOC Lab 7: Deri
+ ve Id/Iq PI gains from Rs and Ls and Ts. Implement discrete PI with back-
+ calculation anti-windup. Close Id loop in open-loop electrical angle mode
+ . Deliverable: Step response plots for Id controller
+CATEGORIES:All Courses - Deadline
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:e216bdaa-8c0b-41e6-bce3-f424e97e41ea@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260518T190000
+DTEND;TZID=America/New_York:20260518T210000
+SUMMARY:📖 FOC Wk8: Closed-Loop Current Control Integration (PROJECT 1
+DESCRIPTION:Read Krishnan Ch. 6 (continued) + ST AN4220 Sec. 4\\n\\nTopic:
+  Closed-Loop Current Control Integration (PROJECT 1 DUE)
+CATEGORIES:FOC - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:dddcc316-5fa6-4f13-8e50-c8be9ab7222d@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260519T190000
+DTEND;TZID=America/New_York:20260519T203000
+SUMMARY:📖 MES Wk8: Putting It Together: Project 1 Intro & Mid-Review
+DESCRIPTION:Review Making Embedded Systems Ch. 1-7\\n\\nTopic: Putting It 
+ Together: Project 1 Intro & Mid-Review
+CATEGORIES:MES - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:d0f042bb-a501-4e1d-9d75-ad203a763cec@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260520T190000
+DTEND;TZID=America/New_York:20260520T210000
+SUMMARY:📖 BMC Wk8: UART From Scratch & Project 1 Kickoff
+DESCRIPTION:Read Bare-Metal Embedded C Ch. 8 (pp. 233-263) + Review Ch. 1-
+ 7\\n\\nTopic: UART From Scratch & Project 1 Kickoff
+CATEGORIES:BMC - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:ed373616-7ccb-4498-81bb-b2766a9c9da1@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260521T190000
+DTEND;TZID=America/New_York:20260521T220000
+SUMMARY:🔬 FOC Wk8: Lab Part 1
+DESCRIPTION:FOC Lab 8 / Project 1 Due: Close both Id and Iq loops. Impleme
+ nt cross-axis decoupling (omega*L feedforward). Tune for bandwidth. Run m
+ otor open loop. Deliverable: Full current control stack + tuning report w
+ ith Bode estimates\\n\\nEvening session. Continues Saturday morning.
+CATEGORIES:FOC - Lab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:e91b5847-5095-471d-adca-d060c20e4c38@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260522T190000
+DTEND;TZID=America/New_York:20260522T203000
+SUMMARY:📝 Wk8: Review & Planning
+DESCRIPTION:Review week progress and plan weekend work sessions
+CATEGORIES:All Courses - Review
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:d5499650-0fb6-4274-8cb7-12ec986439e9@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260523T090000
+DTEND;TZID=America/New_York:20260523T100000
+SUMMARY:🔬 FOC Wk8: Lab Part 2
+DESCRIPTION:FOC Lab 8 / Project 1 Due: Close both Id and Iq loops. Impleme
+ nt cross-axis decoupling (omega*L feedforward). Tune for bandwidth. Run m
+ otor open loop. Deliverable: Full current control stack + tuning report w
+ ith Bode estimates\\n\\nContinued from Thursday evening.
+CATEGORIES:FOC - Lab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:c9e62fda-672b-496b-8d4f-6c0948876dde@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260523T130000
+DTEND;TZID=America/New_York:20260523T160000
+SUMMARY:🛠️ MES Wk8: Project Work
+DESCRIPTION:MES PROJECT 1 KICKOFF: Interrupt-Driven Sensor Logger. Read se
+ nsor via SPI/I2C then process through state machine then log over UART. M
+ ust include interrupt-driven I/O and watchdog and documented memory map. 
+ Deliverables: source code and linker script and .map analysis and 1-page 
+ design document.
+CATEGORIES:MES - Project
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:e32475b7-5a8a-4548-806e-de08672d55f6@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260523T163000
+DTEND;TZID=America/New_York:20260523T193000
+SUMMARY:🛠️ BMC Wk8: Project Work
+DESCRIPTION:BMC PROJECT 1 KICKOFF: Register-Level Peripheral Stack. No HAL
+ : clock config and GPIO and UART and SPI or I2C. Read sensor and stream o
+ ver UART. Deliverables: fully commented source and startup/linker files a
+ nd oscilloscope captures and design rationale.
+CATEGORIES:BMC - Project
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:05a004f2-4b01-4429-85ff-fb584958b82b@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260524T090000
+DTEND;TZID=America/New_York:20260524T110000
+SUMMARY:🔬 FOC Wk8: Lab Review & Documentation
+DESCRIPTION:Review FOC lab work from this week. Clean up code and document
+  findings and prepare deliverable.\\n\\nTopic: Closed-Loop Current Contro
+ l Integration (PROJECT 1 DUE)
+CATEGORIES:FOC - Lab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:afcc0a28-4dbd-4df7-8141-bf34b8c65d2d@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260524T130000
+DTEND;TZID=America/New_York:20260524T153000
+SUMMARY:📝 Wk8: Catch-up & Submission Prep
+DESCRIPTION:Finish incomplete HW or lab work.\\n\\nMES: Putting It Togethe
+ r: Project 1 Intro & Mid-Review\\nBMC: UART From Scratch & Project 1 Kick
+ off\\nFOC: Closed-Loop Current Control Integration (PROJECT 1 DUE)\\n\\nW
+ rite reflections (3-5 sentences each). Package submissions with README.
+CATEGORIES:All Courses - Review
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:e049928c-cc19-412e-81be-e1753284b055@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260524T210000
+DTEND;TZID=America/New_York:20260524T213000
+SUMMARY:⏰ Week 8 SUBMISSIONS DUE
+DESCRIPTION:All Week 8 deliverables due tonight.\\n\\nMES: MES PROJECT 1 K
+ ICKOFF: Interrupt-Driven Sensor Logger. Read sensor via SPI/I2C then proc
+ ess through state machine then log over UART. Must include interrupt-driv
+ en I/O and watchdog and documented memory map. Deliverables: source code 
+ and linker script and .map analysis and 1-page design document.\\nBMC: BM
+ C PROJECT 1 KICKOFF: Register-Level Peripheral Stack. No HAL: clock confi
+ g and GPIO and UART and SPI or I2C. Read sensor and stream over UART. Del
+ iverables: fully commented source and startup/linker files and oscillosco
+ pe captures and design rationale.\\nFOC: FOC Lab 8 / Project 1 Due: Close
+  both Id and Iq loops. Implement cross-axis decoupling (omega*L feedforwa
+ rd). Tune for bandwidth. Run motor open loop. Deliverable: Full current c
+ ontrol stack + tuning report with Bode estimates
+CATEGORIES:All Courses - Deadline
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:887481cb-ff66-404e-a434-2d2b1de4390c@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260525T190000
+DTEND;TZID=America/New_York:20260525T213000
+SUMMARY:📖 FOC Wk9: Back-EMF & Observer Theory (PROJECT 2 START)
+DESCRIPTION:Read Krishnan Ch. 8: BEMF models and Luenberger observer and S
+ MO theory\\n\\nTopic: Back-EMF & Observer Theory (PROJECT 2 START)
+CATEGORIES:FOC - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:77e40ec6-ac1e-47b8-9f3c-e1703b3b1734@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260526T190000
+DTEND;TZID=America/New_York:20260526T205000
+SUMMARY:📖 MES Wk9: Math & Algorithms: Fixed-Point DSP Basics
+DESCRIPTION:Read Making Embedded Systems Ch. 8 (pp. 233-265)\\n\\nTopic: M
+ ath & Algorithms: Fixed-Point DSP Basics
+CATEGORIES:MES - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:333dd7aa-78d9-4b3b-8fe1-244dc38cbac2@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260527T190000
+DTEND;TZID=America/New_York:20260527T210000
+SUMMARY:📖 BMC Wk9: SPI and I2C: Protocol Internals & Driver Writing
+DESCRIPTION:Read Bare-Metal Embedded C Ch. 9 (pp. 264-298)\\n\\nTopic: SPI
+  and I2C: Protocol Internals & Driver Writing
+CATEGORIES:BMC - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:5197a89e-a172-433c-a170-1e3b7b14d3b9@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260528T190000
+DTEND;TZID=America/New_York:20260528T220000
+SUMMARY:🔬 FOC Wk9: Lab Part 1
+DESCRIPTION:FOC Lab 9 / Project 2 Start: Derive discrete BEMF model from m
+ otor equations. Implement alpha/beta BEMF estimator. Log estimated vs exp
+ ected BEMF at fixed speed. Deliverable: BEMF estimator C module + compari
+ son plot\\n\\nEvening session. Continues Saturday morning.
+CATEGORIES:FOC - Lab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:0d8388a7-5b45-4e35-b4d6-1e1db2c49ad3@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260529T190000
+DTEND;TZID=America/New_York:20260529T210000
+SUMMARY:💻 MES Wk9: Start Homework
+DESCRIPTION:MES HW8: Implement fixed-point multiply and compare with float
+CATEGORIES:MES - Homework
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:7e9b9e12-749d-45a8-8549-1f6c432e35f9@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260530T090000
+DTEND;TZID=America/New_York:20260530T093000
+SUMMARY:🔬 FOC Wk9: Lab Part 2
+DESCRIPTION:FOC Lab 9 / Project 2 Start: Derive discrete BEMF model from m
+ otor equations. Implement alpha/beta BEMF estimator. Log estimated vs exp
+ ected BEMF at fixed speed. Deliverable: BEMF estimator C module + compari
+ son plot\\n\\nContinued from Thursday evening.
+CATEGORIES:FOC - Lab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:2e93ccf5-9293-408d-8e03-650b8e8a42dc@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260530T130000
+DTEND;TZID=America/New_York:20260530T153000
+SUMMARY:💻 MES Wk9: Homework
+DESCRIPTION:MES HW8: Implement fixed-point multiply and compare with float
+CATEGORIES:MES - Homework
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:97c3ec94-da2e-47ec-b485-59984e9615c7@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260530T163000
+DTEND;TZID=America/New_York:20260530T190000
+SUMMARY:💻 BMC Wk9: Homework
+DESCRIPTION:BMC HW8: Write SPI driver and exchange data with sensor (no HA
+ L)
+CATEGORIES:BMC - Homework
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:1866370a-b06b-4684-b9d2-dc2ff312f77a@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260530T193000
+DTEND;TZID=America/New_York:20260530T213000
+SUMMARY:🛠️ MES Wk9: Project Work
+DESCRIPTION:MES Project 1 Work: Sensor driver + state machine implementati
+ on
+CATEGORIES:MES - Project
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:463dfce0-04df-4547-a520-21ab6e6bd83b@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260531T090000
+DTEND;TZID=America/New_York:20260531T110000
+SUMMARY:🔬 FOC Wk9: Lab Review & Documentation
+DESCRIPTION:Review FOC lab work from this week. Clean up code and document
+  findings and prepare deliverable.\\n\\nTopic: Back-EMF & Observer Theory
+  (PROJECT 2 START)
+CATEGORIES:FOC - Lab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:311e7c58-5334-489a-9bc7-89ef17a0b5b0@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260531T130000
+DTEND;TZID=America/New_York:20260531T153000
+SUMMARY:📝 Wk9: Catch-up & Submission Prep
+DESCRIPTION:Finish incomplete HW or lab work.\\n\\nMES: Math & Algorithms:
+  Fixed-Point DSP Basics\\nBMC: SPI and I2C: Protocol Internals & Driver W
+ riting\\nFOC: Back-EMF & Observer Theory (PROJECT 2 START)\\n\\nWrite ref
+ lections (3-5 sentences each). Package submissions with README.
+CATEGORIES:All Courses - Review
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:b3c6598b-50cc-4195-bf94-693ef69253ac@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260531T210000
+DTEND;TZID=America/New_York:20260531T213000
+SUMMARY:⏰ Week 9 SUBMISSIONS DUE
+DESCRIPTION:All Week 9 deliverables due tonight.\\n\\nMES: MES HW8: Implem
+ ent fixed-point multiply and compare with float\\nBMC: BMC HW8: Write SPI
+  driver and exchange data with sensor (no HAL)\\nFOC: FOC Lab 9 / Project
+  2 Start: Derive discrete BEMF model from motor equations. Implement alph
+ a/beta BEMF estimator. Log estimated vs expected BEMF at fixed speed. Del
+ iverable: BEMF estimator C module + comparison plot
+CATEGORIES:All Courses - Deadline
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:2077c4fa-68b9-413c-ba33-6b9e841fbb4d@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260601T190000
+DTEND;TZID=America/New_York:20260601T213000
+SUMMARY:📖 FOC Wk10: Sliding Mode Observer Implementation
+DESCRIPTION:Read Krishnan Ch. 8 (SMO section) + Microchip AN1078 + NXP DRM
+ 148 Sec. 4\\n\\nTopic: Sliding Mode Observer Implementation
+CATEGORIES:FOC - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:35310daa-c0c9-4af4-a56f-4c98196c7e68@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260602T190000
+DTEND;TZID=America/New_York:20260602T204000
+SUMMARY:📖 MES Wk10: Infinite Loops: Watchdog Error Handling Robustness
+DESCRIPTION:Read Making Embedded Systems Ch. 9 (pp. 266-295)\\n\\nTopic: I
+ nfinite Loops: Watchdog Error Handling Robustness
+CATEGORIES:MES - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:b4d699fb-c311-4e44-8aa8-87190689a636@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260603T190000
+DTEND;TZID=America/New_York:20260603T210000
+SUMMARY:📖 BMC Wk10: Interrupts & NVIC: Priority Nesting Latency
+DESCRIPTION:Read Bare-Metal Embedded C Ch. 10 (pp. 299-332)\\n\\nTopic: In
+ terrupts & NVIC: Priority Nesting Latency
+CATEGORIES:BMC - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:a09710e7-fe8f-470a-aef5-6625d0c50730@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260604T190000
+DTEND;TZID=America/New_York:20260604T220000
+SUMMARY:🔬 FOC Wk10: Lab Part 1
+DESCRIPTION:FOC Lab 10: Implement full SMO. Switching function and low-pas
+ s filter and atan2 angle extraction. Validate estimated angle against kno
+ wn electrical angle in open-loop spin. Deliverable: SMO C module + angle 
+ error vs speed plot\\n\\nEvening session. Continues Saturday morning.
+CATEGORIES:FOC - Lab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:eb3b3309-d4e4-4beb-ae02-cbecad64a672@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260605T190000
+DTEND;TZID=America/New_York:20260605T210000
+SUMMARY:💻 MES Wk10: Start Homework
+DESCRIPTION:MES HW9: Add watchdog & fault handler to prior code
+CATEGORIES:MES - Homework
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:188451e9-0d65-47c1-b1ec-849ca0cbc559@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260606T090000
+DTEND;TZID=America/New_York:20260606T100000
+SUMMARY:🔬 FOC Wk10: Lab Part 2
+DESCRIPTION:FOC Lab 10: Implement full SMO. Switching function and low-pas
+ s filter and atan2 angle extraction. Validate estimated angle against kno
+ wn electrical angle in open-loop spin. Deliverable: SMO C module + angle 
+ error vs speed plot\\n\\nContinued from Thursday evening.
+CATEGORIES:FOC - Lab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:a1b8f175-6f7a-443e-be8a-565189723733@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260606T130000
+DTEND;TZID=America/New_York:20260606T153000
+SUMMARY:💻 MES Wk10: Homework
+DESCRIPTION:MES HW9: Add watchdog & fault handler to prior code
+CATEGORIES:MES - Homework
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:50d64195-3c78-41b1-9905-7619f402f5d7@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260606T163000
+DTEND;TZID=America/New_York:20260606T190000
+SUMMARY:💻 BMC Wk10: Homework
+DESCRIPTION:BMC HW9: Configure NVIC priorities and measure ISR entry laten
+ cy
+CATEGORIES:BMC - Homework
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:866eaf76-24c7-4c04-a117-37f160a8381d@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260606T193000
+DTEND;TZID=America/New_York:20260606T213000
+SUMMARY:🛠️ MES Wk10: Project Work
+DESCRIPTION:MES Project 1 Work: Add interrupt-driven I/O and watchdog
+CATEGORIES:MES - Project
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:d9882bc6-c322-426c-9e57-f9c0055b4ef9@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260607T090000
+DTEND;TZID=America/New_York:20260607T110000
+SUMMARY:🔬 FOC Wk10: Lab Review & Documentation
+DESCRIPTION:Review FOC lab work from this week. Clean up code and document
+  findings and prepare deliverable.\\n\\nTopic: Sliding Mode Observer Impl
+ ementation
+CATEGORIES:FOC - Lab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:8f01c9a6-1059-4115-bf49-1fa5f02c81e7@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260607T130000
+DTEND;TZID=America/New_York:20260607T153000
+SUMMARY:📝 Wk10: Catch-up & Submission Prep
+DESCRIPTION:Finish incomplete HW or lab work.\\n\\nMES: Infinite Loops: Wa
+ tchdog Error Handling Robustness\\nBMC: Interrupts & NVIC: Priority Nesti
+ ng Latency\\nFOC: Sliding Mode Observer Implementation\\n\\nWrite reflect
+ ions (3-5 sentences each). Package submissions with README.
+CATEGORIES:All Courses - Review
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:d1436b0d-1b9d-49be-b9c5-85c2632cb70c@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260607T210000
+DTEND;TZID=America/New_York:20260607T213000
+SUMMARY:⏰ Week 10 SUBMISSIONS DUE
+DESCRIPTION:All Week 10 deliverables due tonight.\\n\\nMES: MES HW9: Add w
+ atchdog & fault handler to prior code\\nBMC: BMC HW9: Configure NVIC prio
+ rities and measure ISR entry latency\\nFOC: FOC Lab 10: Implement full SM
+ O. Switching function and low-pass filter and atan2 angle extraction. Val
+ idate estimated angle against known electrical angle in open-loop spin. D
+ eliverable: SMO C module + angle error vs speed plot
+CATEGORIES:All Courses - Deadline
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:d1001bcc-4e65-45fe-b69e-d23b6fb0d0a7@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260608T190000
+DTEND;TZID=America/New_York:20260608T210000
+SUMMARY:📖 FOC Wk11: PLL-Based Speed & Angle Tracking
+DESCRIPTION:Read Krishnan Ch. 8 (PLL section) + ST AN4220 Sec. 5\\n\\nTopi
+ c: PLL-Based Speed & Angle Tracking
+CATEGORIES:FOC - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:213aef63-b5ec-45c3-add8-033cfcda1d79@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260609T190000
+DTEND;TZID=America/New_York:20260609T210000
+SUMMARY:📖 MES Wk11: Communicating: SPI I2C and Protocol Layers
+DESCRIPTION:Read Making Embedded Systems Ch. 10 (pp. 296-330)\\n\\nTopic: 
+ Communicating: SPI I2C and Protocol Layers
+CATEGORIES:MES - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:5f240a8b-3333-4da8-9dd8-a558be3ea9c5@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260610T190000
+DTEND;TZID=America/New_York:20260610T210000
+SUMMARY:📖 BMC Wk11: DMA: Memory-to-Memory and Peripheral Transfers
+DESCRIPTION:Read Bare-Metal Embedded C Ch. 11 (pp. 333-365)\\n\\nTopic: DM
+ A: Memory-to-Memory and Peripheral Transfers
+CATEGORIES:BMC - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:3a1f4c01-d18b-45df-a89d-c408d7d34232@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260611T190000
+DTEND;TZID=America/New_York:20260611T220000
+SUMMARY:🔬 FOC Wk11: Lab Part 1
+DESCRIPTION:FOC Lab 11: Replace raw atan2 with tracking PLL on SMO outputs
+ . Compare noise/latency of raw vs PLL-tracked angle. Implement speed esti
+ mate from PLL. Deliverable: PLL module + noise comparison plot\\n\\nEveni
+ ng session. Continues Saturday morning.
+CATEGORIES:FOC - Lab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:aafc3c04-6916-4b9e-85db-a04adbd416c7@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260612T190000
+DTEND;TZID=America/New_York:20260612T210000
+SUMMARY:💻 MES Wk11: Start Homework
+DESCRIPTION:MES HW10: SPI sensor driver - read and log data
+CATEGORIES:MES - Homework
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:7fc22a0c-f489-403a-8db9-52b0cb73f469@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260613T090000
+DTEND;TZID=America/New_York:20260613T093000
+SUMMARY:🔬 FOC Wk11: Lab Part 2
+DESCRIPTION:FOC Lab 11: Replace raw atan2 with tracking PLL on SMO outputs
+ . Compare noise/latency of raw vs PLL-tracked angle. Implement speed esti
+ mate from PLL. Deliverable: PLL module + noise comparison plot\\n\\nConti
+ nued from Thursday evening.
+CATEGORIES:FOC - Lab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:60bb1761-1a0d-4616-8986-fadf973fa1fd@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260613T130000
+DTEND;TZID=America/New_York:20260613T153000
+SUMMARY:💻 MES Wk11: Homework
+DESCRIPTION:MES HW10: SPI sensor driver - read and log data
+CATEGORIES:MES - Homework
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:69a5d609-d1de-450f-ac7e-dc3288c7d69e@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260613T163000
+DTEND;TZID=America/New_York:20260613T190000
+SUMMARY:💻 BMC Wk11: Homework
+DESCRIPTION:BMC HW10: DMA circular buffer for ADC and profile CPU savings
+CATEGORIES:BMC - Homework
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:dc532946-d081-43e5-881f-c5db7861a8b5@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260613T193000
+DTEND;TZID=America/New_York:20260613T213000
+SUMMARY:🛠️ MES Wk11: Project Work
+DESCRIPTION:MES PROJECT 1 DUE: Finalize sensor logger. Submit source code 
+ and linker script and .map analysis and 1-page design doc
+CATEGORIES:MES - Project
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:d9860772-9e07-425f-84c0-8cb49ed4a388@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260614T090000
+DTEND;TZID=America/New_York:20260614T110000
+SUMMARY:🔬 FOC Wk11: Lab Review & Documentation
+DESCRIPTION:Review FOC lab work from this week. Clean up code and document
+  findings and prepare deliverable.\\n\\nTopic: PLL-Based Speed & Angle Tr
+ acking
+CATEGORIES:FOC - Lab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:71fa6871-63a3-4418-9e01-b05632365c03@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260614T130000
+DTEND;TZID=America/New_York:20260614T153000
+SUMMARY:📝 Wk11: Catch-up & Submission Prep
+DESCRIPTION:Finish incomplete HW or lab work.\\n\\nMES: Communicating: SPI
+  I2C and Protocol Layers\\nBMC: DMA: Memory-to-Memory and Peripheral Tran
+ sfers\\nFOC: PLL-Based Speed & Angle Tracking\\n\\nWrite reflections (3-5
+  sentences each). Package submissions with README.
+CATEGORIES:All Courses - Review
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:e251cf4f-d80d-46f8-aef2-06f9cc19fcc2@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260614T210000
+DTEND;TZID=America/New_York:20260614T213000
+SUMMARY:⏰ Week 11 SUBMISSIONS DUE
+DESCRIPTION:All Week 11 deliverables due tonight.\\n\\nMES: MES HW10: SPI 
+ sensor driver - read and log data\\nBMC: BMC HW10: DMA circular buffer fo
+ r ADC and profile CPU savings\\nFOC: FOC Lab 11: Replace raw atan2 with t
+ racking PLL on SMO outputs. Compare noise/latency of raw vs PLL-tracked a
+ ngle. Implement speed estimate from PLL. Deliverable: PLL module + noise 
+ comparison plot
+CATEGORIES:All Courses - Deadline
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:5c19813f-fb81-4656-b291-3d122fb077f9@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260615T190000
+DTEND;TZID=America/New_York:20260615T210000
+SUMMARY:📖 FOC Wk12: Open-Loop Startup & Observer Handoff (PROJECT 2 DU
+DESCRIPTION:Read Krishnan Ch. 9: startup strategies + ST AN4220 Sec. 6\\n\
+ \nTopic: Open-Loop Startup & Observer Handoff (PROJECT 2 DUE)
+CATEGORIES:FOC - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:053f41af-38d7-46e9-baab-0aff71723062@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260616T190000
+DTEND;TZID=America/New_York:20260616T205000
+SUMMARY:📖 MES Wk12: Debugging: JTAG Logging and Profiling
+DESCRIPTION:Read Making Embedded Systems Ch. 11 (pp. 331-360)\\n\\nTopic: 
+ Debugging: JTAG Logging and Profiling
+CATEGORIES:MES - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:b4912e9c-23fc-4d31-89d1-b477d603d63a@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260617T190000
+DTEND;TZID=America/New_York:20260617T210000
+SUMMARY:📖 BMC Wk12: ADC & DAC: Sampling Oversampling Noise
+DESCRIPTION:Read Bare-Metal Embedded C Ch. 12 (pp. 366-398)\\n\\nTopic: AD
+ C & DAC: Sampling Oversampling Noise
+CATEGORIES:BMC - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:dc062c9d-2a7f-42c7-802b-dd1e987591c5@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260618T190000
+DTEND;TZID=America/New_York:20260618T220000
+SUMMARY:🔬 FOC Wk12: Lab Part 1
+DESCRIPTION:FOC Lab 12 / Project 2 Due: Implement align then V/f ramp then
+  SMO handoff sequence. Verify smooth handoff at threshold speed. Characte
+ rize minimum handoff speed. Deliverable: Sensorless observer stack end-to
+ -end + startup video + handoff plot\\n\\nEvening session. Continues Satur
+ day morning.
+CATEGORIES:FOC - Lab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:511f29c8-58ae-4489-93f6-d975e54a8328@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260619T190000
+DTEND;TZID=America/New_York:20260619T210000
+SUMMARY:💻 MES Wk12: Start Homework
+DESCRIPTION:MES HW11: Instrument code with cycle counter and profile ISR l
+ atency
+CATEGORIES:MES - Homework
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:31f41d27-59c0-4c93-83c0-e7e43c2e1d38@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260620T090000
+DTEND;TZID=America/New_York:20260620T103000
+SUMMARY:🔬 FOC Wk12: Lab Part 2
+DESCRIPTION:FOC Lab 12 / Project 2 Due: Implement align then V/f ramp then
+  SMO handoff sequence. Verify smooth handoff at threshold speed. Characte
+ rize minimum handoff speed. Deliverable: Sensorless observer stack end-to
+ -end + startup video + handoff plot\\n\\nContinued from Thursday evening.
+CATEGORIES:FOC - Lab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:fa3d799e-3832-453d-b521-1dc14f4acb61@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260620T130000
+DTEND;TZID=America/New_York:20260620T153000
+SUMMARY:💻 MES Wk12: Homework
+DESCRIPTION:MES HW11: Instrument code with cycle counter and profile ISR l
+ atency
+CATEGORIES:MES - Homework
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:336a41f1-2695-4765-b02a-764a27c9a96f@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260620T163000
+DTEND;TZID=America/New_York:20260620T190000
+SUMMARY:💻 BMC Wk12: Homework
+DESCRIPTION:BMC HW11: Sample analog input at Nyquist and plot in Python/MA
+ TLAB
+CATEGORIES:BMC - Homework
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:a86e941b-e0ff-452d-b3b2-7315e66da8cb@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260621T090000
+DTEND;TZID=America/New_York:20260621T110000
+SUMMARY:🔬 FOC Wk12: Lab Review & Documentation
+DESCRIPTION:Review FOC lab work from this week. Clean up code and document
+  findings and prepare deliverable.\\n\\nTopic: Open-Loop Startup & Observ
+ er Handoff (PROJECT 2 DUE)
+CATEGORIES:FOC - Lab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:c2bd2d27-c49b-4746-b203-3e07395768c4@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260621T130000
+DTEND;TZID=America/New_York:20260621T153000
+SUMMARY:📝 Wk12: Catch-up & Submission Prep
+DESCRIPTION:Finish incomplete HW or lab work.\\n\\nMES: Debugging: JTAG Lo
+ gging and Profiling\\nBMC: ADC & DAC: Sampling Oversampling Noise\\nFOC: 
+ Open-Loop Startup & Observer Handoff (PROJECT 2 DUE)\\n\\nWrite reflectio
+ ns (3-5 sentences each). Package submissions with README.
+CATEGORIES:All Courses - Review
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:9ec0f61a-a8ac-4db1-a222-86d18f5ce464@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260621T210000
+DTEND;TZID=America/New_York:20260621T213000
+SUMMARY:⏰ Week 12 SUBMISSIONS DUE
+DESCRIPTION:All Week 12 deliverables due tonight.\\n\\nMES: MES HW11: Inst
+ rument code with cycle counter and profile ISR latency\\nBMC: BMC HW11: S
+ ample analog input at Nyquist and plot in Python/MATLAB\\nFOC: FOC Lab 12
+  / Project 2 Due: Implement align then V/f ramp then SMO handoff sequence
+ . Verify smooth handoff at threshold speed. Characterize minimum handoff 
+ speed. Deliverable: Sensorless observer stack end-to-end + startup video 
+ + handoff plot
+CATEGORIES:All Courses - Deadline
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:ad57aa36-f82f-4f42-b922-a668c3f9a12f@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260622T190000
+DTEND;TZID=America/New_York:20260622T210000
+SUMMARY:📖 FOC Wk13: Outer Speed Controller (PROJECT 3 START)
+DESCRIPTION:Read Krishnan Ch. 9: speed loop design and bandwidth separatio
+ n and reference ramping\\n\\nTopic: Outer Speed Controller (PROJECT 3 STA
+ RT)
+CATEGORIES:FOC - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:e402bb74-7d36-4dad-8b4a-7ea2a3299d75@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260623T190000
+DTEND;TZID=America/New_York:20260623T205000
+SUMMARY:📖 MES Wk13: Connecting: Networking & Wireless Basics
+DESCRIPTION:Read Making Embedded Systems Ch. 12 (pp. 361-390)\\n\\nTopic: 
+ Connecting: Networking & Wireless Basics
+CATEGORIES:MES - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:4eacc159-19cb-43db-b75d-6d463f34baaf@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260624T190000
+DTEND;TZID=America/New_York:20260624T205000
+SUMMARY:📖 BMC Wk13: Power Management: Sleep Stop Standby Modes
+DESCRIPTION:Read Bare-Metal Embedded C Ch. 13 (pp. 399-428)\\n\\nTopic: Po
+ wer Management: Sleep Stop Standby Modes
+CATEGORIES:BMC - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:f9d14298-9aa1-4781-a10a-226827bb2579@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260625T190000
+DTEND;TZID=America/New_York:20260625T220000
+SUMMARY:🔬 FOC Wk13: Lab Part 1
+DESCRIPTION:FOC Lab 13 / Project 3 Start: Implement speed PI loop feeding 
+ Iq reference. Tune for 10:1 bandwidth separation from current loop. Add s
+ peed ramp. Test step response 10%-100% rated speed. Deliverable: Speed co
+ ntroller C module + step response capture\\n\\nEvening session. Continues
+  Saturday morning.
+CATEGORIES:FOC - Lab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:b5608110-8be8-4fd1-8e42-7489741568bc@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260626T190000
+DTEND;TZID=America/New_York:20260626T210000
+SUMMARY:💻 MES Wk13: Start Homework
+DESCRIPTION:MES HW12: Survey wireless options and write design trade-off m
+ emo
+CATEGORIES:MES - Homework
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:9f32a1ed-deb2-4408-96e8-5a439165d352@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260627T090000
+DTEND;TZID=America/New_York:20260627T100000
+SUMMARY:🔬 FOC Wk13: Lab Part 2
+DESCRIPTION:FOC Lab 13 / Project 3 Start: Implement speed PI loop feeding 
+ Iq reference. Tune for 10:1 bandwidth separation from current loop. Add s
+ peed ramp. Test step response 10%-100% rated speed. Deliverable: Speed co
+ ntroller C module + step response capture\\n\\nContinued from Thursday ev
+ ening.
+CATEGORIES:FOC - Lab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:cf5ea927-cf44-4bfd-9da5-08615cb889c7@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260627T130000
+DTEND;TZID=America/New_York:20260627T150000
+SUMMARY:💻 MES Wk13: Homework
+DESCRIPTION:MES HW12: Survey wireless options and write design trade-off m
+ emo
+CATEGORIES:MES - Homework
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:582c3946-400f-4865-8cd3-2d6dd956d346@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260627T163000
+DTEND;TZID=America/New_York:20260627T183000
+SUMMARY:💻 BMC Wk13: Homework
+DESCRIPTION:BMC HW12: Measure current in each power mode with bench meter
+CATEGORIES:BMC - Homework
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:8fd1abbd-406f-42ed-8c79-1c6c4b3b1f01@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260628T090000
+DTEND;TZID=America/New_York:20260628T110000
+SUMMARY:🔬 FOC Wk13: Lab Review & Documentation
+DESCRIPTION:Review FOC lab work from this week. Clean up code and document
+  findings and prepare deliverable.\\n\\nTopic: Outer Speed Controller (PR
+ OJECT 3 START)
+CATEGORIES:FOC - Lab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:6c5c8102-b475-4aea-aee6-d4908633631b@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260628T130000
+DTEND;TZID=America/New_York:20260628T153000
+SUMMARY:📝 Wk13: Catch-up & Submission Prep
+DESCRIPTION:Finish incomplete HW or lab work.\\n\\nMES: Connecting: Networ
+ king & Wireless Basics\\nBMC: Power Management: Sleep Stop Standby Modes\
+ \nFOC: Outer Speed Controller (PROJECT 3 START)\\n\\nWrite reflections (3
+ -5 sentences each). Package submissions with README.
+CATEGORIES:All Courses - Review
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:7542000f-2809-40b5-9125-9d91894dd298@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260628T210000
+DTEND;TZID=America/New_York:20260628T213000
+SUMMARY:⏰ Week 13 SUBMISSIONS DUE
+DESCRIPTION:All Week 13 deliverables due tonight.\\n\\nMES: MES HW12: Surv
+ ey wireless options and write design trade-off memo\\nBMC: BMC HW12: Meas
+ ure current in each power mode with bench meter\\nFOC: FOC Lab 13 / Proje
+ ct 3 Start: Implement speed PI loop feeding Iq reference. Tune for 10:1 b
+ andwidth separation from current loop. Add speed ramp. Test step response
+  10%-100% rated speed. Deliverable: Speed controller C module + step resp
+ onse capture
+CATEGORIES:All Courses - Deadline
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:fb7c4207-adbf-4151-93dd-3293c6df7f18@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260629T190000
+DTEND;TZID=America/New_York:20260629T210000
+SUMMARY:📖 FOC Wk14: Fault Handling & Protection
+DESCRIPTION:Read Krishnan Ch. 10 (drive protection) + DRV8323RS datasheet 
+ Sec. 8\\n\\nTopic: Fault Handling & Protection
+CATEGORIES:FOC - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:2979e69d-4406-488c-80f2-c756d7150cbc@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260630T190000
+DTEND;TZID=America/New_York:20260630T205000
+SUMMARY:📖 MES Wk14: Design Patterns in Embedded C
+DESCRIPTION:Read Making Embedded Systems Ch. 13 (pp. 391-420)\\n\\nTopic: 
+ Design Patterns in Embedded C
+CATEGORIES:MES - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:6d7073ad-8b71-429a-8372-da2b484bd3d4@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260701T190000
+DTEND;TZID=America/New_York:20260701T210000
+SUMMARY:📖 BMC Wk14: Bare-Metal Bootloader Design
+DESCRIPTION:Read Bare-Metal Embedded C Ch. 14 (pp. 429-460)\\n\\nTopic: Ba
+ re-Metal Bootloader Design
+CATEGORIES:BMC - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:19d8c5f6-98c0-44d2-8c3e-a976996aea7d@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260702T190000
+DTEND;TZID=America/New_York:20260702T220000
+SUMMARY:🔬 FOC Wk14: Lab Part 1
+DESCRIPTION:FOC Lab 14: Implement fault state machine. Overcurrent (nFAULT
+ ) and overvoltage (ADC monitor) and stall detection (speed estimate dropo
+ ut). Test each fault path. Deliverable: Fault handler C module + fault in
+ jection test results\\n\\nEvening session. Continues Saturday morning.
+CATEGORIES:FOC - Lab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:7dc793d1-9e6e-49cb-9d15-6eae93fb9761@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260703T190000
+DTEND;TZID=America/New_York:20260703T210000
+SUMMARY:💻 MES Wk14: Start Homework
+DESCRIPTION:MES HW13: Apply observer pattern to sensor/display subsystem
+CATEGORIES:MES - Homework
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:3d391223-ec90-487a-aefa-004934ff6fc5@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260704T090000
+DTEND;TZID=America/New_York:20260704T093000
+SUMMARY:🔬 FOC Wk14: Lab Part 2
+DESCRIPTION:FOC Lab 14: Implement fault state machine. Overcurrent (nFAULT
+ ) and overvoltage (ADC monitor) and stall detection (speed estimate dropo
+ ut). Test each fault path. Deliverable: Fault handler C module + fault in
+ jection test results\\n\\nContinued from Thursday evening.
+CATEGORIES:FOC - Lab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:1d01ec41-ebb1-41b0-bc04-307bf3b05e3e@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260704T130000
+DTEND;TZID=America/New_York:20260704T153000
+SUMMARY:💻 MES Wk14: Homework
+DESCRIPTION:MES HW13: Apply observer pattern to sensor/display subsystem
+CATEGORIES:MES - Homework
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:e16f6071-cebe-412a-9c6c-d4dc3aa3ae90@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260704T163000
+DTEND;TZID=America/New_York:20260704T190000
+SUMMARY:💻 BMC Wk14: Homework
+DESCRIPTION:BMC HW13: Implement a minimal UART bootloader and flash image 
+ over serial
+CATEGORIES:BMC - Homework
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:734c60b5-69fd-4350-9b96-10d7d9c202a5@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260704T193000
+DTEND;TZID=America/New_York:20260704T210000
+SUMMARY:🛠️ MES Wk14: Project Work
+DESCRIPTION:MES Project 2 Design: RTOS-Based Control Application - begin a
+ rchitecture
+CATEGORIES:MES - Project
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:b8171169-65dd-41a5-ab4a-e08a79bca049@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260705T090000
+DTEND;TZID=America/New_York:20260705T110000
+SUMMARY:🔬 FOC Wk14: Lab Review & Documentation
+DESCRIPTION:Review FOC lab work from this week. Clean up code and document
+  findings and prepare deliverable.\\n\\nTopic: Fault Handling & Protection
+CATEGORIES:FOC - Lab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:38aa3ee2-4393-49c1-935b-3e0152c5d4ee@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260705T130000
+DTEND;TZID=America/New_York:20260705T153000
+SUMMARY:📝 Wk14: Catch-up & Submission Prep
+DESCRIPTION:Finish incomplete HW or lab work.\\n\\nMES: Design Patterns in
+  Embedded C\\nBMC: Bare-Metal Bootloader Design\\nFOC: Fault Handling & P
+ rotection\\n\\nWrite reflections (3-5 sentences each). Package submission
+ s with README.
+CATEGORIES:All Courses - Review
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:a7c88eb3-141b-4ebe-ac84-2c35afd9bd6c@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260705T210000
+DTEND;TZID=America/New_York:20260705T213000
+SUMMARY:⏰ Week 14 SUBMISSIONS DUE
+DESCRIPTION:All Week 14 deliverables due tonight.\\n\\nMES: MES HW13: Appl
+ y observer pattern to sensor/display subsystem\\nBMC: BMC HW13: Implement
+  a minimal UART bootloader and flash image over serial\\nFOC: FOC Lab 14:
+  Implement fault state machine. Overcurrent (nFAULT) and overvoltage (ADC
+  monitor) and stall detection (speed estimate dropout). Test each fault p
+ ath. Deliverable: Fault handler C module + fault injection test results
+CATEGORIES:All Courses - Deadline
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:ff052389-e1ee-4622-9d9e-ea432c8355c1@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260706T190000
+DTEND;TZID=America/New_York:20260706T210000
+SUMMARY:📖 FOC Wk15: System Integration & Tuning
+DESCRIPTION:Read Krishnan Ch. 11: complete system commissioning + review a
+ ll AN references\\n\\nTopic: System Integration & Tuning
+CATEGORIES:FOC - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:535c3d50-6f46-4cb6-b39b-2054e1c217ba@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260707T190000
+DTEND;TZID=America/New_York:20260707T205000
+SUMMARY:📖 MES Wk15: Production Readiness: Testing MISRA & Code Quality
+DESCRIPTION:Read Making Embedded Systems Ch. 14 (pp. 421-450)\\n\\nTopic: 
+ Production Readiness: Testing MISRA & Code Quality
+CATEGORIES:MES - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:b77587ce-17eb-4001-adbd-9dc8d4f80d33@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260708T190000
+DTEND;TZID=America/New_York:20260708T205000
+SUMMARY:📖 BMC Wk15: Testing Bare-Metal Code: Unity Mocks HIL
+DESCRIPTION:Read Bare-Metal Embedded C Ch. 15 (pp. 461-490)\\n\\nTopic: Te
+ sting Bare-Metal Code: Unity Mocks HIL
+CATEGORIES:BMC - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:a5d5b085-dbfe-46e0-8001-e53b02305ef7@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260709T190000
+DTEND;TZID=America/New_York:20260709T220000
+SUMMARY:🔬 FOC Wk15: Lab Part 1
+DESCRIPTION:FOC Lab 15: Full-stack integration. Startup then sensorless th
+ en speed control then fault handling. Characterize speed regulation vs lo
+ ad. Optimize ISR execution time. Deliverable: Integrated firmware build +
+  timing analysis report\\n\\nEvening session. Continues Saturday morning.
+CATEGORIES:FOC - Lab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:213c91ae-79e1-4c78-88e5-0e82200f5c02@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260710T190000
+DTEND;TZID=America/New_York:20260710T210000
+SUMMARY:💻 MES Wk15: Start Homework
+DESCRIPTION:MES HW14: Static analysis run - document and fix 5 findings
+CATEGORIES:MES - Homework
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:8b175a39-7554-46df-bd4b-7cc9f36b6506@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260711T090000
+DTEND;TZID=America/New_York:20260711T103000
+SUMMARY:🔬 FOC Wk15: Lab Part 2
+DESCRIPTION:FOC Lab 15: Full-stack integration. Startup then sensorless th
+ en speed control then fault handling. Characterize speed regulation vs lo
+ ad. Optimize ISR execution time. Deliverable: Integrated firmware build +
+  timing analysis report\\n\\nContinued from Thursday evening.
+CATEGORIES:FOC - Lab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:3dc48e17-f6c6-404c-84fb-58dd6b2a7532@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260711T130000
+DTEND;TZID=America/New_York:20260711T153000
+SUMMARY:💻 MES Wk15: Homework
+DESCRIPTION:MES HW14: Static analysis run - document and fix 5 findings
+CATEGORIES:MES - Homework
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:bba7ed5f-b520-4c42-aa8d-008cedc7fb40@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260711T163000
+DTEND;TZID=America/New_York:20260711T190000
+SUMMARY:💻 BMC Wk15: Homework
+DESCRIPTION:BMC HW14: Write unit tests for a driver module using Unity fra
+ mework
+CATEGORIES:BMC - Homework
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:fdc3a638-f846-46be-8d60-6f292b7d131e@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260711T193000
+DTEND;TZID=America/New_York:20260711T213000
+SUMMARY:🛠️ MES Wk15: Project Work
+DESCRIPTION:MES Project 2 Work: Multi-task RTOS system with sensor acquisi
+ tion and processing and output control
+CATEGORIES:MES - Project
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:e7f54b36-944f-4821-87ad-80026432f97c@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260712T090000
+DTEND;TZID=America/New_York:20260712T110000
+SUMMARY:🔬 FOC Wk15: Lab Review & Documentation
+DESCRIPTION:Review FOC lab work from this week. Clean up code and document
+  findings and prepare deliverable.\\n\\nTopic: System Integration & Tuning
+CATEGORIES:FOC - Lab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:48e68353-27ca-432a-b678-6ca980cd7bf4@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260712T130000
+DTEND;TZID=America/New_York:20260712T153000
+SUMMARY:📝 Wk15: Catch-up & Submission Prep
+DESCRIPTION:Finish incomplete HW or lab work.\\n\\nMES: Production Readine
+ ss: Testing MISRA & Code Quality\\nBMC: Testing Bare-Metal Code: Unity Mo
+ cks HIL\\nFOC: System Integration & Tuning\\n\\nWrite reflections (3-5 se
+ ntences each). Package submissions with README.
+CATEGORIES:All Courses - Review
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:a1b70737-8c32-455c-9391-c2e14c410c39@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260712T210000
+DTEND;TZID=America/New_York:20260712T213000
+SUMMARY:⏰ Week 15 SUBMISSIONS DUE
+DESCRIPTION:All Week 15 deliverables due tonight.\\n\\nMES: MES HW14: Stat
+ ic analysis run - document and fix 5 findings\\nBMC: BMC HW14: Write unit
+  tests for a driver module using Unity framework\\nFOC: FOC Lab 15: Full-
+ stack integration. Startup then sensorless then speed control then fault 
+ handling. Characterize speed regulation vs load. Optimize ISR execution t
+ ime. Deliverable: Integrated firmware build + timing analysis report
+CATEGORIES:All Courses - Deadline
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:ae211052-0477-44ed-ad07-4ccc94110e3b@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260713T190000
+DTEND;TZID=America/New_York:20260713T203000
+SUMMARY:📖 FOC Wk16: Final Project Demo & Documentation (PROJECT 3 DUE)
+DESCRIPTION:Review all course notes and AN references\\n\\nTopic: Final Pr
+ oject Demo & Documentation (PROJECT 3 DUE)
+CATEGORIES:FOC - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:11fe1b74-8fe0-49af-b93a-47bdae2fcec9@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260714T190000
+DTEND;TZID=America/New_York:20260714T203000
+SUMMARY:📖 MES Wk16: Final Review & Project 2 Presentations
+DESCRIPTION:Review all Making Embedded Systems chapters\\n\\nTopic: Final 
+ Review & Project 2 Presentations
+CATEGORIES:MES - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:11b52e12-4e5d-4261-8996-095e37a1114b@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260715T190000
+DTEND;TZID=America/New_York:20260715T203000
+SUMMARY:📖 BMC Wk16: Capstone Review & Project 2 Presentations
+DESCRIPTION:Review all Bare-Metal Embedded C chapters\\n\\nTopic: Capstone
+  Review & Project 2 Presentations
+CATEGORIES:BMC - Reading
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:65824a10-a891-44d5-8f90-1d308a02b328@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260716T190000
+DTEND;TZID=America/New_York:20260716T220000
+SUMMARY:🔬 FOC Wk16: Lab Part 1
+DESCRIPTION:FOC PROJECT 3 DUE (FINAL): Demo commanded speed sweep 10%-100%
+  rated speed with simulated load and fault recovery. Record video. Delive
+ rable: Final firmware repo + technical write-up + demo video\\n\\nEvening
+  session. Continues Saturday morning.
+CATEGORIES:FOC - Lab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:4923265a-e130-4388-8e82-2b1bbe2c7cab@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260717T190000
+DTEND;TZID=America/New_York:20260717T203000
+SUMMARY:📝 Wk16: Review & Planning
+DESCRIPTION:Review week progress and plan weekend work sessions
+CATEGORIES:All Courses - Review
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:b8cb3181-acc8-49e6-b727-2763841f5b95@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260718T090000
+DTEND;TZID=America/New_York:20260718T113000
+SUMMARY:🔬 FOC Wk16: Lab Part 2
+DESCRIPTION:FOC PROJECT 3 DUE (FINAL): Demo commanded speed sweep 10%-100%
+  rated speed with simulated load and fault recovery. Record video. Delive
+ rable: Final firmware repo + technical write-up + demo video\\n\\nContinu
+ ed from Thursday evening.
+CATEGORIES:FOC - Lab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:1c7cf7f7-3292-4002-bc97-3a9aa1f37651@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260718T130000
+DTEND;TZID=America/New_York:20260718T160000
+SUMMARY:🛠️ MES Wk16: Project Work
+DESCRIPTION:MES PROJECT 2 DUE: Full source and test plan and profiling rep
+ ort and demo/video walkthrough
+CATEGORIES:MES - Project
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:ec9f1040-9cd2-4208-bcef-dd0a4e1f2949@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260718T163000
+DTEND;TZID=America/New_York:20260718T193000
+SUMMARY:🛠️ BMC Wk16: Project Work
+DESCRIPTION:BMC PROJECT 2 DUE: Source code and memory map and timing diagr
+ ams and ISR latency measurement and demo video
+CATEGORIES:BMC - Project
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:82c8e1b5-28dc-4b7f-9144-3a76d12114d0@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260719T090000
+DTEND;TZID=America/New_York:20260719T110000
+SUMMARY:🔬 FOC Wk16: Lab Review & Documentation
+DESCRIPTION:Review FOC lab work from this week. Clean up code and document
+  findings and prepare deliverable.\\n\\nTopic: Final Project Demo & Docum
+ entation (PROJECT 3 DUE)
+CATEGORIES:FOC - Lab
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:c3917c80-886a-4aee-ba7c-937e4471755b@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260719T130000
+DTEND;TZID=America/New_York:20260719T153000
+SUMMARY:📝 Wk16: Catch-up & Submission Prep
+DESCRIPTION:Finish incomplete HW or lab work.\\n\\nMES: Final Review & Pro
+ ject 2 Presentations\\nBMC: Capstone Review & Project 2 Presentations\\nF
+ OC: Final Project Demo & Documentation (PROJECT 3 DUE)\\n\\nWrite reflect
+ ions (3-5 sentences each). Package submissions with README.
+CATEGORIES:All Courses - Review
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:bc3b3357-257a-4e1e-aa63-c7e47252d23b@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260719T210000
+DTEND;TZID=America/New_York:20260719T213000
+SUMMARY:⏰ Week 16 SUBMISSIONS DUE
+DESCRIPTION:All Week 16 deliverables due tonight.\\n\\nMES: MES PROJECT 2 
+ DUE: Full source and test plan and profiling report and demo/video walkth
+ rough\\nBMC: BMC PROJECT 2 DUE: Source code and memory map and timing dia
+ grams and ISR latency measurement and demo video\\nFOC: FOC PROJECT 3 DUE
+  (FINAL): Demo commanded speed sweep 10%-100% rated speed with simulated 
+ load and fault recovery. Record video. Deliverable: Final firmware repo +
+  technical write-up + demo video
+CATEGORIES:All Courses - Deadline
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:06eb0f9f-3bc7-4f46-a5ef-0ac281f5578a@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260504T190000
+DTEND;TZID=America/New_York:20260504T191500
+SUMMARY:🚀 MES Project 1 Kickoff
+DESCRIPTION:Interrupt-Driven Sensor Logger begins. Review spec and start d
+ esign doc.
+CATEGORIES:MES - Project
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:362ca497-fefe-4e18-b5f2-77b4b89e1656@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260525T190000
+DTEND;TZID=America/New_York:20260525T191500
+SUMMARY:📦 MES Project 1 Due This Week
+DESCRIPTION:Finalize sensor logger. Source + linker + .map + design doc.
+CATEGORIES:MES - Project
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:3c238794-6a5f-46d7-900a-19ce55ec908c@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260504T193000
+DTEND;TZID=America/New_York:20260504T194500
+SUMMARY:🚀 BMC Project 1 Kickoff
+DESCRIPTION:Register-Level Peripheral Stack begins. No HAL allowed.
+CATEGORIES:BMC - Project
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:f5ba6e07-a6b4-4f50-98ec-3f368ce721ad@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260525T193000
+DTEND;TZID=America/New_York:20260525T194500
+SUMMARY:📦 BMC Project 1 Due This Week
+DESCRIPTION:Finalize peripheral stack. Source + startup + scope captures.
+CATEGORIES:BMC - Project
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:618b91d2-0650-4a9f-a8f9-4edc69a3ef84@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260427T190000
+DTEND;TZID=America/New_York:20260427T191500
+SUMMARY:🚀 FOC Project 1 Starts (Wk5)
+DESCRIPTION:Current Sensing & FOC Current Loop. Build lower half of FOC st
+ ack.
+CATEGORIES:FOC - Project
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:d312168b-01f8-4255-898d-8b904e5af5dc@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260518T190000
+DTEND;TZID=America/New_York:20260518T191500
+SUMMARY:📦 FOC Project 1 Due (Wk8)
+DESCRIPTION:Current control stack must be running on hardware.
+CATEGORIES:FOC - Project
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:3566568f-5a92-41f1-98e4-657f8bcfaae8@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260525T190000
+DTEND;TZID=America/New_York:20260525T191500
+SUMMARY:🚀 FOC Project 2 Starts (Wk9)
+DESCRIPTION:Sensorless Observer Stack. SMO + PLL implementation.
+CATEGORIES:FOC - Project
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:fa81601a-aa25-4d07-82e0-e11b0c125d1c@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260615T190000
+DTEND;TZID=America/New_York:20260615T191500
+SUMMARY:📦 FOC Project 2 Due (Wk12)
+DESCRIPTION:Sensorless observer end-to-end with startup sequence.
+CATEGORIES:FOC - Project
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:ff958656-8cc1-44af-ad28-281e9e3fafd1@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260622T190000
+DTEND;TZID=America/New_York:20260622T191500
+SUMMARY:🚀 FOC Project 3 Starts (Wk13)
+DESCRIPTION:Complete Sensorless FOC Drive. Final integration.
+CATEGORIES:FOC - Project
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:f1898340-517b-4e67-afae-ac193d666853@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260713T190000
+DTEND;TZID=America/New_York:20260713T191500
+SUMMARY:📦 FOC Project 3 / FINAL Due (Wk16)
+DESCRIPTION:Final demo: speed sweep + load + fault recovery + video.
+CATEGORIES:FOC - Project
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:2d2ce299-ce70-4781-98c3-42a2d5c56611@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260706T190000
+DTEND;TZID=America/New_York:20260706T191500
+SUMMARY:🚀 MES Project 2 Work Begins
+DESCRIPTION:RTOS-Based Control Application.
+CATEGORIES:MES - Project
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:5e542a73-5946-4449-aa98-92005bcf631d@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260713T193000
+DTEND;TZID=America/New_York:20260713T194500
+SUMMARY:📦 MES Project 2 FINAL Due
+DESCRIPTION:Full source + test plan + profiling report + demo.
+CATEGORIES:MES - Project
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:39e48b09-5df3-4ba0-86e1-ffa4b81dabf1@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260706T193000
+DTEND;TZID=America/New_York:20260706T194500
+SUMMARY:🚀 BMC Project 2 Work Begins
+DESCRIPTION:FOC-Ready Motor Control Framework.
+CATEGORIES:BMC - Project
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
+UID:8f98d976-2b2d-43e8-adb4-bc0b038d62f9@courses.self-study
+DTSTAMP:20260410T220000Z
+DTSTART;TZID=America/New_York:20260713T200000
+DTEND;TZID=America/New_York:20260713T201500
+SUMMARY:📦 BMC Project 2 FINAL Due
+DESCRIPTION:Source + memory map + timing + ISR latency + demo video.
+CATEGORIES:BMC - Project
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR
