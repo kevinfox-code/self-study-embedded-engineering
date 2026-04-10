@@ -4,7 +4,7 @@
 
 This repository contains content created with AI assistance.
 
-Per maintainer request, portions of repository content are identified as generated or drafted with Anthropic Claude. Additional edits and refinements may have been made using other AI tools and by the repository maintainer.
+Per maintainer request, portions of repository content were generated or drafted with Anthropic Claude. Additional edits and refinements may have been made using other AI tools and by the repository maintainer.
 
 Use this repository with the understanding that AI-generated text may contain mistakes or omissions and should be reviewed before production or academic submission.
 
