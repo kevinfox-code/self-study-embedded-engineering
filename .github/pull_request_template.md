@@ -25,7 +25,7 @@ If AI assistance was used, specify tool(s) and scope:
 - [ ] I confirm this contribution is original, public domain, or properly licensed for redistribution.
 - [ ] I did not add copyrighted third-party content without rights.
 - [ ] I preserved required attributions and notices.
-- [ ] I reviewed LICENSE and NOTICE for consistency.
+- [ ] I reviewed LICENSE and NOTICE.md for consistency.
 
 ## Naming And Structure Checklist
 
