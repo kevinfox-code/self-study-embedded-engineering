@@ -3,3 +3,8 @@
 
 # Local reference material (keep private/local unless intentionally versioned)
 ECE-452/*.pdf
+ESE-311/*.pdf
+
+# STM32CubeIDE / CubeMX build outputs
+ESE-311/Week2/RegisterManipulation/Debug/
+ESE-311/Week2/RegisterManipulation/Release/
