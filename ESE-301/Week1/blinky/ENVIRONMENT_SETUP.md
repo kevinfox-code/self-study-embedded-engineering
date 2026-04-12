@@ -23,7 +23,11 @@ This project references environment variables in VS Code debug settings and tool
 
 - `GCC_TOOLCHAIN_ROOT`
   - Used by:
-    - `cmake/starm-clang.cmake` (`--gcc-toolchain` root)
+    - `cmake/starm-clang.cmake` (`--gcc-toolchain="$ENV{GCC_TOOLCHAIN_ROOT}/.."`)
+  - Set this to the GCC toolchain `bin` directory, not the toolchain root directory itself.
+  - Example:
+    - macOS: `$CUBE_BUNDLE_PATH/gnu-tools-for-stm32/14.3.1+st.2/bin`
+    - Windows: `%CUBE_BUNDLE_PATH%\gnu-tools-for-stm32\14.3.1+st.2\bin`
 
 ## Recommended Values
 
