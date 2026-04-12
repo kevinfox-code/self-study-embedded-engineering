@@ -389,7 +389,7 @@ Re-read the *"Driver Interface: Open, Close, Read, Write, IOCTL"* and *"Adapter 
 
 [^10]: https://www.oreilly.com/library/view/making-embedded-systems/9781449308889/ch02.html
 
-[^11]: https://www.reddit.com/r/Scholar/comments/1hy88cm/book_making_embedded_systems_2nd_edition_2024_by/
+[^11]: https://www.oreilly.com/library/view/making-embedded-systems/9781098151539/
 
 [^12]: https://www.youtube.com/watch?v=S0ODfxXe2UU
 
