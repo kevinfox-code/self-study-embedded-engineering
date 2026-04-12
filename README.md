@@ -15,6 +15,10 @@ The repository is organized for traceability and professional documentation stan
 - [ECE-452](ECE-452): Electric motor drives and field-oriented control
 - [embedded-engineering-course-schedule.ics](embedded-engineering-course-schedule.ics): course calendar
 
+## Environment Setup
+
+- [ESE-301/Week1/blinky/ESE-301_Environment-Setup.md](ESE-301/Week1/blinky/ESE-301_Environment-Setup.md): environment variable setup for STM32CubeIDE tools (macOS + Windows + Linux)
+
 ## Course Syllabus Files
 
 The current syllabus documents are stored as Word (`.docx`) files. If they do not preview well in your browser, download and open them in Microsoft Word or LibreOffice. For easier review in pull requests, prefer exporting syllabus updates to PDF or Markdown alongside the `.docx` source when possible.
