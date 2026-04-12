@@ -47,7 +47,7 @@ Adjust version folder names to match what is installed on each machine.
 
 ## Set Variables Persistently
 
-## macOS (zsh)
+### macOS (zsh)
 
 Append these lines to `~/.zshrc`:
 
