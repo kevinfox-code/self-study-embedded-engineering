@@ -371,7 +371,7 @@ Re-read the *"Driver Interface: Open, Close, Read, Write, IOCTL"* and *"Adapter 
 
 [^1]: https://www.oreilly.com/library/view/making-embedded-systems/9781098151539/ch02.html
 
-[^2]: https://pdfcoffee.com/elecia-white-ox27reilly-making-embedded-systems-2011-pdf-free.html
+[^2]: https://www.oreilly.com/library/view/making-embedded-systems/9781098151539/
 
 [^3]: https://github.com/eleciawhite/making-embedded-systems/blob/main/Ch02_Architecture/README.md
 
@@ -382,8 +382,6 @@ Re-read the *"Driver Interface: Open, Close, Read, Write, IOCTL"* and *"Adapter 
 [^6]: https://api.pageplace.de/preview/DT0400.9781098151515_A49445162/preview-9781098151515_A49445162.pdf
 
 [^7]: https://www.geeksforgeeks.org/system-design/design-patterns-for-embedded-systems-in-c/
-
-[^8]: https://www.scribd.com/document/392049040/Making-Embedded-Systems
 
 [^9]: https://stackoverflow.com/questions/76156157/embedded-driver-singleton-to-handle-multiple-hardware-interfaces-of-the-same-ty
 
