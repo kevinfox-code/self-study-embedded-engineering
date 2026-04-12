@@ -1,6 +1,6 @@
 # Environment Setup (macOS + Windows + Linux)
 
-This project references environment variables in VS Code debug settings and toolchain CMake files.
+This project uses environment variables in VS Code debug/settings for the current GCC flow. Additional environment variables are only referenced by CMake if you switch to the optional `starm-clang.cmake` + `STARM_HYBRID` flow.
 
 ## Variables Used In This Project
 
