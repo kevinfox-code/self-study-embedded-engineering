@@ -25,6 +25,7 @@ The current syllabus documents are stored as Word (`.docx`) files. If they do no
 - [ESE-301/ESE-301_Making-Embedded-Systems_Syllabus.docx](ESE-301/ESE-301_Making-Embedded-Systems_Syllabus.docx)
 - [ESE-311/ESE-311_Bare-Metal-Embedded-C-Programming_Syllabus.docx](ESE-311/ESE-311_Bare-Metal-Embedded-C-Programming_Syllabus.docx)
 - [ECE-452/ECE-452_Sensorless-FOC-STM32-Implementation-in-C_Syllabus.docx](ECE-452/ECE-452_Sensorless-FOC-STM32-Implementation-in-C_Syllabus.docx)
+- [ECE-452/ECE-452_Sensorless-FOC-STM32-Implementation-in-C_Syllabus.md](ECE-452/ECE-452_Sensorless-FOC-STM32-Implementation-in-C_Syllabus.md)
 
 ## Naming Conventions
 
