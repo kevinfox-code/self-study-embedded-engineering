@@ -13,7 +13,7 @@
             "origin": "snippet",
             "cwd": "${workspaceFolder}",
             "preLaunchTask": "build-debug",
-            "gdb": "${env:CUBE_BUNDLE_PATH}/gnu-tools-for-stm32/<version>/bin/arm-none-eabi-gdb",
+            "gdb": "${env:ARM_NONE_EABI_GDB}",
             "deviceName": "STM32U575ZIT6Q",
             "deviceCore": "ARM_CM33_NTZ",
             "deviceTrustzone": "TZ-disabled",
