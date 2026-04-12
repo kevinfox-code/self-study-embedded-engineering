@@ -220,12 +220,14 @@ DriverStatus_t peripheral_ioctl(PeripheralHandle_t *handle,
 
     switch (command) {
         case IOCTL_SET_SAMPLERATE:
+            if (!arg) return DRIVER_ERR_PARAM;
             handle->sample_rate_hz = *(uint32_t *)arg;
             printf("[peripheral_ioctl] sample rate set to %u Hz\n",
                    handle->sample_rate_hz);
             return DRIVER_OK;
 
         case IOCTL_GET_STATUS:
+            if (!arg) return DRIVER_ERR_PARAM;
             *(bool *)arg = handle->is_open;
             return DRIVER_OK;
 
