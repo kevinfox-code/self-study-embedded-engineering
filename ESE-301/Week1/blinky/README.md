@@ -2,7 +2,7 @@
 
 ## Setup
 
-- [ENVIRONMENT_SETUP.md](ENVIRONMENT_SETUP.md): environment variables required for VS Code debug and toolchain integration on macOS and Windows
+- [ENVIRONMENT_SETUP.md](ENVIRONMENT_SETUP.md): environment variables required for VS Code debug and toolchain integration on macOS, Windows, and Linux
 
 ## Build
 

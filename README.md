@@ -17,7 +17,7 @@ The repository is organized for traceability and professional documentation stan
 
 ## Environment Setup
 
-- [ESE-301/Week1/blinky/ENVIRONMENT_SETUP.md](ESE-301/Week1/blinky/ENVIRONMENT_SETUP.md): cross-platform environment variable setup for STM32CubeIDE tools (macOS + Windows)
+- [ESE-301/Week1/blinky/ENVIRONMENT_SETUP.md](ESE-301/Week1/blinky/ENVIRONMENT_SETUP.md): environment variable setup for STM32CubeIDE tools (macOS + Windows + Linux)
 
 ## Course Syllabus Files
 
