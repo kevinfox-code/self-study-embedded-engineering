@@ -268,11 +268,11 @@ static void test_open_close(void) {
 static void test_read(void) {
     printf("--- test_read ---\n");
     PeripheralHandle_t *h = peripheral_open(1, 0x0001);
-    uint8_t buf[^4] = {0};
+    uint8_t buf[4] = {0};
     int32_t n = peripheral_read(h, buf, 4);
     assert(n == 4);
-    assert(buf[^0] == 0xA0);
-    printf("buf[^0]=0x%02X buf[^1]=0x%02X\n", buf[^0], buf[^1]);
+    assert(buf[0] == 0xA0);
+    printf("buf[0]=0x%02X buf[1]=0x%02X\n", buf[0], buf[1]);
     peripheral_close(h);
     printf("PASS\n\n");
 }
