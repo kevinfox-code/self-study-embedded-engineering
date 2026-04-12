@@ -31,7 +31,7 @@ This project references environment variables in VS Code debug settings and tool
 
 ## Recommended Values
 
-Use your STM32CubeIDE bundle install root as `CUBE_BUNDLE_PATH`.
+Set `CUBE_BUNDLE_PATH` to the STM32CubeIDE external-tools `tools` directory under `plugins/.../tools` (the folder that contains `STLink-gdb-server`, `STM32CubeProgrammer`, and `gnu-tools-for-stm32`), not the top-level STM32CubeIDE install root.
 
 ### macOS example
 
