@@ -99,7 +99,7 @@ Motor parameter extraction:
 
 #### Week 3 — Power Electronics & Inverter Topology
 
-**Reading Assignment** *(Krishnan Ch. 2, pp. 135–175)*
+**Reading Assignment** *(Krishnan Ch. 2, pp. 135–175, 195–215)*
 
 - §2.1 Power devices: diode, MOSFET, IGBT — switching behavior & losses (pp. 135–145)
 - §2.2–2.3 DC bus, 3-phase VSI switching states, 6-step operation (pp. 146–161)
