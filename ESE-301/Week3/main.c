@@ -49,7 +49,7 @@ const struct commandStruct commandList[] = {
     {"ver", CmdVersion,
         "Display firmware version"},
     {"flashTest", CmdFlashTest,
-        "Runs the flash unit utest, prints number of errors of erros upon completion"},
+        "Runs the flash unit test; prints the number of errors upon completion"},
     {"blinkLED", CmdBlinkLED,
         "Blinks the onboard LED at a desired rate (parameter: frequency (Hz))"},
     {"help", CmdHelp,
