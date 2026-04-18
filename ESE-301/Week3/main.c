@@ -34,10 +34,10 @@ static void CmdVersion(void) {
 }
 static void CmdFlashTest(void) {
     printf("Running flash test... No errors found.\n");
-    printf("Total Flash Test Errors: %d\n", FlashTestErrors);
+    printf("Total Flash Test Errors: %u\n", (unsigned int)FlashTestErrors);
 }
 static void CmdBlinkLED(void) {
-    printf("Blinking LED at %d Hz...\n", UserFrequency);
+    printf("Blinking LED at %u Hz...\n", (unsigned int)UserFrequency);
 }
 static void CmdHelp(void) {
     for (int i = 0; commandList[i].functionPointer != 0; i++) {
