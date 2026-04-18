@@ -1,7 +1,15 @@
 #include <stdint.h>
 #include <stdio.h>
 
-#define BKPT() __builtin_debugtrap() // Portable trap that breaks when a debugger is attached
+#if defined(__has_builtin)
+#  if __has_builtin(__builtin_debugtrap)
+#    define BKPT() __builtin_debugtrap() // Debug trap when supported by the compiler
+#  else
+#    define BKPT() __builtin_trap() // Fallback trap for compilers without __builtin_debugtrap
+#  endif
+#else
+#  define BKPT() __builtin_trap() // Fallback trap when builtin feature detection is unavailable
+#endif
 typedef void(*functionPointerType)(void);
 
 static volatile uint16_t UserFrequency = 10; // Global variable to hold user frequency input for blinking LED
