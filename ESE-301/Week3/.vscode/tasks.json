@@ -9,7 +9,7 @@
                 "-S",
                 ".",
                 "-B",
-                "bulid",
+                "build",
                 "-DCMAKE_BUILD_TYPE=Debug"
             ],
             "problemMatcher": []
@@ -20,7 +20,7 @@
             "command": "cmake",
             "args": [
                 "--build",
-                "bulid"
+                "build"
             ],
             "problemMatcher": [
                 "$gcc"
