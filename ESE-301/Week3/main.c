@@ -54,7 +54,7 @@ const struct commandStruct commandList[] = {
         "Blinks the onboard LED at a desired rate (parameter: frequency (Hz))"},
     {"help", CmdHelp,
         "Prints out help messages"},
-    {"",0, ""}, // Empty command to test error handling}nel value to mark the end of the list
+    {"",0, ""}, // End-of-table sentinel entry
 };
 
 int main() {
