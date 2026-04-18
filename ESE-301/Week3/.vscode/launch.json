@@ -8,7 +8,7 @@
             "name": "Debug CommandPattern (CodeLLDB)",
             "type": "lldb",
             "request": "launch",
-            "program": "${workspaceFolder}/bulid/CommandPattern",
+            "program": "${workspaceFolder}/build/CommandPattern",
             "args": [],
             "cwd": "${workspaceFolder}",
             "stopOnEntry": false,
