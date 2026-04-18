@@ -57,7 +57,7 @@ const struct commandStruct commandList[] = {
     {"",0, ""}, // End-of-table sentinel entry
 };
 
-int main() {
+int main(void) {
     
     commandList[0].functionPointer(); // Call the first command (CmdVersion)
     BKPT(); // Trigger a debugger break after the first command
