@@ -20,7 +20,9 @@
             "command": "cmake",
             "args": [
                 "--build",
-                "build"
+                "build",
+                "--config",
+                "Debug"
             ],
             "problemMatcher": [
                 "$gcc"
