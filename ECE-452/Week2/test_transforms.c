@@ -190,7 +190,7 @@ static int test_edge_cases(void)
         printf("FAIL  EC-Large: alpha=%.4f (expected %.4f)\n", (double)c.alpha, (double)A);
         ok = 0;
     } else {
-        printf("PASS  EC-Large: amplitude %.0f round-trips (alpha=%.4f)\n", (double)A, (double)c.alpha);
+        printf("PASS  EC-Large: amplitude %.0f yields expected alpha=%.4f\n", (double)A, (double)c.alpha);
     }
 
     return ok;
