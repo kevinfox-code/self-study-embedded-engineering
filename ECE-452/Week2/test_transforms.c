@@ -185,12 +185,19 @@ static int test_edge_cases(void)
 
     /* Large amplitude */
     float32_t A = 1000.0f;
-    c = clarke_forward(A, -A/2.0f, -A/2.0f);
-    if (fabsf(c.alpha - A) > A * ROUND_TRIP_TOL) {
-        printf("FAIL  EC-Large: alpha=%.4f (expected %.4f)\n", (double)c.alpha, (double)A);
+    float32_t ia_large = A, ib_large = -A / 2.0f, ic_large = -A / 2.0f;
+    c = clarke_forward(ia_large, ib_large, ic_large);
+    abc_r = clarke_inverse(c.alpha, c.beta, c.zero);
+    if (fabsf(abc_r.a - ia_large) > A * ROUND_TRIP_TOL ||
+        fabsf(abc_r.b - ib_large) > A * ROUND_TRIP_TOL ||
+        fabsf(abc_r.c - ic_large) > A * ROUND_TRIP_TOL) {
+        printf("FAIL  EC-Large: reconstructed a=%.4f b=%.4f c=%.4f "
+               "(expected %.4f %.4f %.4f)\n",
+               (double)abc_r.a, (double)abc_r.b, (double)abc_r.c,
+               (double)ia_large, (double)ib_large, (double)ic_large);
         ok = 0;
     } else {
-        printf("PASS  EC-Large: amplitude %.0f yields expected alpha=%.4f\n", (double)A, (double)c.alpha);
+        printf("PASS  EC-Large: amplitude %.0f round-trips correctly\n", (double)A);
     }
 
     return ok;
