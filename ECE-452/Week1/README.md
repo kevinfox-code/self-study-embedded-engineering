@@ -1,4 +1,4 @@
-**Week 1 Homework: Permanent Magnets & PMSM Machine Physics**
+# Week 1 — Permanent Magnets & PMSM Machine Physics
 
 **Back-EMF Constant (Ke):**
 
