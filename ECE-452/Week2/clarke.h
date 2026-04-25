@@ -25,9 +25,9 @@ typedef struct {
  *   0 = (1/3)( ia  + ib          + ic        )
  *
  * Inverse:
- *   ia =  α              + 0
- *   ib = −α/2 + (√3/2)β + 0
- *   ic = −α/2 − (√3/2)β + 0
+ *   ia =  α              + zero
+ *   ib = −α/2 + (√3/2)β + zero
+ *   ic = −α/2 − (√3/2)β + zero
  */
 Clarke_Output clarke_forward(float32_t ia, float32_t ib, float32_t ic);
 ABC_Vector    clarke_inverse(float32_t alpha, float32_t beta, float32_t zero);
