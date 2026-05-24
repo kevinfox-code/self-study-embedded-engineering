@@ -7,7 +7,7 @@
 #ifndef GPIO_H
 #define GPIO_H
 
-#include "STM32U575xx.h"
+#include "stm32u575xx.h"
 #include <stdbool.h>
 
 void led_init(void);
