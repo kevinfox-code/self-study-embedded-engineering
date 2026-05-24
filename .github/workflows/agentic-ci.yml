@@ -37,7 +37,26 @@ jobs:
           set -euo pipefail
           echo "Looking for Makefile and CMakeLists.txt in repository..."
           mapfile -t makefiles < <(git ls-files -- "**/Makefile" 2>/dev/null | sed 's#/Makefile$##' || true)
-          mapfile -t cmakelists < <(git ls-files -- "**/CMakeLists.txt" 2>/dev/null | sed 's#/CMakeLists.txt$##' || true)
+
+          mapfile -t cmakefiles < <(git ls-files -- "**/CMakeLists.txt" 2>/dev/null || true)
+          cmakelists=()
+          for cmakefile in "${cmakefiles[@]:-}"; do
+            project_dir=$(dirname "$cmakefile")
+            parent_dir=$(dirname "$project_dir")
+            nested=false
+
+            while [[ "$parent_dir" != "." && "$parent_dir" != "/" ]]; do
+              if [[ -f "$parent_dir/CMakeLists.txt" ]]; then
+                nested=true
+                break
+              fi
+              parent_dir=$(dirname "$parent_dir")
+            done
+
+            if [[ "$nested" == false ]]; then
+              cmakelists+=("$project_dir")
+            fi
+          done
 
           echo "Make projects: ${makefiles[*]}"
           echo "CMake projects: ${cmakelists[*]}"
@@ -51,12 +70,27 @@ jobs:
 
           for d in "${cmakelists[@]:-}"; do
             echo "Building CMake project in: $d"
-            mkdir -p "$d/build"
-            pushd "$d/build"
-            cmake ..
-            cmake --build . -- -j$(nproc)
-            if command -v ctest >/dev/null 2>&1; then
-              ctest --output-on-failure || true
+            if [[ -f "$d/CMakePresets.json" ]]; then
+              pushd "$d"
+              cmake --preset Debug
+              cmake --build --preset Debug --parallel $(nproc)
+              if command -v ctest >/dev/null 2>&1; then
+                ctest --preset Debug --output-on-failure || true
+              fi
+              popd
+            else
+              toolchain_file=$(find "$d" -path '*/gcc-arm-none-eabi.cmake' -print -quit)
+              mkdir -p "$d/build"
+              pushd "$d/build"
+              if [[ -n "$toolchain_file" ]]; then
+                cmake .. -DCMAKE_TOOLCHAIN_FILE="$toolchain_file"
+              else
+                cmake ..
+              fi
+              cmake --build . --parallel $(nproc)
+              if command -v ctest >/dev/null 2>&1; then
+                ctest --output-on-failure || true
+              fi
+              popd
             fi
-            popd
           done
