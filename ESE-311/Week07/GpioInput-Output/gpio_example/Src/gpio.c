@@ -1,3 +1,9 @@
+/*
+ * Author:      Kevin Fox
+ * Book:        Bare-Metal Embedded C Programming
+ *              by Israel Gbati — Packt, 2024
+ * Description: Implements the bare-metal GPIO driver — configures RGB LED pins as outputs and the user button as an input using direct register writes, and provides read/write helper functions.
+ */
 #include "gpio.h"
 
 // PC7 - Green LED

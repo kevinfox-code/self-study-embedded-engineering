@@ -1,3 +1,9 @@
+/*
+ * Author:      Kevin Fox
+ * Book:        Bare-Metal Embedded C Programming
+ *              by Israel Gbati — Packt, 2024
+ * Description: Rewrites the bare-metal LED blink using CMSIS-Core peripheral struct pointers (RCC_NS, GPIOB_NS) instead of raw address macros, demonstrating how CMSIS device headers simplify register access on the STM32U575.
+ */
 #include <stdint.h>
 #include "stm32u575xx.h"
 

@@ -1,4 +1,11 @@
 /*
+ * Author:      Kevin Fox
+ * Book:        Making Embedded Systems: Design Patterns for Great Software
+ *              by Elecia White — O'Reilly Media
+ * Description: Host-side HAL implementation using printf stubs — allows the LED FSM to run on a development PC without target hardware, printing LED state changes and returning simulated tick values.
+ */
+
+/*
  * Host HAL — runs on a development machine, no real hardware.
  * The sandbox main.c drives events directly, so button/tick stubs
  * are never called during simulation; they exist to satisfy the linker.

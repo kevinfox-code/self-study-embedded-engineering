@@ -1,3 +1,10 @@
+/*
+ * Author:      Kevin Fox
+ * Book:        Making Embedded Systems: Design Patterns for Great Software
+ *              by Elecia White — O'Reilly Media
+ * Description: Implements the scheduler tick counter and multi-rate publish logic, maintaining millisecond, 100 ms, and 1 s tick topics for use by any registered pub/sub subscriber.
+ */
+
 #include "scheduler.h"
 #include "pubsub.h"
 

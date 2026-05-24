@@ -1,3 +1,10 @@
+/*
+ * Author:      Kevin Fox
+ * Book:        Permanent Magnet Synchronous and Brushless DC Motor Drives
+ *              by R. Krishnan — CRC Press, 2010
+ * Description: Defines the Clarke transform data types and function prototypes for converting three-phase (abc) stator currents to the stationary two-axis (αβ0) reference frame, and the inverse transform back to abc.
+ */
+
 #ifndef CLARKE_H
 #define CLARKE_H
 

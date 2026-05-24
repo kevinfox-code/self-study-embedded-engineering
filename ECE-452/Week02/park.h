@@ -1,3 +1,10 @@
+/*
+ * Author:      Kevin Fox
+ * Book:        Permanent Magnet Synchronous and Brushless DC Motor Drives
+ *              by R. Krishnan — CRC Press, 2010
+ * Description: Defines data types and function prototypes for the Park transform, which rotates stationary αβ vectors into the synchronous rotating dq reference frame aligned with the rotor flux.
+ */
+
 #ifndef PARK_H
 #define PARK_H
 

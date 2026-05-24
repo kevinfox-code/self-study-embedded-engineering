@@ -1,3 +1,10 @@
+/*
+ * Author:      Kevin Fox
+ * Book:        Making Embedded Systems: Design Patterns for Great Software
+ *              by Elecia White — O'Reilly Media
+ * Description: Implements the temperature sensor subscriber — listens on TOPIC_TICK_100MS and publishes a simulated temperature reading on TOPIC_TEMPERATURE at 10 Hz.
+ */
+
 #include "sensor.h"
 #include "pubsub.h"
 

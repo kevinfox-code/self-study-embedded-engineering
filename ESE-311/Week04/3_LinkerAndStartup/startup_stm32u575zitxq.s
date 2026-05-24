@@ -1,3 +1,9 @@
+/*
+ * Author:      Kevin Fox
+ * Book:        Bare-Metal Embedded C Programming
+ *              by Israel Gbati — Packt, 2024
+ * Description: Hand-written ARM Cortex-M33 startup file — defines the vector table with Reset_Handler and fault entries, copies .data from Flash to SRAM, zeroes .bss, then jumps to main. Written as part of the linker-and-startup assignment.
+ */
 /**
   ******************************************************************************
   * @file      startup_stm32u575xx.s

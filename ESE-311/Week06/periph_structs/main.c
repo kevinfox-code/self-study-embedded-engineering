@@ -1,3 +1,9 @@
+/*
+ * Author:      Kevin Fox
+ * Book:        Bare-Metal Embedded C Programming
+ *              by Israel Gbati — Packt, 2024
+ * Description: Demonstrates writing custom GPIO and RCC peripheral structs from scratch (matching STM32U575 reference-manual offsets) as an alternative to CMSIS headers, then uses them to blink PB7 via struct member access.
+ */
 #include <stdint.h>
 
 // #define PERIPH_BASE_NS 			(0X40000000UL)

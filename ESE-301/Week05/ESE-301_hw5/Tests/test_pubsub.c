@@ -1,4 +1,11 @@
 /*
+ * Author:      Kevin Fox
+ * Book:        Making Embedded Systems: Design Patterns for Great Software
+ *              by Elecia White — O'Reilly Media
+ * Description: Unit tests for the pub/sub module — verifies subscribe, unsubscribe, publish dispatch, subscriber count tracking, capacity limits, and error codes using assertion-based checks.
+ */
+
+/*
  * Sandbox test suite for the Publish/Subscribe pattern.
  *
  * Pure C (C11), no HAL dependencies.  Compile and run on the host:

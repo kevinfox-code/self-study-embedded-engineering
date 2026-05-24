@@ -1,3 +1,9 @@
+/*
+ * Author:      Kevin Fox
+ * Book:        Bare-Metal Embedded C Programming
+ *              by Israel Gbati — Packt, 2024
+ * Description: ARM Cortex-M33 startup file for the peripheral-structs example — provides the vector table and memory-section initialisation needed to boot the custom-struct LED blink application.
+ */
 /**
   ******************************************************************************
   * @file      startup_stm32u575xx.s

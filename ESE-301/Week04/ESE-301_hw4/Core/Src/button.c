@@ -1,3 +1,10 @@
+/*
+ * Author:      Kevin Fox
+ * Book:        Making Embedded Systems: Design Patterns for Great Software
+ *              by Elecia White — O'Reilly Media
+ * Description: Implements GPIO input reading and interrupt-driven debounce logic for the user button, with support for registering a callback invoked on button press events.
+ */
+
 #include "button.h"
 #include "main.h"
 

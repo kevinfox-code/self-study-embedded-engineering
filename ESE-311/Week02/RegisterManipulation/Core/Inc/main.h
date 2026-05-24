@@ -1,3 +1,9 @@
+/*
+ * Author:      Kevin Fox
+ * Book:        Bare-Metal Embedded C Programming
+ *              by Israel Gbati — Packt, 2024
+ * Description: Header for the Week 2 register manipulation project — includes system header and declares Error_Handler.
+ */
 /* USER CODE BEGIN Header */
 /**
   ******************************************************************************

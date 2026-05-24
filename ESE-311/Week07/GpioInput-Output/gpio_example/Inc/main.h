@@ -1,3 +1,9 @@
+/*
+ * Author:      Kevin Fox
+ * Book:        Bare-Metal Embedded C Programming
+ *              by Israel Gbati — Packt, 2024
+ * Description: Main header for the Week 7 GPIO input/output project — includes CMSIS device header and declares Error_Handler.
+ */
 #ifndef MAIN_H
 #define MAIN_H
 

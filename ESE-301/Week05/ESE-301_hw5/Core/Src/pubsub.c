@@ -1,3 +1,10 @@
+/*
+ * Author:      Kevin Fox
+ * Book:        Making Embedded Systems: Design Patterns for Great Software
+ *              by Elecia White — O'Reilly Media
+ * Description: Implements the publish-subscribe bus with a statically allocated subscriber table indexed by topic. Supports up to PUBSUB_MAX_SUBSCRIBERS handlers per topic with O(1) publish and O(n) unsubscribe.
+ */
+
 #include "pubsub.h"
 #include <string.h>
 

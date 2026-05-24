@@ -1,3 +1,10 @@
+/*
+ * Author:      Kevin Fox
+ * Book:        Permanent Magnet Synchronous and Brushless DC Motor Drives
+ *              by R. Krishnan — CRC Press, 2010
+ * Description: Implements SVPWM sector detection, active-vector dwell time calculation, and duty cycle generation via midpoint common-mode injection. Includes an optional STM32 TIM1 CCR write function gated by the STM32_TARGET compile flag.
+ */
+
 #include "svpwm.h"
 
 #ifdef STM32_TARGET

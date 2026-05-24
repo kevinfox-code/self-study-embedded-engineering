@@ -1,4 +1,11 @@
 /*
+ * Author:      Kevin Fox
+ * Book:        Making Embedded Systems: Design Patterns for Great Software
+ *              by Elecia White — O'Reilly Media
+ * Description: Sandbox entry point — drives the LED FSM on the host by simulating a sequence of button press events and tick increments to exercise all FSM state transitions interactively.
+ */
+
+/*
  * LED state machine sandbox — runs on host, no hardware required.
  *
  * Simulates three button presses that cycle:

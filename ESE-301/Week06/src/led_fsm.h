@@ -1,3 +1,10 @@
+/*
+ * Author:      Kevin Fox
+ * Book:        Making Embedded Systems: Design Patterns for Great Software
+ *              by Elecia White — O'Reilly Media
+ * Description: Declares the LED finite state machine interface — init, update (takes an event and current tick), and state query. Supports OFF, ON, and BLINKING states driven by button press events.
+ */
+
 #pragma once
 
 #include <stdint.h>

@@ -1,3 +1,10 @@
+/*
+ * Author:      Kevin Fox
+ * Book:        Making Embedded Systems: Design Patterns for Great Software
+ *              by Elecia White — O'Reilly Media
+ * Description: Declares the simulated temperature sensor module — SENSOR_Update() reads (or simulates) a temperature value and publishes it on TOPIC_TEMPERATURE for any interested subscriber.
+ */
+
 #ifndef __SENSOR_H__
 #define __SENSOR_H__
 

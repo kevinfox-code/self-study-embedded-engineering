@@ -1,0 +1,58 @@
+name: Agentic CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-checks:
+    name: Build and Checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential cmake shellcheck
+
+      - name: Run forbidden-artifact check
+        run: .github/scripts/check_forbidden_artifacts.sh
+
+      - name: Run shellcheck on scripts
+        run: |
+          if command -v shellcheck >/dev/null; then
+            find .github -name "*.sh" -print0 | xargs -0 --no-run-if-empty shellcheck || true
+          fi
+
+      - name: Discover and build subprojects
+        run: |
+          set -euo pipefail
+          echo "Looking for Makefile and CMakeLists.txt in repository..."
+          mapfile -t makefiles < <(git ls-files -- "**/Makefile" 2>/dev/null | sed 's#/Makefile$##' || true)
+          mapfile -t cmakelists < <(git ls-files -- "**/CMakeLists.txt" 2>/dev/null | sed 's#/CMakeLists.txt$##' || true)
+
+          echo "Make projects: ${makefiles[*]}"
+          echo "CMake projects: ${cmakelists[*]}"
+
+          for d in "${makefiles[@]:-}"; do
+            echo "Building Make project in: $d"
+            pushd "$d"
+            make -j$(nproc)
+            popd
+          done
+
+          for d in "${cmakelists[@]:-}"; do
+            echo "Building CMake project in: $d"
+            mkdir -p "$d/build"
+            pushd "$d/build"
+            cmake ..
+            cmake --build . -- -j$(nproc)
+            if command -v ctest >/dev/null 2>&1; then
+              ctest --output-on-failure || true
+            fi
+            popd
+          done

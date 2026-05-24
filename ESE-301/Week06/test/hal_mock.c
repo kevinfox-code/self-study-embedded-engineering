@@ -1,4 +1,11 @@
 /*
+ * Author:      Kevin Fox
+ * Book:        Making Embedded Systems: Design Patterns for Great Software
+ *              by Elecia White — O'Reilly Media
+ * Description: Test-double HAL implementation — records calls to hal_led_set, provides a controllable hal_button_pressed return value, and tracks the tick counter for deterministic FSM unit testing.
+ */
+
+/*
  * Mock HAL — records LED state so tests can assert against it.
  * Call hal_mock_reset() between tests to clear recorded state.
  */
