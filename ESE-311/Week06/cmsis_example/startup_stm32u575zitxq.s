@@ -1,3 +1,9 @@
+/*
+ * Author:      Kevin Fox
+ * Book:        Bare-Metal Embedded C Programming
+ *              by Israel Gbati — Packt, 2024
+ * Description: ARM Cortex-M33 startup file paired with the CMSIS example — vector table, .data/.bss init, and branch to main; identical structure to Week 4/5 startup to isolate the CMSIS header integration change.
+ */
 /**
   ******************************************************************************
   * @file      startup_stm32u575xx.s

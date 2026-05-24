@@ -21,6 +21,7 @@ add_subdirectory(CMSIS)
 add_executable(${TARGET}
     Src/main.c
     Src/gpio.c
+    Src/syscalls.c
     startup_stm32u575zitxq.s
 )
 

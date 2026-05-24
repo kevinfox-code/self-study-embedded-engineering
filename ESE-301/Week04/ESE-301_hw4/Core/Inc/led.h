@@ -1,3 +1,10 @@
+/*
+ * Author:      Kevin Fox
+ * Book:        Making Embedded Systems: Design Patterns for Great Software
+ *              by Elecia White — O'Reilly Media
+ * Description: Public interface for the RGB LED driver — defines the LED_Color enum and declares on, off, toggle, and set-all functions for red, green, and blue channels.
+ */
+
 #ifndef __LED_H__
 #define __LED_H__
 

@@ -1,4 +1,11 @@
 /*
+ * Author:      Kevin Fox
+ * Book:        Making Embedded Systems: Design Patterns for Great Software
+ *              by Elecia White — O'Reilly Media
+ * Description: Implements a three-state LED FSM (OFF → ON → BLINKING → OFF) driven by BUTTON_PRESS events and a millisecond tick for blink timing, using the HAL interface for all hardware output.
+ */
+
+/*
  * LED state machine — Elecia White pattern (Making Embedded Systems, p. 279):
  *
  *   case (state):

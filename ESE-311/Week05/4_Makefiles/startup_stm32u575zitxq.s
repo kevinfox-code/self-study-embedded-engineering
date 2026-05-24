@@ -1,3 +1,9 @@
+/*
+ * Author:      Kevin Fox
+ * Book:        Bare-Metal Embedded C Programming
+ *              by Israel Gbati — Packt, 2024
+ * Description: ARM Cortex-M33 startup file used with the custom Makefile — defines the interrupt vector table, initialises memory sections (.data, .bss), and transfers control to main.
+ */
 /**
   ******************************************************************************
   * @file      startup_stm32u575xx.s

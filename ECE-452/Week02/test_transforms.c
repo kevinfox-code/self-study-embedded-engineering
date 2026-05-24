@@ -1,3 +1,10 @@
+/*
+ * Author:      Kevin Fox
+ * Book:        Permanent Magnet Synchronous and Brushless DC Motor Drives
+ *              by R. Krishnan — CRC Press, 2010
+ * Description: Test suite for the Clarke and Park transforms — verifies known-answer spot checks, round-trip reconstruction accuracy across 1,000 randomised phase vectors, and edge cases including zero input and large amplitude signals.
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>

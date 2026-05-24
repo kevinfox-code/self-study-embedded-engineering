@@ -1,3 +1,10 @@
+/*
+ * Author:      Kevin Fox
+ * Book:        Making Embedded Systems: Design Patterns for Great Software
+ *              by Elecia White — O'Reilly Media
+ * Description: Application entry point for Week 5 — wires the scheduler, sensor, and LED modules into the pub/sub bus, demonstrating interrupt-driven multi-rate task dispatch without a traditional RTOS.
+ */
+
 /* USER CODE BEGIN Header */
 /**
   ******************************************************************************

@@ -1,7 +1,13 @@
+/*
+ * Author:      Kevin Fox
+ * Book:        Bare-Metal Embedded C Programming
+ *              by Israel Gbati — Packt, 2024
+ * Description: Declares the bare-metal GPIO driver API for Week 7 — led_init, button_init, individual LED on/off functions, and get_button_state, all implemented without the STM32 HAL.
+ */
 #ifndef GPIO_H
 #define GPIO_H
 
-#include "STM32U575xx.h"
+#include "stm32u575xx.h"
 #include <stdbool.h>
 
 void led_init(void);

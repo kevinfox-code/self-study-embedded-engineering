@@ -1,3 +1,9 @@
+/*
+ * Author:      Kevin Fox
+ * Book:        Bare-Metal Embedded C Programming
+ *              by Israel Gbati — Packt, 2024
+ * Description: ARM Cortex-M33 startup file for the Week 7 GPIO input/output project — vector table definition, .data/.bss section initialisation, and branch to main.
+ */
 /**
   ******************************************************************************
   * @file      startup_stm32u575xx.s

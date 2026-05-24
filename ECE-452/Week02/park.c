@@ -1,3 +1,10 @@
+/*
+ * Author:      Kevin Fox
+ * Book:        Permanent Magnet Synchronous and Brushless DC Motor Drives
+ *              by R. Krishnan — CRC Press, 2010
+ * Description: Implements the Park forward transform (αβ → dq) and inverse (dq → αβ) using the rotor electrical angle θ, enabling DC-domain current control in FOC.
+ */
+
 #include "park.h"
 #include <math.h>
 

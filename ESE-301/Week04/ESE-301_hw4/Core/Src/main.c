@@ -1,3 +1,10 @@
+/*
+ * Author:      Kevin Fox
+ * Book:        Making Embedded Systems: Design Patterns for Great Software
+ *              by Elecia White — O'Reilly Media
+ * Description: Application entry point for Week 4 — initialises the HAL, GPIO, button, LED, and timer peripherals, then runs a main loop that blinks LEDs and responds to button presses via interrupt callbacks.
+ */
+
 /* USER CODE BEGIN Header */
 /**
   ******************************************************************************

@@ -1,3 +1,10 @@
+/*
+ * Author:      Kevin Fox
+ * Book:        Permanent Magnet Synchronous and Brushless DC Motor Drives
+ *              by R. Krishnan — CRC Press, 2010
+ * Description: Defines data types and function prototypes for Space Vector PWM (SVPWM) — computes symmetrical 7-segment duty cycles from an αβ reference voltage vector and optionally writes CCR values to STM32 TIM1.
+ */
+
 #ifndef SVPWM_H
 #define SVPWM_H
 

@@ -1,4 +1,11 @@
 /*
+ * Author:      Kevin Fox
+ * Book:        Making Embedded Systems: Design Patterns for Great Software
+ *              by Elecia White — O'Reilly Media
+ * Description: Unit tests for the LED FSM — verifies initial state, state transitions on button press, blink toggling timing, and idle behaviour using the mock HAL to inject controlled events and tick values.
+ */
+
+/*
  * Test suite for the LED state machine pattern (Making Embedded Systems p. 279).
  *
  * Build and run on host:

@@ -1,3 +1,10 @@
+/*
+ * Author:      Kevin Fox
+ * Book:        Making Embedded Systems: Design Patterns for Great Software
+ *              by Elecia White — O'Reilly Media
+ * Description: Implements GPIO output control for the RGB LED, mapping LED_Color enum values to GPIO pin operations for on, off, and toggle actions on the STM32 Nucleo board.
+ */
+
 #include "led.h"
 #include "main.h"
 

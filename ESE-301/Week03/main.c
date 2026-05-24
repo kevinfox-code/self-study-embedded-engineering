@@ -1,3 +1,10 @@
+/*
+ * Author:      Kevin Fox
+ * Book:        Making Embedded Systems: Design Patterns for Great Software
+ *              by Elecia White — O'Reilly Media
+ * Description: Implements a command-response test harness in C using a function-pointer dispatch table. Demonstrates command table design with a sentinel-terminated array of commandStruct entries mapping name strings to handler functions (version, flash test, LED blink, help).
+ */
+
 #include <stdint.h>
 #include <stdio.h>
 

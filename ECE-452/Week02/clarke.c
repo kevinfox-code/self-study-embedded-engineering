@@ -1,3 +1,10 @@
+/*
+ * Author:      Kevin Fox
+ * Book:        Permanent Magnet Synchronous and Brushless DC Motor Drives
+ *              by R. Krishnan — CRC Press, 2010
+ * Description: Implements the amplitude-invariant Clarke forward transform (abc → αβ0) and inverse transform (αβ0 → abc) used as the first stage in the FOC signal chain.
+ */
+
 #include "clarke.h"
 
 /* √3/2 — used for β-axis projection coefficients */

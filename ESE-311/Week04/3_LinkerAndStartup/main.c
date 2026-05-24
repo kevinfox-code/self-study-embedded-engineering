@@ -1,3 +1,9 @@
+/*
+ * Author:      Kevin Fox
+ * Book:        Bare-Metal Embedded C Programming
+ *              by Israel Gbati — Packt, 2024
+ * Description: Bare-metal LED blink application written from scratch to test a hand-authored linker script and startup file. Toggles PB7 via direct register writes; SystemInit and Error_Handler are stub implementations.
+ */
 #include <stdint.h>
 
 #define PERIPH_BASE_NS 			(0X40000000UL)

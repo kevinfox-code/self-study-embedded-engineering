@@ -1,3 +1,10 @@
+/*
+ * Author:      Kevin Fox
+ * Book:        Making Embedded Systems: Design Patterns for Great Software
+ *              by Elecia White — O'Reilly Media
+ * Description: Declares the time-driven event publisher — SCHEDULER_Tick() is called from a 1 ms ISR and fires TOPIC_TICK_1MS, TOPIC_TICK_100MS, and TOPIC_TICK_1S pub/sub events at the appropriate intervals.
+ */
+
 #ifndef __SCHEDULER_H__
 #define __SCHEDULER_H__
 

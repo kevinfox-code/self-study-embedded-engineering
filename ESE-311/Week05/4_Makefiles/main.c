@@ -1,3 +1,9 @@
+/*
+ * Author:      Kevin Fox
+ * Book:        Bare-Metal Embedded C Programming
+ *              by Israel Gbati — Packt, 2024
+ * Description: LED blink application used to validate the custom Makefile build system. Identical register-level PB7 toggle loop to Week 4, with a slower delay count to confirm the Makefile correctly compiles and links a multi-file project.
+ */
 #include <stdint.h>
 
 #define PERIPH_BASE_NS 			(0X40000000UL)

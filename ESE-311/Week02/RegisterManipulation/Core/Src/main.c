@@ -1,3 +1,9 @@
+/*
+ * Author:      Kevin Fox
+ * Book:        Bare-Metal Embedded C Programming
+ *              by Israel Gbati — Packt, 2024
+ * Description: Blinks the blue LED (PB7) on the STM32U575 Nucleo board by directly writing to GPIO and RCC registers — no HAL library. Demonstrates raw peripheral register access using volatile pointer macros derived from the reference manual.
+ */
 /* USER CODE BEGIN Header */
 /**
   ******************************************************************************

@@ -1,3 +1,10 @@
+/*
+ * Author:      Kevin Fox
+ * Book:        Permanent Magnet Synchronous and Brushless DC Motor Drives
+ *              by R. Krishnan — CRC Press, 2010
+ * Description: Test suite for the SVPWM module — validates hand-calculated duty cycles at key angles (30°, 90°), sector detection across all six sectors, invariant checks (T1+T2+T0=1, duty∈[0,1], αβ reconstruction), and overmodulation clamping. Prints a comparison table against hand-derived results.
+ */
+
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>

@@ -1,3 +1,10 @@
+/*
+ * Author:      Kevin Fox
+ * Book:        Making Embedded Systems: Design Patterns for Great Software
+ *              by Elecia White — O'Reilly Media
+ * Description: Defines the publish-subscribe messaging interface — topics, per-topic payload union, message struct, handler function pointer type, status codes, and API declarations for init, subscribe, unsubscribe, publish, and subscriber count query.
+ */
+
 #ifndef __PUBSUB_H__
 #define __PUBSUB_H__
 

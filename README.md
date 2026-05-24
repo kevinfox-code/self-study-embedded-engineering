@@ -45,3 +45,21 @@ This repository follows a simple, predictable naming scheme:
 
 - This repository may include references to third-party books and course material for educational context.
 - Rights for third-party content remain with original owners.
+
+## Agentic Workflow (interactive)
+
+This repository supports an interactive, agent-assisted workflow using the Copilot/VS Code prompts found under `.github/prompts/` and a lightweight CI workflow that validates builds and repository hygiene on PRs.
+
+- **Local flow (typical)**: create a branch using the `{course-lowercase}-week{NN}` pattern, run `sessionstart.prompt.md` in Copilot to orient the agent, use `new-week.prompt.md` to scaffold work, build/tests locally, commit with AI disclosure in the commit body, push and open a PR.
+- **Automated checks**: the `Agentic CI` GitHub Actions workflow runs on `push` and `pull_request` to `main` and will attempt to build detected `Makefile` and `CMakeLists.txt` projects, run a forbidden-artifact check, and lint scripts.
+- **Where to look**: See `AGENTS.md` for agent role descriptions and `.github/pull_request_template.md` for required PR disclosure.
+
+Example minimal workflow (developer):
+
+1. Create a branch: `git checkout -b ese301-week07`
+2. Start a Copilot session: open Copilot Chat and run `sessionstart.prompt.md` (select the prompt from `.github/prompts/`).
+3. Use prompts to generate or scaffold files (e.g., `new-week.prompt.md`).
+4. Build and run tests locally (for CMake projects: `mkdir -p build && cd build && cmake .. && cmake --build . && ctest`; for Makefile projects: `make`).
+5. Commit with AI disclosure in the commit body per [.github/copilot-instructions.md](.github/copilot-instructions.md).
+6. Push and open a PR; CI will run and report build/test status.
+

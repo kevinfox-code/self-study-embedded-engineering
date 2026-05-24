@@ -1,3 +1,10 @@
+/*
+ * Author:      Kevin Fox
+ * Book:        Making Embedded Systems: Design Patterns for Great Software
+ *              by Elecia White — O'Reilly Media
+ * Description: Hardware Abstraction Layer (HAL) interface — declares led set, button read, and tick_ms functions that can be backed by any of three implementations: the real target, a host sandbox using printf stubs, or a test mock with programmable state.
+ */
+
 #pragma once
 
 #include <stdbool.h>
