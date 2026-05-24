@@ -11,6 +11,7 @@ Generate a complete pull request description for the current branch, ready to pa
 
 1. **Read the current branch name** and validate it follows `{course}-week{NN}` convention.
    - If it does not match, warn me and ask before proceeding.
+   - If the branch is already a work branch, keep the PR focused on the committed change set and do not include unrelated local edits.
 
 2. **Get recent commits** on this branch (since diverging from `main`):
    ```bash
@@ -26,7 +27,8 @@ Generate a complete pull request description for the current branch, ready to pa
    ```bash
    git status
    ```
-   Warn me if `.o`, `.elf`, `.bin`, `.hex`, `.map`, `Debug/`, or `Release/` appear staged.
+   Warn me if `.o`, `.elf`, `.bin`, `.hex`, `.map`, `Debug/`, `Release/`, or generated IDE/build outputs appear staged or untracked.
+   Treat `.DS_Store` and build directories under new week examples as exclusions unless they are explicitly required source assets.
 
 5. **Generate a PR description** using `.github/pull_request_template.md` as the structure.
    Fill in:
@@ -36,6 +38,7 @@ Generate a complete pull request description for the current branch, ready to pa
    - **Licensing and Attribution**: pre-check boxes that clearly apply; flag any uncertain ones
    - **Naming and Structure Checklist**: verify against repo conventions before checking
    - **Validation**: list what was tested (e.g., `make run` output, observed behavior)
+   - **Process notes**: if the PR introduces repository workflow or scaffolding changes, mention the normal PR process assumptions that were validated (for example, branch naming, generated artifact exclusion, and review of committed-only scope).
 
 6. **Output the complete PR description** in a code block so I can copy-paste it directly into GitHub.
 

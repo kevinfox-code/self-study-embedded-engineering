@@ -2,6 +2,8 @@
 
 Describe what changed and why.
 
+If this PR also updates repository workflow or scaffolding, briefly note any process expectations that were validated while preparing it.
+
 ## Change Type
 
 - [ ] Documentation
@@ -32,6 +34,12 @@ If AI assistance was used, specify tool(s) and scope:
 - [ ] File and folder names follow repository conventions.
 - [ ] New files are placed in the correct course directory.
 - [ ] Non-essential generated/system files are excluded.
+
+## Process Notes
+
+- [ ] The PR scope reflects committed changes only.
+- [ ] Generated build outputs and IDE/system files were excluded from the PR.
+- [ ] Branch naming and course/week structure were checked before finalizing the PR.
 
 ## Validation
 
