@@ -6,10 +6,10 @@
  */
 #include "uart.h"
 
-#define USART1_EN (1U << 11)    // APB2ENR
-#define DBG_UART_BAUDRATE 115200
-#define SYS_FREQ_HZ 16000000 // 16 MHz system clock
-#define APB1_CLK_Hz (SYS_FREQ_HZ)
+#define USART1_EN (1U << 14)    // APB2ENR (USART1 clock enable)
+#define DBG_UART_BAUDRATE 115200UL
+#define SYS_FREQ_HZ 16000000UL // 16 MHz HSI16 system clock
+#define APB2_CLK_Hz (SYS_FREQ_HZ)
 #define CR1_TE (1U << 3) // Transmitter enable
 #define CR1_RE (1U << 2) // Receiver enable 
 #define CR1_UE (1U << 0) // USART enable
@@ -18,6 +18,9 @@
 
 // GPIOA - USART1 PA9 (TX) and PA10 (RX)
 #define GPIOA_EN 	(1U << 0)
+
+static uint32_t compute_uart_bd(uint32_t peripheral_clock, uint32_t baudrate);
+static void uart_set_baudrate(uint32_t peripheral_clock, uint32_t baudrate);
 
 int __io_putchar(int ch) {
     uart_send_char((char)ch);
@@ -39,25 +42,28 @@ void uart_init(void) {
     /*Enable clock access to USART1 */
     RCC_NS->APB2ENR |= USART1_EN;
     /*Configure baud rate */
-    uart_set_baudrate(APB1_CLK_Hz, DBG_UART_BAUDRATE);
-    /*Configure transfer direction */
-    USART1_NS->CR1 |= CR1_TE;
+    uart_set_baudrate(APB2_CLK_Hz, DBG_UART_BAUDRATE);
+    /*Configure transfer direction: enable transmitter and receiver */
+    USART1_NS->CR1 |= (CR1_TE | CR1_RE);
     /*Enable USART1 */
     USART1_NS->CR1 |= CR1_UE;
 }
 
-static uint16_t compute_uart_bd(uint32_t peripheral_clock, uint32_t baudrate) {
+static uint32_t compute_uart_bd(uint32_t peripheral_clock, uint32_t baudrate) {
+    /* STM32U5 BRR = USARTDIV = fCK / baudrate (plain integer, oversampling by 16).
+     * Add baudrate/2 for rounding.
+     */
     return (peripheral_clock + (baudrate / 2U)) / baudrate;
 }
 
 static void uart_set_baudrate(uint32_t peripheral_clock, uint32_t baudrate) {
-    uint16_t ubrr = compute_uart_bd(peripheral_clock, baudrate);
+    uint32_t ubrr = compute_uart_bd(peripheral_clock, baudrate);
     USART1_NS->BRR = ubrr;
 }
 
 void uart_send_char(char c) {
     while(!(USART1_NS->ISR & SR_TXE)); // Wait until transmit data register is empty
-    USART1_NS->RDR = c; // Write character to data register
+    USART1_NS->TDR = (uint32_t)(uint8_t)c; // Write character to transmit data register
 }
 
 void uart_send_string(const char *str) {
@@ -68,6 +74,8 @@ void uart_send_string(const char *str) {
 }
 
 char uart_recv_char(void) {
-    /* TODO: Implement character reception */
-    return 0;
+    /* Wait until a character is received */
+    while (!(USART1_NS->ISR & SR_RXNE));
+    /* Read lower 8 bits from the RDR */
+    return (char)(USART1_NS->RDR & 0xFF);
 }

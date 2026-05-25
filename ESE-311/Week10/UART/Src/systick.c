@@ -5,13 +5,6 @@
  * Description: Implements systick_msec_delay — configures the ARM Cortex-M SysTick timer to use the internal 16 MHz processor clock and polls the COUNTFLAG bit to produce an accurate millisecond blocking delay without using any HAL.
  */
 #include "systick.h"
-
-#define SysTick_CTRL_ENABLE_Pos       0U
-#define SysTick_CTRL_ENABLE_Msk       (1UL << SysTick_CTRL_ENABLE_Pos)
-#define SysTick_CTRL_CLKSOURCE_Pos    2U
-#define SysTick_CTRL_CLKSOURCE_Msk    (1UL << SysTick_CTRL_CLKSOURCE_Pos)
-#define SysTick_CTRL_COUNTFLAG_Pos    16U
-#define SysTick_CTRL_COUNTFLAG_Msk    (1UL << SysTick_CTRL_COUNTFLAG_Pos)
 /*By default the CPU is 16MHz*/
 #define ONE_MSEC_LOAD   16000          // number of clock cycles per milisecond
 void systick_init(void) {

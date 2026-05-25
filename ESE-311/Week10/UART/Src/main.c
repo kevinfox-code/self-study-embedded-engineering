@@ -8,15 +8,17 @@
 #include "gpio.h"
 #include "uart.h"
 #include "systick.h"
+#include <stdio.h>
 
 int main(void) {
     led_init();
     button_init();
-    systick_init();
     uart_init();
 
     while (1) {
-        /* Main application loop */
+        green_led_toggle();
+        uart_send_string("Hello\r\n");
+        systick_msec_delay(250);
     }
 
     return 0;
