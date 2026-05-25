@@ -11,8 +11,6 @@
 #include <stdint.h>
 
 void uart_init(void);
-static uint16_t compute_uart_bd(uint32_t peripheral_clock, uint32_t baudrate);
-static void uart_set_baudrate(uint32_t peripheral_clock, uint32_t baudrate);
 void uart_send_char(char c);
 void uart_send_string(const char *str);
 char uart_recv_char(void);
