@@ -14,6 +14,9 @@
 #define SysTick_CTRL_COUNTFLAG_Msk    (1UL << SysTick_CTRL_COUNTFLAG_Pos)
 /*By default the CPU is 16MHz*/
 #define ONE_MSEC_LOAD   16000          // number of clock cycles per milisecond
+void systick_init(void) {
+    /*No initialization needed for this simple delay implementation*/
+}
 void systick_msec_delay(uint32_t msec) {
     /*Load number of clock cycles per milisecond*/
     SysTick->LOAD = ONE_MSEC_LOAD - 1;

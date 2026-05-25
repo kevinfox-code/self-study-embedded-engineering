@@ -7,6 +7,7 @@
 #ifndef SYSTICK_H
 #define SYSTICK_H
 
+#include "stm32u575xx.h"
 #include <stdint.h>
 
 void systick_init(void);

@@ -6,6 +6,8 @@
  */
 #include "gpio.h"
 
+
+
 // PC7 - Green LED
 #define GPIOC_EN 	(1U << 2)
 #define GREEN_LED_SET 	(1U << 7)
