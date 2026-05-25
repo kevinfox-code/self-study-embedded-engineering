@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug GTIM (OpenOCD)",
+      "type": "cortex-debug",
+      "request": "launch",
+      "servertype": "openocd",
+      "cwd": "${workspaceFolder}",
+      "executable": "${workspaceFolder}/build/gtim.elf",
+      "gdbPath": "arm-none-eabi-gdb",
+      "serverpath": "openocd",
+      "configFiles": [
+        "interface/stlink.cfg",
+        "target/stm32u5x.cfg"
+      ],
+      "liveWatch": {
+        "enabled": true
+      },
+      "preLaunchTask": "cmake: build",
+      "runToEntryPoint": "main",
+      "showDevDebugOutput": false
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 ---
-mode: agent
+agent: ask
 description: Scaffold a new week folder with README and branch setup
 ---
 
@@ -7,20 +7,38 @@ description: Scaffold a new week folder with README and branch setup
 
 Scaffold a new week for this embedded engineering curriculum.
 
-## What to ask me first (if not already provided)
+## Script arguments (no interactive prompts)
 
-1. Which course? (`ESE-301`, `ESE-311`, or `ECE-452`)
-2. Which week number? (e.g., `8` → padded to `Week08`)
-3. What is the topic/title for this week?
-4. Does this week need a standalone build? (Makefile for ECE-452 math, CMake for ESE-301 tests, or none for CubeIDE projects)
+The script produced must be non-interactive and accept the following command-line arguments. If required arguments are missing or invalid, the script should exit with a usage message and non-zero status — it must not rely on external conversational prompts.
+
+1. `COURSE` — one of `ESE-301`, `ESE-311`, or `ECE-452`
+2. `WEEK_NUMBER` — integer (e.g., `8` or `08`) — the script must format this as `Week{NN}` where `NN` is zero-padded to two digits
+3. `TOPIC_TITLE` — short descriptive title for the week
+4. `BUILDSYS` (optional) — one of `Makefile`, `CMake`, or `None`. If omitted, treat as `None`.
+
+Examples of invocation the script should accept:
+
+```
+./newweek.sh "ESE-301" 8 "Clarke and Park" Makefile
+bash newweek.sh ECE-452 2 "SVPWM" None
+```
 
 ## Steps to perform
 
-1. **Create the branch** (if not already on one):
-   ```
-   git checkout -b {course-lowercase}-week{NN}
-   ```
-   Example: `ese311-week08`
+> Constraint: Output a single, directly executable bash script (one copy-pasteable block) that:
+> - checks the current git branch and only creates/checks out the new branch if not already on it,
+> - creates the week directory and files using `mkdir -p` and `cat <<'EOF' > ...` here-documents,
+> - does not include conversational text outside the script (no instructions or prompts before/after the block).
+>
+> Example (high-level):
+> ```bash
+> #!/usr/bin/env bash
+> # (script checks current branch, conditionally runs git checkout -b, then uses here-docs)
+> ```
+
+1. **Create the branch**:
+   - Include in the script a conditional branch check and creation so the script itself will only run `git checkout -b {course-lowercase}-week{NN}` when the current branch is different. Do not require a separate, manual git command outside the script.
+   - Example branch name: `ese311-week08`
 
 2. **Create the week directory**:
    ```
@@ -90,10 +108,12 @@ Scaffold a new week for this embedded engineering curriculum.
    add_executable(week{NN}_main main.c)
    ```
 
-6. **Report what was created** and remind me to:
-   - Add source files with correct naming (snake_case for C, `COURSEID_` prefix for docs)
-   - Fill in the README objectives before the first commit
-   - Stage and commit once files are ready
+6. **At the end of the script, add `echo` statements** that print:
+   - Each file path that was created
+   - A reminder to fill in the README objectives before the first commit
+   - A reminder to stage and commit once source files are added
+
+   These must be `echo` lines inside the script block — not prose outside it.
 
 ## Naming rules to enforce
 
@@ -101,3 +121,4 @@ Scaffold a new week for this embedded engineering curriculum.
 - Course directory: uppercase with dash — `ESE-301`, `ESE-311`, `ECE-452`
 - Source files: lowercase snake_case — `timer_config.c`, `clarke.h`
 - Document files: `COURSEID_Title-With-Dashes.ext` — e.g., `ESE-311_Memory-Map.md`
+   - Exception: repository-level README files for a week MUST be named `README.md` (use the template above). Other documents should follow the `COURSEID_Title-With-Dashes.ext` pattern.
