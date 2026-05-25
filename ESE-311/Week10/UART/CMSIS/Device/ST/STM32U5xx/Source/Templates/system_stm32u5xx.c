@@ -33,7 +33,7 @@ void SystemInit(void) {
 #endif
 
     /* Reset RCC to default state (matches Cube-generated init) */
-    RCC_NS->CR |= RCC_CR_MSISON;
+    RCC_NS->CR = RCC_CR_MSISON;
     RCC_NS->CFGR1 = 0U;
     RCC_NS->CFGR2 = 0U;
     RCC_NS->CFGR3 = 0U;
