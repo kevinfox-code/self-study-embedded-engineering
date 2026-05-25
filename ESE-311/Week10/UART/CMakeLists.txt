@@ -30,6 +30,7 @@ add_executable(${TARGET}
     Src/debug.c
     Src/sysmem.c
     Src/syscalls.c
+    CMSIS/Device/ST/STM32U5xx/Source/Templates/system_stm32u5xx.c
     startup_stm32u575zitxq.s
 )
 
