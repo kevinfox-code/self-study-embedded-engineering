@@ -1,4 +1,5 @@
 /*
+ * SPDX-License-Identifier: MIT
  * Author:      Kevin Fox
  * Book:        Making Embedded Systems: Design Patterns for Great Software
  *              by Elecia White — O'Reilly Media

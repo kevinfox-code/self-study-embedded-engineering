@@ -52,6 +52,11 @@ This repository follows a simple, predictable naming scheme:
 - [lesson-content-standards](.github/skills/lesson-content-standards/SKILL.md): keep lesson READMEs, code headers, and teaching comments aligned with the correct course week.
 - [week-folder-readme-alignment](.github/skills/week-folder-readme-alignment/SKILL.md): keep each week folder, its README, and commit summary aligned when content changes.
 
+## Workspace Instructions
+
+- [college-lesson-code-comments](.github/instructions/college-lesson-code-comments.instructions.md): enforce college-level lesson code headers and instructional comments in C source/header files across course folders.
+- [college-lesson-readme](.github/instructions/college-lesson-readme.instructions.md): enforce college-level lesson README structure, instructional tone, and accurate course/week context.
+
 ## Agentic Workflow (interactive)
 
 This repository supports an interactive, agent-assisted workflow using the Copilot/VS Code prompts found under `.github/prompts/` and a lightweight CI workflow that validates builds and repository hygiene on PRs.
