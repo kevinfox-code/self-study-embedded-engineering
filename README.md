@@ -57,6 +57,7 @@ This repository follows a simple, predictable naming scheme:
 This repository supports an interactive, agent-assisted workflow using the Copilot/VS Code prompts found under `.github/prompts/` and a lightweight CI workflow that validates builds and repository hygiene on PRs.
 
 - **Local flow (typical)**: create a branch using the `{course-lowercase}-week{NN}` pattern, run `sessionstart.prompt.md` in Copilot to orient the agent, use `new-week.prompt.md` to scaffold work, build/tests locally, commit with AI disclosure in the commit body, push and open a PR.
+- **Publish flow (work to PR)**: run `work2pr.prompt.md` to convert completed local work into a compliant branch, scoped commit, push, and PR using the repository template/checklists.
 - **Automated checks**: the `Agentic CI` GitHub Actions workflow runs on `push` and `pull_request` to `main` and will attempt to build detected `Makefile` and `CMakeLists.txt` projects, run a forbidden-artifact check, and lint scripts.
 - **Where to look**: See `AGENTS.md` for agent role descriptions and `.github/pull_request_template.md` for required PR disclosure.
 
