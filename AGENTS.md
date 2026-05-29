@@ -7,6 +7,7 @@ Agent roles
 - Scaffolder: runs `new-week.prompt.md` to create project scaffolding for a course week.
 - Build Checker: runs `build-check.prompt.md` to detect appropriate build systems and provide build commands.
 - PR Preparer: runs `pr-prep.prompt.md` to draft PR descriptions from recent commits and ensure AI disclosure is included.
+- Work Publisher: runs `work2pr.prompt.md` to turn completed local work into a compliant branch + commit + push + pull request flow.
 - Session Guide: use `sessionstart.prompt.md` at session start to load conventions and ground rules.
 
 How to use

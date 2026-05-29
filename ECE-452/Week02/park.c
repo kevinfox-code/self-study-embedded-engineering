@@ -1,4 +1,5 @@
 /*
+ * SPDX-License-Identifier: MIT
  * Author:      Kevin Fox
  * Book:        Permanent Magnet Synchronous and Brushless DC Motor Drives
  *              by R. Krishnan — CRC Press, 2010
