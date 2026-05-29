@@ -12,6 +12,7 @@ The repository is organized for traceability and professional documentation stan
 
 - [ESE-301](ESE-301): Embedded systems design and engineering patterns
 - [ESE-311](ESE-311): Bare-metal embedded C programming on ARM Cortex-M
+- [ESE-311/Week11/ADC](ESE-311/Week11/ADC): bare-metal STM32U575 ADC example with explicit sample-time setup
 - [ECE-452](ECE-452): Electric motor drives and field-oriented control
 - [embedded-engineering-course-schedule.ics](embedded-engineering-course-schedule.ics): course calendar
 
