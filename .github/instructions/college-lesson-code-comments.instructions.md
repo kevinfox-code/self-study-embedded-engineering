@@ -9,26 +9,24 @@ Use this instruction for course code that should read like a college software/em
 
 ## Required Header Template
 
-Use this exact structure at the top of each `.c`, `.cpp`, and `.h` lesson file, adapted to the file context:
+Use this header style for new or updated `.c`, `.cpp`, and `.h` lesson files:
 
 ```c
 /*
- * File:        <filename>
- * Course:      <ESE-301 | ESE-311 | ECE-452>
- * Week:        <WeekNN>
- * Module:      <module or lab name>
- * Purpose:     <what this file implements>
- * Learning:    <what a student should learn from this file>
- * Dependencies:<key headers/peripherals/assumptions>
+ * SPDX-License-Identifier: <license>
+ * Author:      <name>
+ * Book:        <textbook or source reference>
+ *              <author/publisher line if needed>
+ * Description: <what this file implements and what students should learn>
  */
 ```
 
 Header rules:
 
-- Keep all fields present. Do not omit lines.
+- Keep SPDX, Author, Book, and Description aligned with the current lesson context.
 - Keep wording technical and concise.
-- Match the folder context exactly (course/week/module).
 - Update header fields when file behavior changes.
+- Do not rewrite untouched legacy files only to force this header format.
 
 ## Instructional Comment Expectations
 
@@ -65,6 +63,5 @@ Complexity guidance (college-level):
 ## Quick Self-Check Before Finalizing
 
 - Would a student understand why the key steps exist?
-- Does the file include the full required header template with accurate values?
-- Do header and comments match the course/week/module in this folder?
+- Does the file include the required SPDX/Author/Book/Description header fields with accurate values?
 - Are comments focused on intent and behavior, not trivial syntax?
