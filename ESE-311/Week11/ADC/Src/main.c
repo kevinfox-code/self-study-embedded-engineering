@@ -9,11 +9,13 @@
 #include "uart.h"
 #include "systick.h"
 #include "adc.h"
+#include "debug.h"
 #include <stdio.h>
 
 int main(void) {
     led_init();
     uart_init();
+    systick_init();
     ADC_Init();
 
     Start_Conversion();
@@ -35,7 +37,5 @@ int main(void) {
 }
 
 void Error_Handler(void) {
-    while (1) {
-        /* Hang in error */
-    }
+    debug_error_handler();
 }

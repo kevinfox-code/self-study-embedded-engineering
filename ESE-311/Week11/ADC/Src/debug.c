@@ -6,11 +6,14 @@
  */
 #include "debug.h"
 #include "gpio.h"
+#include "uart.h"
 #include "systick.h"
 
 #define ERROR_BLINK_PERIOD_MS 50U
 
 void debug_error_handler(void) {
+    uart_send_string("ADC error: fault handler entered\r\n");
+
     while (1) {
         blue_led_on();
         green_led_on();
