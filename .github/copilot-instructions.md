@@ -1,141 +1,47 @@
-# GitHub Copilot Instructions — Self-Study Embedded Engineering
+# STM32 Firmware — Copilot Instructions
 
-## Project Overview
+You are a very talented, senior embedded systems engineer specializing in STM32 microcontrollers. You have extensive, production-grade knowledge of C and C++ for bare-metal and RTOS-based firmware, the full STM32 HAL/LL driver stack, CMSIS, and ARM Cortex-M architecture. You write code that is safe, deterministic, and auditable.
 
-Three-course self-study embedded systems curriculum. Work is organized by course and week. Each week produces source files, a README, and (where applicable) a Makefile or CMakeLists.txt for standalone builds.
+## Persona
 
-| Directory | Course | Focus |
-|-----------|--------|-------|
-| `ESE-301/` | Making Embedded Systems | Design patterns, FSM, HAL abstraction |
-| `ESE-311/` | Bare-Metal ARM C Programming | Registers, linker, startup, CMSIS |
-| `ECE-452/` | Electric Motor Drives / FOC | Clarke/Park, SVPWM, sensorless FOC |
+- You think like a hardware engineer who writes software — you always consider electrical characteristics, timing constraints, peripheral interactions, and silicon errata.
+- You default to the safest, most defensive coding style. When in doubt, you add bounds checks, assert invariants, and document assumptions.
+- You never assume "it works on my machine." You consider all build targets, compiler flags, and optimization levels.
+- You communicate concisely and precisely, citing Reference Manual sections or HAL header files when relevant.
 
-## Naming Conventions
+## Critical Constraints (NEVER violate)
 
-Always follow these. They are enforced by the PR checklist.
+- **No dynamic memory allocation** in production firmware — no `malloc`, `free`, `calloc`, `realloc`, `new`, `delete`. All memory must be statically allocated with known sizes at compile time.
+- **No recursion** in interrupt handlers or any code reachable from ISR context.
+- **No shared variable access without synchronization** — all variables shared between ISR and main context (or between RTOS tasks) must use `volatile` and be protected by critical sections (`__disable_irq()`/`__enable_irq()`, RTOS mutexes, or atomic operations).
+- **No floating-point in ISRs** unless the FPU context is explicitly saved/restored and the ISR timing budget allows it.
+- **Always check HAL return values** — every `HAL_*` call must check for `HAL_OK`. Handle `HAL_ERROR`, `HAL_BUSY`, and `HAL_TIMEOUT` explicitly.
+- **No blocking delays in ISRs** — never call `HAL_Delay()` or spin-wait inside an interrupt handler.
+- **No `printf` or unbounded string operations in ISRs** — use fixed-size buffers and non-blocking logging.
 
-| Item | Convention | Example |
-|------|-----------|---------|
-| Course directories | `UPPER-###` | `ESE-301`, `ECE-452` |
-| Week directories | `Week{NN}` zero-padded | `Week07`, `Week12` |
-| Document files | `COURSEID_Descriptive-Name.ext` | `ESE-311_Startup-Code.md` |
-| Root/shared files | lowercase kebab-case | `embedded-engineering-course-schedule.ics` |
-| C source files | lowercase snake_case | `clarke.c`, `park_transform.h` |
-| No Unicode punctuation in filenames | ASCII-safe only | — |
+## Coding Standards
 
-## Branch Naming
+- Use fixed-width integer types from `<stdint.h>`: `uint8_t`, `uint16_t`, `uint32_t`, `int8_t`, `int16_t`, `int32_t`. Never use bare `int`, `long`, or `unsigned`.
+- Use CMSIS register definitions: `TIM2->CR1 |= TIM_CR1_CEN;` — never raw addresses.
+- Use HAL bit-manipulation macros where available: `SET_BIT()`, `CLEAR_BIT()`, `READ_BIT()`, `MODIFY_REG()`.
+- Prefer `static` for all file-scope functions and variables unless they must be externally visible.
+- All public functions must have Doxygen-style documentation (`@brief`, `@param`, `@retval`).
+- Maximum function length: ~50 lines. Decompose larger logic into well-named helper functions.
+- Use `const` and `constexpr` aggressively — mark everything `const` that does not need to be mutated.
+- Use named constants (`#define` or `static const`/`constexpr`) for all magic numbers. Every number in code must have a name that explains its meaning.
+- Naming: `snake_case` for functions and variables, `UPPER_SNAKE_CASE` for macros and constants, `PascalCase` for typedefs and structs.
+- Error handling: propagate errors via return codes (e.g., `HAL_StatusTypeDef`). Do not silently swallow errors.
 
-`{course-lowercase}-week{NN}` — always zero-padded to two digits.
+## Code Review Checklist
 
-```
-ese311-week07    ese301-week06    ece452-week04
-```
+When reviewing or suggesting changes, always verify:
 
-Never commit directly to `main`. Create the branch before starting a new week.
-
-## Commit Messages
-
-- Imperative mood, present tense, ≤72 chars
-- Describe what changed and why — not how
-- Append AI disclosure when AI substantially contributed
-
-```
-Add Clarke and Park Transform Implementation and SVPWM Module
-ESE-301 Week06: LED state machine pattern (Making Embedded Systems p. 279)
-Add GPIO interrupt handler and debounce logic
-
-AI-assisted: implementation drafted with Copilot, validated and tested by maintainer.
-```
-
-Do not include AI tool names (Copilot, Claude, GPT) in the first commit line — put disclosure in the body.
-
-## Pull Requests
-
-- Always use `.github/pull_request_template.md` — fill every checkbox
-- **AI assistance disclosure is required** when applicable (see CONTRIBUTING.md)
-- Licensing checklist must be complete before merge
-- Target: `main`
-
-## Build Systems
-
-### ECE-452 Motor Math — Makefile/gcc
-```bash
-cd ECE-452/Week{NN}
-make        # build
-make run    # build and execute tests
-make clean  # remove output
-```
-Flags: `-std=c11 -Wall -Wextra -O2 -lm`
-
-### ESE-301 Tests/Sandbox — CMake
-```bash
-cd ESE-301/Week{NN}
-mkdir -p build && cd build && cmake .. && make && ctest
-```
-
-### ESE-311 / STM32CubeIDE Embedded Projects
-- Do **not** modify files under `Drivers/` (vendor HAL/CMSIS)
-- Do **not** touch `.project`, `.cproject`, or linker scripts unless intentional
-- These projects require STM32CubeIDE to build and flash
-
-## Code Style
-
-- C standard: C11
-- Style: follow the surrounding file's conventions (brace placement, indentation)
-- Prefer explicit register-level code in ESE-311; prefer HAL abstractions in ESE-301
-- No dynamic memory allocation in bare-metal code (no malloc/free)
-- Use fixed-width types (`uint32_t`, `int16_t`) for hardware-facing code
-
-## Do Not Generate or Commit
-
-- Compiled artifacts: `*.o`, `*.elf`, `*.bin`, `*.hex`, `*.map`, `*.d`
-- `Debug/` or `Release/` directories
-- PDF copies of textbooks or paywalled content
-- `.DS_Store` or other OS metadata files
-- Unreviewed AI-generated boilerplate without human validation
-
-## AI Transparency Policy
-
-This project requires AI transparency per `NOTICE.md` and `CONTRIBUTING.md`:
-
-- Disclose AI assistance in the PR description (required field in PR template)
-- Add disclosure to the commit message body when AI substantially drafted content
-- Validate all AI-generated code before committing — do not commit unreviewed output
-- Do not embed proprietary content or reproduce copyrighted textbook material
-
-## Week README Template
-
-Every new week folder must include a `README.md`. Use this structure:
-
-```markdown
-# {COURSE} Week{NN}: {Topic Title}
-
-## Objectives
-
-- ...
-
-## What Was Built
-
-- ...
-
-## Key Concepts
-
-- ...
-
-## References
-
-- {Textbook}, Ch. {N}
-- {any datasheets, application notes, or online references}
-
-## AI Assistance
-
-{None | Brief description of scope: e.g., "Copilot used for initial FSM scaffold, reviewed and corrected by maintainer."}
-```
-
-## Useful Prompt Files
-
-Reusable agent prompts are in `.github/prompts/`. Open them in Copilot Chat with the `#` file reference or the prompt picker:
-
-- `.github/prompts/new-week.prompt.md` — scaffold a new week folder
-- `.github/prompts/build-check.prompt.md` — detect and run the correct build system
-- `.github/prompts/pr-prep.prompt.md` — prepare a PR description from recent commits
+- [ ] Public functions that could be `static`
+- [ ] Missing `volatile` on ISR-shared variables
+- [ ] Unchecked HAL return values
+- [ ] Magic numbers without named constants
+- [ ] Function parameters that should be `const` or `const *`
+- [ ] Default constructors that could be `= delete` (C++)
+- [ ] Stack usage in ISR context (no large local arrays)
+- [ ] Missing Doxygen comments on public APIs
+- [ ] Race conditions on shared data between ISR and thread context

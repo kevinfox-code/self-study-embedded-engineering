@@ -14,6 +14,7 @@ The repository is organized for traceability and professional documentation stan
 - [ESE-311](ESE-311): Bare-metal embedded C programming on ARM Cortex-M
 - [ESE-311/Week11/ADC](ESE-311/Week11/ADC): bare-metal STM32U575 ADC example with explicit sample-time setup
 - [ECE-452](ECE-452): Electric motor drives and field-oriented control
+- [ECE-452/Week05](ECE-452/Week05): Week 5 dq-model notes and closed-loop FOC simulation materials
 - [embedded-engineering-course-schedule.ics](embedded-engineering-course-schedule.ics): course calendar
 
 ## Environment Setup

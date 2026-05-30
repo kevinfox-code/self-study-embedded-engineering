@@ -1,5 +1,5 @@
 ---
-mode: agent
+agent: Ask
 description: Detect and run the correct build system for the current or specified directory
 ---
 
