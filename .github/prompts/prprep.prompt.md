@@ -1,5 +1,5 @@
 ---
-mode: agent
+agent: Plan
 description: Prepare a complete PR description from recent commits on the current branch
 ---
 
