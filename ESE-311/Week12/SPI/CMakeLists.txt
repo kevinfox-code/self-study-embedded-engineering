@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.20)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
     set(CMAKE_BUILD_TYPE Debug CACHE STRING "Build type" FORCE)
 endif()
@@ -51,6 +53,7 @@ add_executable(${TARGET}
     Src/uart.c
     Src/adc.c
     Src/tim.c
+    Src/spi.c
     Src/ringbuffer.c
     Src/systick.c
     Src/debug.c
