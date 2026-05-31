@@ -1,4 +1,4 @@
----
+x---
 agent: ask
 description: Turn current work into a branch, commit, push, and PR using repo conventions
 argument-hint: Describe the completed work and preferred scope (for example: ADC now working, include only Src changes)
