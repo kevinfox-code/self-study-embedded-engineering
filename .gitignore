@@ -18,3 +18,6 @@ build/
 *.map
 *.o
 *.d
+
+# language server caches
+.cache/
