@@ -27,7 +27,7 @@
 1. Create a `build` directory and run CMake:
 
 ```bash
-cd ESE-311/Week07/GpioInput-Output/gpio_example
+cd ESE-311/Week07-GPIO-Driver/GpioInput-Output/gpio_example
 mkdir -p build && cd build
 cmake ..
 make

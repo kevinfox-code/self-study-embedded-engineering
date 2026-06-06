@@ -21,7 +21,7 @@
 ## Build
 
 ```bash
-cd ESE-311/Week10/UART
+cd ESE-311/Week10-UART-Driver/UART
 rm -rf build
 cmake -B build
 cmake --build build

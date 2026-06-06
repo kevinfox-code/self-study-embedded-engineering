@@ -27,7 +27,7 @@
 ## Example Build (Local)
 
 ```bash
-cd ESE-311/Week11/ADC
+cd ESE-311/Week11-ADC-Driver/ADC
 rm -rf build
 cmake -B build
 cmake --build build
@@ -85,4 +85,4 @@ If you'd like, I can also:
 - add a CI step that builds the demo, or
 - commit these README changes to a branch and open a PR.
 
-File: ESE-311/Week11/ADC/README.md
+File: ESE-311/Week11-ADC-Driver/ADC/README.md
