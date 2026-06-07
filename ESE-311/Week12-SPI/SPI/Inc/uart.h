@@ -14,11 +14,12 @@
 #include <stdint.h>
 
 /* UART operation status codes. */
-typedef enum {
-    UART_OK = 0,
-    UART_ERROR_INIT = 1,
-    UART_ERROR_BUSY = 2,
-    UART_ERROR_TIMEOUT = 3,
+typedef enum
+{
+    UART_OK                  = 0,
+    UART_ERROR_INIT          = 1,
+    UART_ERROR_BUSY          = 2,
+    UART_ERROR_TIMEOUT       = 3,
     UART_ERROR_INVALID_PARAM = 4,
 } uart_status_t;
 
@@ -31,7 +32,8 @@ uart_status_t uart_send_char(char c);
 /* Send a null-terminated string (blocking). Returns UART_OK on success. */
 uart_status_t uart_send_string(const char *str);
 
-/* Receive a single character (blocking). Returns character on success, or error code if status != NULL. */
+/* Receive a single character (blocking). Returns character on success, or error code if status !=
+ * NULL. */
 char uart_recv_char(void);
 
 #if FEATURE_UART_DMA
@@ -39,10 +41,11 @@ char uart_recv_char(void);
 #include "ringbuffer.h"
 
 /* Callback event types. */
-typedef enum {
-    UART_EVENT_TX_COMPLETE = 0,  /* All queued TX data sent. */
-    UART_EVENT_RX_DATA = 1,       /* Data available in RX buffer. */
-    UART_EVENT_ERROR = 2,         /* Transmission or buffer error. */
+typedef enum
+{
+    UART_EVENT_TX_COMPLETE = 0, /* All queued TX data sent. */
+    UART_EVENT_RX_DATA     = 1, /* Data available in RX buffer. */
+    UART_EVENT_ERROR       = 2, /* Transmission or buffer error. */
 } uart_event_t;
 
 /* Callback signature: called from ISR when event occurs. Keep handler short! */

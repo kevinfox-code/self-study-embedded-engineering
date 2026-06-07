@@ -10,18 +10,20 @@
 
 #define ERROR_BLINK_PERIOD_MS 50U
 
-void debug_error_handler(void) {
-    while (1) {
+void debug_error_handler(void)
+{
+    while (1)
+    {
         (void)blue_led_on();
         (void)green_led_on();
         (void)red_led_on();
-        
+
         systick_msec_delay(ERROR_BLINK_PERIOD_MS);
 
         (void)blue_led_off();
         (void)green_led_off();
         (void)red_led_off();
-        
+
         systick_msec_delay(ERROR_BLINK_PERIOD_MS);
     }
 }

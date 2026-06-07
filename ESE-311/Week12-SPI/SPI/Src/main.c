@@ -6,27 +6,30 @@
 #include "uart.h"
 #include <stdio.h>
 
-int main(void) {
+int main(void)
+{
     uart_status_t uart_status;
-    
-    // Initialize the MPU6050 accelerometer 
-    
+
+    // Initialize the MPU6050 accelerometer
+
     uart_status = uart_init();
-    if (uart_status != UART_OK) {
+    if (uart_status != UART_OK)
+    {
         Error_Handler();
     }
 
-    while (1) {
+    while (1)
+    {
         uart_send_string("Hello\r\n");
-
-
     }
 
     return 0;
 }
 
-void Error_Handler(void) {
-    while (1) {
+void Error_Handler(void)
+{
+    while (1)
+    {
         /* Hang in error */
     }
 }

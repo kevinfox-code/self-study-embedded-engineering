@@ -10,8 +10,8 @@
 #include "stm32u575xx.h"
 
 // Function prototypes
-void ADC_Init(void);
-void Start_Conversion(void);
+void     ADC_Init(void);
+void     Start_Conversion(void);
 uint32_t ADC_Read(void);
 
 #endif // ADC_H

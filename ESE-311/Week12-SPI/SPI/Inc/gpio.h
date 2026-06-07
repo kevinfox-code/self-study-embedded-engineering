@@ -12,9 +12,10 @@
 #include <stdbool.h>
 
 /* GPIO operation status codes. */
-typedef enum {
-    GPIO_OK = 0,
-    GPIO_ERROR_INIT = 1,
+typedef enum
+{
+    GPIO_OK                = 0,
+    GPIO_ERROR_INIT        = 1,
     GPIO_ERROR_INVALID_PIN = 2,
 } gpio_status_t;
 
