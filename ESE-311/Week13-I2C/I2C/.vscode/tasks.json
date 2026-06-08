@@ -1,0 +1,82 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "format-all",
+            "type": "shell",
+            "command": "find ${workspaceFolder}/Src ${workspaceFolder}/Inc ${workspaceFolder}/tests -name '*.c' -o -name '*.h' | xargs clang-format -i",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": "build",
+            "presentation": {
+                "reveal": "silent",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "build-project_name",
+            "type": "shell",
+            "command": "cmake -S ${workspaceFolder}/PROJECT_NAME -B ${workspaceFolder}/PROJECT_NAME/build && cmake --build ${workspaceFolder}/PROJECT_NAME/build",
+            "options": {
+                "cwd": "${workspaceFolder}/PROJECT_NAME"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "build-release",
+            "type": "shell",
+            "command": "cmake -S ${workspaceFolder}/PROJECT_NAME -B ${workspaceFolder}/PROJECT_NAME/build-release -DCMAKE_BUILD_TYPE=Release && cmake --build ${workspaceFolder}/PROJECT_NAME/build-release",
+            "options": {
+                "cwd": "${workspaceFolder}/PROJECT_NAME"
+            },
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "build-dma",
+            "type": "shell",
+            "command": "cmake -S ${workspaceFolder}/PROJECT_NAME -B ${workspaceFolder}/PROJECT_NAME/build-dma -DFEATURE_UART_DMA=ON && cmake --build ${workspaceFolder}/PROJECT_NAME/build-dma",
+            "options": {
+                "cwd": "${workspaceFolder}/PROJECT_NAME"
+            },
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "build-lint",
+            "type": "shell",
+            "command": "cmake -S ${workspaceFolder}/PROJECT_NAME -B ${workspaceFolder}/PROJECT_NAME/build-lint -DENABLE_LINT=ON && cmake --build ${workspaceFolder}/PROJECT_NAME/build-lint",
+            "options": {
+                "cwd": "${workspaceFolder}/PROJECT_NAME"
+            },
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "clean-project_name",
+            "type": "shell",
+            "command": "rm -rf ${workspaceFolder}/PROJECT_NAME/build ${workspaceFolder}/PROJECT_NAME/build-debug ${workspaceFolder}/PROJECT_NAME/build-dma ${workspaceFolder}/PROJECT_NAME/build-lint ${workspaceFolder}/PROJECT_NAME/build-release",
+            "options": {
+                "cwd": "${workspaceFolder}/PROJECT_NAME"
+            },
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "flash-project_name",
+            "type": "shell",
+            "command": "cmake -S ${workspaceFolder}/PROJECT_NAME -B ${workspaceFolder}/PROJECT_NAME/build && cmake --build ${workspaceFolder}/PROJECT_NAME/build --target flash",
+            "options": {
+                "cwd": "${workspaceFolder}/PROJECT_NAME"
+            },
+            "group": "build",
+            "problemMatcher": []
+        }
+    ]
+}

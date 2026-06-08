@@ -12,14 +12,14 @@ The repository is organized for traceability and professional documentation stan
 
 - [ESE-301](ESE-301): Embedded systems design and engineering patterns
 - [ESE-311](ESE-311): Bare-metal embedded C programming on ARM Cortex-M
-- [ESE-311/Week11/ADC](ESE-311/Week11/ADC): bare-metal STM32U575 ADC example with explicit sample-time setup
+- [ESE-311/Week11-ADC-Driver/ADC](ESE-311/Week11-ADC-Driver/ADC): bare-metal STM32U575 ADC example with explicit sample-time setup
 - [ECE-452](ECE-452): Electric motor drives and field-oriented control
-- [ECE-452/Week05](ECE-452/Week05): Week 5 dq-model notes and closed-loop FOC simulation materials
+- [ECE-452/Week05-dq-Model-FOC](ECE-452/Week05-dq-Model-FOC): Week 5 dq-model notes and closed-loop FOC simulation materials
 - [embedded-engineering-course-schedule.ics](embedded-engineering-course-schedule.ics): course calendar
 
 ## Environment Setup
 
-- [ESE-301/Week1/blinky/ESE-301_Environment-Setup.md](ESE-301/Week1/blinky/ESE-301_Environment-Setup.md): environment variable setup for STM32CubeIDE tools (macOS + Windows + Linux)
+- [ESE-301/Week01-Introduction/blinky/ESE-301_Environment-Setup.md](ESE-301/Week01-Introduction/blinky/ESE-301_Environment-Setup.md): environment variable setup for STM32CubeIDE tools (macOS + Windows + Linux)
 
 ## Course Syllabus Files
 
