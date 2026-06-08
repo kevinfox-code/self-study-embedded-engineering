@@ -90,7 +90,9 @@ target_link_options(${TARGET} PRIVATE
     ${CPU_FLAGS}
     -T${LINKER_SCRIPT}
     --specs=nosys.specs
+    -u _printf_float
     -Wl,-Map=${MAP_DIR}/${TARGET}.map
+    -Wl,-u,_printf_float
     -Wl,--gc-sections
 )
 

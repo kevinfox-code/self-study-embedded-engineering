@@ -1,4 +1,5 @@
-#include "adxl345.h"
+#include "adx1345.h"
+#include "uart.h"
 
 void adxl_read(uint8_t address, uint8_t *rxdata)
 {
@@ -9,9 +10,9 @@ void adxl_read(uint8_t address, uint8_t *rxdata)
     /*Pull cs line low to enable slave*/
     cs_enable();
     /*Send address*/
-    spi1_transmit(&address, 1);
+    (void)spi1_transmit(&address, 1U);
     /*Read 6 bytes */
-    spi1_receive(rxdata, 6);
+    (void)spi1_receive(rxdata, 6U);
     /*Pull cs line high to disable slave*/
     cs_disable();
 }
@@ -19,28 +20,25 @@ void adxl_read(uint8_t address, uint8_t *rxdata)
 void adxl_write(uint8_t address, uint8_t value)
 {
     uint8_t data[2];
-    /*Enable multi-byte, place address into buffer*/
-    data[0] = address | ADXL345_MULTI_BYTE_ENABLE;
+    /*Place address into buffer*/
+    data[0] = address;
     /*Place data into buffer*/
     data[1] = value;
     /*Pull cs line low to enable slave*/
     cs_enable();
     /*Transmit data and address*/
-    spi1_transmit(data, 2);
+    (void)spi1_transmit(data, 2U);
     /*Pull cs line high to disable slave*/
     cs_disable();
 }
 
 void adxl_init(void)
 {
-    /*Enable SPI gpio*/
-    spi_gpio_init();
-    /*Config SPI*/
-    spi1_config();
-    /*Set data format range to +-4g*/
+    (void)uart_send_string("write DATA_FORMAT\r\n");
     adxl_write(ADXL345_REG_DATA_FORMAT, ADXL345_RANGE_4G);
-    /*Reset all bits*/
+    (void)uart_send_string("write POWER_CTL reset\r\n");
     adxl_write(ADXL345_REG_POWER_CTL, ADXL345_RESET);
-    /*Configure power control measure bit*/
+    (void)uart_send_string("write POWER_CTL measure\r\n");
     adxl_write(ADXL345_REG_POWER_CTL, ADXL345_MEASURE_BIT);
+    (void)uart_send_string("adxl writes done\r\n");
 }
