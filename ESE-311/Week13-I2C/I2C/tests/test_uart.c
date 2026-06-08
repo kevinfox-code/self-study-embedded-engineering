@@ -19,42 +19,46 @@
 #include "uart.h"
 
 #define ANSI_GREEN "\x1b[32m"
-#define ANSI_RED "\x1b[31m"
+#define ANSI_RED   "\x1b[31m"
 #define ANSI_RESET "\x1b[0m"
 
 static int tests_passed = 0;
 
-typedef struct {
+typedef struct
+{
     uart_event_t events[4];
-    void *context;
-    size_t count;
+    void        *context;
+    size_t       count;
 } callback_log_t;
 
 static callback_log_t callback_log;
 
-#define RUN_TEST(fn, description) \
-    do { \
-        printf("Running: %s ... ", description); \
-        fflush(stdout); \
-        fn(); \
-        printf(ANSI_GREEN "PASS" ANSI_RESET "\n"); \
-        tests_passed++; \
+#define RUN_TEST(fn, description)                                                                  \
+    do                                                                                             \
+    {                                                                                              \
+        printf("Running: %s ... ", description);                                                   \
+        fflush(stdout);                                                                            \
+        fn();                                                                                      \
+        printf(ANSI_GREEN "PASS" ANSI_RESET "\n");                                                 \
+        tests_passed++;                                                                            \
     } while (0)
 
 static void reset_callback_log(void)
 {
-    callback_log.count = 0;
+    callback_log.count   = 0;
     callback_log.context = NULL;
-    for (size_t i = 0; i < (sizeof(callback_log.events) / sizeof(callback_log.events[0])); ++i) {
+    for (size_t i = 0; i < (sizeof(callback_log.events) / sizeof(callback_log.events[0])); ++i)
+    {
         callback_log.events[i] = UART_EVENT_ERROR;
     }
 }
 
 static void record_uart_event(uart_event_t event, void *context)
 {
-    if (callback_log.count < (sizeof(callback_log.events) / sizeof(callback_log.events[0]))) {
+    if (callback_log.count < (sizeof(callback_log.events) / sizeof(callback_log.events[0])))
+    {
         callback_log.events[callback_log.count] = event;
-        callback_log.context = context;
+        callback_log.context                    = context;
         callback_log.count++;
     }
 }
@@ -143,7 +147,7 @@ static void test_uart_send_async_queues_bytes_and_enables_txe_irq(void)
 {
     prepare_uart_async();
 
-    const uint8_t payload[] = { 0x11U, 0x22U, 0x33U };
+    const uint8_t payload[] = {0x11U, 0x22U, 0x33U};
     assert(uart_send_async(payload, (uint16_t)sizeof(payload)) == UART_OK);
     assert(uart_send_pending() == (uint16_t)sizeof(payload));
     assert((USART1_NS->CR1 & (1U << 7)) != 0U);
@@ -154,7 +158,8 @@ static void test_uart_send_async_reports_busy_when_buffer_full(void)
     prepare_uart_async();
 
     uint8_t payload[255];
-    for (size_t i = 0; i < sizeof(payload); ++i) {
+    for (size_t i = 0; i < sizeof(payload); ++i)
+    {
         payload[i] = (uint8_t)i;
     }
 
@@ -192,8 +197,8 @@ static void test_uart_isr_handler_completes_tx_and_clears_txe_irq(void)
 {
     prepare_uart_async();
 
-    void *context = &callback_log;
-    const uint8_t payload[] = { 0x5AU };
+    void         *context   = &callback_log;
+    const uint8_t payload[] = {0x5AU};
     assert(uart_set_callback(record_uart_event, context) == UART_OK);
     assert(uart_send_async(payload, (uint16_t)sizeof(payload)) == UART_OK);
 
@@ -219,23 +224,35 @@ int main(void)
     printf("╚════════════════════════════════════════════════════════════╝\n");
     printf("\n");
 
-    RUN_TEST(test_uart_init_configures_gpio_and_usart, "uart_init configures GPIOA, USART1, and BRR");
-    RUN_TEST(test_uart_send_char_writes_tdr_when_txe_set, "uart_send_char writes a byte when TXE is set");
-    RUN_TEST(test_uart_send_string_transmits_each_character, "uart_send_string pushes all characters");
-    RUN_TEST(test_uart_send_string_null_returns_invalid_param, "uart_send_string rejects NULL input");
+    RUN_TEST(test_uart_init_configures_gpio_and_usart,
+             "uart_init configures GPIOA, USART1, and BRR");
+    RUN_TEST(test_uart_send_char_writes_tdr_when_txe_set,
+             "uart_send_char writes a byte when TXE is set");
+    RUN_TEST(test_uart_send_string_transmits_each_character,
+             "uart_send_string pushes all characters");
+    RUN_TEST(test_uart_send_string_null_returns_invalid_param,
+             "uart_send_string rejects NULL input");
     RUN_TEST(test_uart_recv_char_reads_rdr_when_rxne_set, "uart_recv_char reads a received byte");
-    RUN_TEST(test_uart_dma_init_enables_rx_interrupt_and_nvic, "uart_dma_init configures RX interrupt and NVIC");
-    RUN_TEST(test_uart_send_async_rejects_invalid_inputs, "uart_send_async rejects NULL and empty payloads");
-    RUN_TEST(test_uart_send_async_queues_bytes_and_enables_txe_irq, "uart_send_async queues data and enables TXE IRQ");
-    RUN_TEST(test_uart_send_async_reports_busy_when_buffer_full, "uart_send_async reports buffer full");
-    RUN_TEST(test_uart_recv_async_byte_returns_minus_one_when_empty, "uart_recv_async_byte reports empty buffer");
-    RUN_TEST(test_uart_isr_handler_pushes_rx_byte_and_calls_callback, "uart_isr_handler stores RX bytes and triggers RX callback");
-    RUN_TEST(test_uart_isr_handler_completes_tx_and_clears_txe_irq, "uart_isr_handler drains TX data and triggers completion callback");
+    RUN_TEST(test_uart_dma_init_enables_rx_interrupt_and_nvic,
+             "uart_dma_init configures RX interrupt and NVIC");
+    RUN_TEST(test_uart_send_async_rejects_invalid_inputs,
+             "uart_send_async rejects NULL and empty payloads");
+    RUN_TEST(test_uart_send_async_queues_bytes_and_enables_txe_irq,
+             "uart_send_async queues data and enables TXE IRQ");
+    RUN_TEST(test_uart_send_async_reports_busy_when_buffer_full,
+             "uart_send_async reports buffer full");
+    RUN_TEST(test_uart_recv_async_byte_returns_minus_one_when_empty,
+             "uart_recv_async_byte reports empty buffer");
+    RUN_TEST(test_uart_isr_handler_pushes_rx_byte_and_calls_callback,
+             "uart_isr_handler stores RX bytes and triggers RX callback");
+    RUN_TEST(test_uart_isr_handler_completes_tx_and_clears_txe_irq,
+             "uart_isr_handler drains TX data and triggers completion callback");
 
     printf("\n");
     printf("╔════════════════════════════════════════════════════════════╗\n");
     printf("║ Test Summary                                               ║\n");
-    printf("║ Passed: %-3d   Total: %-3d                                  ║\n", tests_passed, tests_passed);
+    printf("║ Passed: %-3d   Total: %-3d                                  ║\n", tests_passed,
+           tests_passed);
     printf("╚════════════════════════════════════════════════════════════╝\n");
     printf("\n");
 

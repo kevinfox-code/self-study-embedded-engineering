@@ -18,17 +18,22 @@ void debug_error_handler(void) __attribute__((noreturn));
 #if DEBUG_ENABLED
 
 /* Assert that condition is true. If false, calls debug_error_handler(). */
-#define UART_ASSERT(condition) \
-    do { \
-        if (!(condition)) { \
-            debug_error_handler(); \
-        } \
+#define UART_ASSERT(condition)                                                                     \
+    do                                                                                             \
+    {                                                                                              \
+        if (!(condition))                                                                          \
+        {                                                                                          \
+            debug_error_handler();                                                                 \
+        }                                                                                          \
     } while (0)
 
 #else
 
 /* Assertions disabled in release builds (no runtime overhead). */
-#define UART_ASSERT(condition) do {} while (0)
+#define UART_ASSERT(condition)                                                                     \
+    do                                                                                             \
+    {                                                                                              \
+    } while (0)
 
 #endif
 

@@ -1,12 +1,10 @@
 cmake_minimum_required(VERSION 3.20)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
-    set(CMAKE_BUILD_TYPE Release CACHE STRING "Build type" FORCE)
+    set(CMAKE_BUILD_TYPE Debug CACHE STRING "Build type" FORCE)
 endif()
-
-# Enable generation of compile_commands.json for IDEs like VSCode and IntelliSense support.
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON CACHE BOOL "Export compile commands for IntelliSense" FORCE)
-
 
 set(CMAKE_SYSTEM_NAME Generic)
 set(CMAKE_SYSTEM_PROCESSOR arm)
@@ -55,6 +53,9 @@ add_executable(${TARGET}
     Src/uart.c
     Src/adc.c
     Src/tim.c
+    Src/spi.c
+    Src/i2c.c
+    Src/adx1345.c
     Src/ringbuffer.c
     Src/systick.c
     Src/debug.c
@@ -90,7 +91,9 @@ target_link_options(${TARGET} PRIVATE
     ${CPU_FLAGS}
     -T${LINKER_SCRIPT}
     --specs=nosys.specs
+    -u _printf_float
     -Wl,-Map=${MAP_DIR}/${TARGET}.map
+    -Wl,-u,_printf_float
     -Wl,--gc-sections
 )
 

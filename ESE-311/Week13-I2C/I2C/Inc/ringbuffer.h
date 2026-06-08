@@ -12,9 +12,10 @@
 #include <stddef.h>
 
 /* Ring buffer handle (opaque). */
-typedef struct {
-    uint8_t *buffer;
-    uint16_t capacity;
+typedef struct
+{
+    uint8_t          *buffer;
+    uint16_t          capacity;
     volatile uint16_t writeIdx;
     volatile uint16_t readIdx;
 } ringbuffer_t;
