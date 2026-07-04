@@ -21,3 +21,5 @@ build/
 
 # language server caches
 .cache/
+# foc-lib host build output
+ECE-452/Week06-MTPA/foc-lib/build_host/
