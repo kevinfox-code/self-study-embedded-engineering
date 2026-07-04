@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "name": "STM32U575 (arm-none-eabi)",
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json",
+            "intelliSenseMode": "gcc-arm",
+            "cStandard": "c11"
+        }
+    ],
+    "version": 4
+}
