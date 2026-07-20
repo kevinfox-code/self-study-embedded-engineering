@@ -1,6 +1,6 @@
 # CubeMX Setup Guide — STM32U5 + DRV8323 Sensorless FOC
 
-This guide walks through configuring an STM32U5 project in STM32CubeMX (or the CubeIDE device configuration tool) so it works with `foc-lib`. The library consumes the peripherals CubeMX initializes — it never re-initializes them — so every setting here matters. Names used below match the macros in [`src/port/stm32u5/constants.h`](../src/port/stm32u5/constants.h); if you deviate from a pin or instance choice, update `constants.h` accordingly (that is the *only* file you should need to edit).
+This guide walks through configuring an STM32U5 project in STM32CubeMX (or the CubeIDE device configuration tool) so it works with `foc-lib`. The library consumes the peripherals CubeMX initializes — it never re-initializes them — so every setting here matters. Names used below match the macros in [`App/constants.h`](../../App/constants.h) (the application's bridge file, moved from `src/port/stm32u5/`); if you deviate from a pin or instance choice, update `constants.h` accordingly (that is the *only* file you should need to edit).
 
 **Reference target:** STM32U575ZIT6Q (Nucleo-U575ZI-Q), 160 MHz, TIM1 PWM at 20 kHz, DRV8323 SPI gate driver, 3 low-side shunts.
 
