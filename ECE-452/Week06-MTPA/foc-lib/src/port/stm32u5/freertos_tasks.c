@@ -21,6 +21,9 @@
 #include "foc/drv8323.h"
 #include "board_support.h"
 
+/* Defined in drv8323_transport.c (same layer, no public header). */
+extern const drv8323_transport_t *drv8323_transport_get(void);
+
 /* -------------------------------------------------------------------------
  * Global instances
  * ---------------------------------------------------------------------- */
