@@ -1,7 +1,8 @@
 /*
+ * SPDX-License-Identifier: MIT
  * Author:      Kevin Fox
- * Description: ADC driver header for STM32U575 — declares init, start conversion, and read
- *              functions for ADC1_IN8 single-channel polling conversion.
+ * Description: ADC1 driver API — ADC_Init, Start_Conversion, and ADC_Read for single-channel
+ *              conversions on ADC1_IN8 (PA3).
  */
 
 #ifndef ADC_H

@@ -1,88 +1,68 @@
-# ADC Module
+# ESE-311 Week 11 — ADC
 
 ## Objectives
 
-- Implement ADC drivers for the STM32U575 family
-- Configure single-shot and continuous conversions
-- Understand sampling time, resolution, and data alignment
-- Use DMA for continuous sampling (optional)
-- Validate readings with a simple test harness
+- Configure the STM32U575 ADC at the register level, without the HAL.
+- Understand the sequence the U5 requires before a conversion will ever complete:
+  clock enable, analog supply valid, calibration, then enable.
+- Select a channel and set an explicit sample time rather than relying on reset defaults.
+- Read conversions in a loop and report them over UART.
 
 ## What Was Built
 
-- ADC initialization and clock configuration
-- Channel selection and sampling-time configuration
-- Single conversion and continuous conversion routines
-- Optional DMA integration example
-- A small test program that logs conversion results over UART
+- [`ADC/Src/adc.c`](ADC/Src/adc.c) — ADC1 driver. Enables the GPIOA and ADC12 clocks,
+  asserts `PWR_SVMCR_ASV` so the analog supply is valid, runs `ADCAL`, selects
+  ADC1_IN8 (PA3, the `AO` pin on the Zio connector), programs a 19.5-cycle
+  sample time via `SMPR1.SMP8`, and runs in continuous mode with `OVRMOD` set so
+  the latest sample always wins.
+- [`ADC/Inc/adc.h`](ADC/Inc/adc.h) — `ADC_Init`, `Start_Conversion`, `ADC_Read`.
+- [`ADC/Src/main.c`](ADC/Src/main.c) — starts a conversion and prints each raw count
+  over UART every 250 ms while toggling the green LED.
+- UART, SysTick, GPIO, and debug modules carried forward from Weeks 7–10.
 
 ## Key Concepts
 
-- ADC clock sources and prescalers
-- Sampling time vs input impedance and source driving
-- Resolution (12/10/8/6-bit) and data alignment
-- Calibration and voltage reference (VREF+ / VREF-)
-- Using DMA to stream ADC samples without CPU polling
+- **The ASV gate.** On STM32U5 the analog isolation switch stays open until
+  `PWR_SVMCR.ASV` is set. Without it the ADC has no analog power and `ADCAL`
+  never completes — the single most common reason a U5 ADC port from an F4
+  appears to hang.
+- **Calibration ordering.** `ADCAL` must run with `ADEN = 0`; enabling the ADC
+  first silently skips calibration.
+- **Sample time vs source impedance.** The sampling capacitor has to charge
+  through the source. A high-impedance source needs a longer `SMP` setting, or
+  readings sag toward the previous conversion.
+- **Continuous vs single conversion.** With `CONT` set the ADC free-runs, so
+  `ADC_Read()` returns whatever is in `DR` rather than triggering a conversion.
+  `OVRMOD` decides whether an unread sample is preserved or overwritten.
+- **Resolution.** `CFGR1.RES` is two bits wide on this part and is left at its
+  reset value here; changing it rescales every raw count in software.
 
-## Example Build (Local)
+## Build and Run
 
 ```bash
-cd ESE-311/Week11-ADC-Driver/ADC
-rm -rf build
+cd ESE-311/Week11-ADC/ADC
 cmake -B build
 cmake --build build
-```
-
-## Build, Flash and Run
-
-To build and flash the demo (uses the `flash` target configured for your board):
-
-```bash
 cmake --build build --target flash
 ```
 
-Then open a serial terminal (115200, 8N1) to observe ADC readings printed by the test program.
+Open a serial terminal on the ST-LINK virtual COM port at 115200 8N1 to see the
+conversion values. Drive PA3 from a potentiometer between 3V3 and GND to sweep
+the reading.
 
 ## VS Code Debug
 
-1. Install the Cortex-Debug extension.
-2. Ensure `arm-none-eabi-gdb` and `openocd` are on your `PATH`.
-3. Connect the board with ST-LINK.
-4. Open the Run and Debug view and select the ADC debug configuration.
-
-The debug launch uses `build/adc_demo.elf` (adjust target name if different).
-
-## Exercises
-
-1. Configure and read a single ADC channel (single conversion). Verify with a known voltage.
-2. Switch the ADC resolution to 10-bit and compare scaling in software.
-3. Implement continuous conversion mode and sample averaging to reduce noise.
-4. (Advanced) Configure DMA to transfer conversions into a circular buffer and plot results.
-
-## Verification
-
-- Use a voltage divider or potentiometer on an analog-capable pin to exercise the ADC.
-- Confirm raw counts map to expected voltages using the reference voltage and resolution.
-- Add simple unit tests for scaling/math functions where practical (host-side tests).
+Requires the Cortex-Debug extension, with `arm-none-eabi-gdb` and `openocd` on
+`PATH`. Open the `ADC/` folder as the workspace and launch **Debug (OpenOCD)**,
+which builds `build/adc.elf` via the `cmake: build` task.
 
 ## References
 
-- Bare-Metal Embedded C Programming, ADC chapter
-- STM32U5 Reference Manual (ADC section)
-- STM32CubeU5 HAL drivers and application notes
+- Israel Gbati, *Bare-Metal Embedded C Programming* — ADC chapter
+- RM0456 §ADC, and the `PWR_SVMCR` description in §PWR
+- See [ESE-311_References.md](../ESE-311_References.md) for download links
 
-## Notes
+## AI Assistance
 
-- Keep analog input sources low impedance or increase sampling time.
-- Calibrate and verify VREF if precise voltage measurements are required.
-- Update `CMakeLists.txt` or build targets if your board or demo target name differs.
-
----
-
-If you'd like, I can also:
-
-- add a small `adc_demo.c` example in this folder,
-- add a CI step that builds the demo, or
-- commit these README changes to a branch and open a PR.
-
-File: ESE-311/Week11-ADC-Driver/ADC/README.md
+Claude Code assisted with the STM32U5 ADC power and calibration sequence and
+with drafting this README. Reviewed and edited by the maintainer.

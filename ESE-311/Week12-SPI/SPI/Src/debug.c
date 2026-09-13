@@ -1,8 +1,10 @@
 /*
+ * SPDX-License-Identifier: MIT
  * Author:      Kevin Fox
- * Description: Debug module — fatal error handler that blinks all LEDs rapidly
- *              to signal an unrecoverable fault.  Intended to be called from
- *              Error_Handler() or hard fault ISRs; never returns.
+ * Book:        Bare-Metal Embedded C Programming
+ *              by Israel Gbati — Packt, 2024
+ * Description: Debug module — fatal error handler that blinks all LEDs rapidly to signal an
+ *              unrecoverable fault. Called from Error_Handler() or hard fault ISRs; never returns.
  */
 #include "debug.h"
 #include "gpio.h"

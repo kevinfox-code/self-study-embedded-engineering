@@ -1,7 +1,10 @@
 /*
+ * SPDX-License-Identifier: MIT
  * Author:      Kevin Fox
- * Description: Bare-metal GPIO driver for STM32U575 — register-level control of RGB LEDs
- *              (PC7, PB7, PB14) and user button (PC13).
+ * Book:        Bare-Metal Embedded C Programming
+ *              by Israel Gbati — Packt, 2024
+ * Description: Bare-metal GPIO driver — configures the Nucleo RGB LED pins as outputs and the user
+ *              button as an input using direct register writes, and provides the LED/button helpers.
  */
 #include "gpio.h"
 

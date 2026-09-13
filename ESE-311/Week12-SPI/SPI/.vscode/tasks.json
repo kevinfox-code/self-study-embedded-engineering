@@ -16,11 +16,11 @@
             "problemMatcher": []
         },
         {
-            "label": "build-project_name",
+            "label": "build-spi",
             "type": "shell",
-            "command": "cmake -S ${workspaceFolder}/PROJECT_NAME -B ${workspaceFolder}/PROJECT_NAME/build && cmake --build ${workspaceFolder}/PROJECT_NAME/build",
+            "command": "cmake -S ${workspaceFolder} -B ${workspaceFolder}/build && cmake --build ${workspaceFolder}/build",
             "options": {
-                "cwd": "${workspaceFolder}/PROJECT_NAME"
+                "cwd": "${workspaceFolder}"
             },
             "group": {
                 "kind": "build",
@@ -31,9 +31,9 @@
         {
             "label": "build-release",
             "type": "shell",
-            "command": "cmake -S ${workspaceFolder}/PROJECT_NAME -B ${workspaceFolder}/PROJECT_NAME/build-release -DCMAKE_BUILD_TYPE=Release && cmake --build ${workspaceFolder}/PROJECT_NAME/build-release",
+            "command": "cmake -S ${workspaceFolder} -B ${workspaceFolder}/build-release -DCMAKE_BUILD_TYPE=Release && cmake --build ${workspaceFolder}/build-release",
             "options": {
-                "cwd": "${workspaceFolder}/PROJECT_NAME"
+                "cwd": "${workspaceFolder}"
             },
             "group": "build",
             "problemMatcher": []
@@ -41,9 +41,9 @@
         {
             "label": "build-dma",
             "type": "shell",
-            "command": "cmake -S ${workspaceFolder}/PROJECT_NAME -B ${workspaceFolder}/PROJECT_NAME/build-dma -DFEATURE_UART_DMA=ON && cmake --build ${workspaceFolder}/PROJECT_NAME/build-dma",
+            "command": "cmake -S ${workspaceFolder} -B ${workspaceFolder}/build-dma -DFEATURE_UART_DMA=ON && cmake --build ${workspaceFolder}/build-dma",
             "options": {
-                "cwd": "${workspaceFolder}/PROJECT_NAME"
+                "cwd": "${workspaceFolder}"
             },
             "group": "build",
             "problemMatcher": []
@@ -51,29 +51,29 @@
         {
             "label": "build-lint",
             "type": "shell",
-            "command": "cmake -S ${workspaceFolder}/PROJECT_NAME -B ${workspaceFolder}/PROJECT_NAME/build-lint -DENABLE_LINT=ON && cmake --build ${workspaceFolder}/PROJECT_NAME/build-lint",
+            "command": "cmake -S ${workspaceFolder} -B ${workspaceFolder}/build-lint -DENABLE_LINT=ON && cmake --build ${workspaceFolder}/build-lint",
             "options": {
-                "cwd": "${workspaceFolder}/PROJECT_NAME"
+                "cwd": "${workspaceFolder}"
             },
             "group": "build",
             "problemMatcher": []
         },
         {
-            "label": "clean-project_name",
+            "label": "clean-spi",
             "type": "shell",
-            "command": "rm -rf ${workspaceFolder}/PROJECT_NAME/build ${workspaceFolder}/PROJECT_NAME/build-debug ${workspaceFolder}/PROJECT_NAME/build-dma ${workspaceFolder}/PROJECT_NAME/build-lint ${workspaceFolder}/PROJECT_NAME/build-release",
+            "command": "rm -rf ${workspaceFolder}/build ${workspaceFolder}/build-debug ${workspaceFolder}/build-dma ${workspaceFolder}/build-lint ${workspaceFolder}/build-release",
             "options": {
-                "cwd": "${workspaceFolder}/PROJECT_NAME"
+                "cwd": "${workspaceFolder}"
             },
             "group": "build",
             "problemMatcher": []
         },
         {
-            "label": "flash-project_name",
+            "label": "flash-spi",
             "type": "shell",
-            "command": "cmake -S ${workspaceFolder}/PROJECT_NAME -B ${workspaceFolder}/PROJECT_NAME/build && cmake --build ${workspaceFolder}/PROJECT_NAME/build --target flash",
+            "command": "cmake -S ${workspaceFolder} -B ${workspaceFolder}/build && cmake --build ${workspaceFolder}/build --target flash",
             "options": {
-                "cwd": "${workspaceFolder}/PROJECT_NAME"
+                "cwd": "${workspaceFolder}"
             },
             "group": "build",
             "problemMatcher": []

@@ -16,7 +16,7 @@
             "problemMatcher": []
         },
         {
-            "label": "build-I2C",
+            "label": "build-mtpa",
             "type": "shell",
             "command": "cmake -S ${workspaceFolder} -B ${workspaceFolder}/build && cmake --build ${workspaceFolder}/build",
             "options": {
@@ -59,7 +59,7 @@
             "problemMatcher": []
         },
         {
-            "label": "clean-I2C",
+            "label": "clean-mtpa",
             "type": "shell",
             "command": "rm -rf ${workspaceFolder}/build ${workspaceFolder}/build-debug ${workspaceFolder}/build-dma ${workspaceFolder}/build-lint ${workspaceFolder}/build-release",
             "options": {
@@ -69,7 +69,7 @@
             "problemMatcher": []
         },
         {
-            "label": "flash-I2C",
+            "label": "flash-mtpa",
             "type": "shell",
             "command": "cmake -S ${workspaceFolder} -B ${workspaceFolder}/build && cmake --build ${workspaceFolder}/build --target flash",
             "options": {

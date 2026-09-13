@@ -54,8 +54,7 @@ add_executable(${TARGET}
     Src/adc.c
     Src/tim.c
     Src/spi.c
-    Src/i2c.c
-    Src/adx1345.c
+    Src/adxl345.c
     Src/ringbuffer.c
     Src/systick.c
     Src/debug.c

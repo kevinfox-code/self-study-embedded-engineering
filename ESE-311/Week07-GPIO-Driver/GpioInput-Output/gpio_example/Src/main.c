@@ -1,8 +1,11 @@
 /*
+ * SPDX-License-Identifier: MIT
  * Author:      Kevin Fox
  * Book:        Bare-Metal Embedded C Programming
  *              by Israel Gbati — Packt, 2024
- * Description: Application for Week 7 — polls the user button and mirrors its state to the blue LED while toggling the green LED every other loop iteration, demonstrating GPIO input reading and output control at the register level.
+ * Description: Application entry point — polls the user button and mirrors its state to the blue LED
+ *              while toggling the green LED every other loop iteration, demonstrating GPIO input
+ *              reading and output control at the register level.
  */
 #include "main.h"
 #include "gpio.h"

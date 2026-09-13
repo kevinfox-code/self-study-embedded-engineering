@@ -1,4 +1,4 @@
-# ECE-452 Week05: Dynamic dq Model and Reference Frame Theory
+# ECE-452 Week 05 — Dynamic dq Model and Reference Frame Theory
 
 ## Objectives
 
@@ -8,7 +8,7 @@
 
 ## What Was Built
 
-- `math.md` collects the dq-model equations, observer relationships, and inverter mappings used in the Week 5 notes.
+- [`ECE-452_dq-Model-Math.md`](ECE-452_dq-Model-Math.md) collects the dq-model equations, observer relationships, and inverter mappings used in the Week 5 notes.
 - `foc_full_closedloop.m` runs a GNU Octave closed-loop FOC simulation with a back-EMF flux observer, PLL, speed loop, current loops, and startup handoff logic.
 - `svpwm.m` provides the seven-segment SVPWM duty-cycle calculation used by the simulation.
 
@@ -35,9 +35,10 @@ Expected outcome: the script produces plots for speed, dq current tracking, flux
 
 - Krishnan, *Permanent Magnet Synchronous and Brushless DC Motor Drives*, Chapter 3, especially the dq model and reference frame derivations.
 - Krishnan, Chapter 6, for current-controller design context.
-- `ECE-452/ECE-452_Sensorless-FOC-STM32-Implementation-in-C_Syllabus.md` for the course reading and lab sequence.
+- [`ECE-452_Sensorless-FOC-STM32-Implementation-in-C_Syllabus.md`](../ECE-452_Sensorless-FOC-STM32-Implementation-in-C_Syllabus.md) for the course reading and lab sequence.
+- See [ECE-452_References.md](../ECE-452_References.md) for download links.
 
 ## AI Assistance
 
-- Copilot was used to draft and organize this README.
-- Human review should confirm that the folder contents, filenames, and week title match the Week 5 course scope.
+GitHub Copilot assisted with drafting and organising this README. Reviewed and
+edited by the maintainer.

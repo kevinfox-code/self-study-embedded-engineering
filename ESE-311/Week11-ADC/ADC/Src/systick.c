@@ -1,8 +1,10 @@
 /*
+ * SPDX-License-Identifier: MIT
  * Author:      Kevin Fox
- * Description: Interrupt-driven SysTick background tick (1 ms).
- * Replaces the previous blocking implementation with an ISR-driven millisecond
- * tick counter. Keeps the same API: systick_init() and systick_msec_delay().
+ * Book:        Bare-Metal Embedded C Programming
+ *              by Israel Gbati — Packt, 2024
+ * Description: Implements the SysTick millisecond delay — configures the ARM Cortex-M SysTick timer
+ *              against the internal 16 MHz processor clock and polls COUNTFLAG, with no HAL dependency.
  */
 
 #include "systick.h"

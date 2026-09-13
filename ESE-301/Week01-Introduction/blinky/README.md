@@ -2,7 +2,7 @@
 
 ## Setup
 
-- [ENVIRONMENT_SETUP.md](ENVIRONMENT_SETUP.md): environment variables required for VS Code debug and toolchain integration on macOS, Windows, and Linux
+- [ESE-301_Environment-Setup.md](ESE-301_Environment-Setup.md): environment variables required for VS Code debug and toolchain integration on macOS, Windows, and Linux
 
 ## Build
 
@@ -17,4 +17,4 @@ Use the VS Code launch configuration:
 
 - `STM32Cube: Launch ST-Link GDB Server`
 
-If debug launch fails, verify all variables and paths from [ENVIRONMENT_SETUP.md](ENVIRONMENT_SETUP.md).
+If debug launch fails, verify all variables and paths from [ESE-301_Environment-Setup.md](ESE-301_Environment-Setup.md).

@@ -1,8 +1,10 @@
 /*
+ * SPDX-License-Identifier: MIT
  * Author:      Kevin Fox
  * Book:        Bare-Metal Embedded C Programming
  *              by Israel Gbati — Packt, 2024
- * Description: Week 9 GTIM application — uses TIM2 as a general-purpose timer to pace LED toggling with a hardware update event.
+ * Description: Application entry point — uses TIM2 as a general-purpose timer to pace LED toggling from
+ *              a hardware update event rather than a software delay.
  */
 #include "main.h"
 #include "gpio.h"

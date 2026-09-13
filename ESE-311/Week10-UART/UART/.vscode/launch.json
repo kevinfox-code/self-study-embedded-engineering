@@ -1,19 +1,25 @@
 {
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "Debug UART (OpenOCD)",
-            "type": "cortex-debug",
-            "request": "launch",
-            "servertype": "openocd",
-            "cwd": "${workspaceFolder}/ESE-311/Week10/UART",
-            "configFiles": [
-                "interface/stlink.cfg",
-                "target/stm32u5x.cfg"
-            ],
-            "executable": "${workspaceFolder}/ESE-311/Week10/UART/build/uart.elf",
-            "preLaunchTask": "build-uart",
-            "svdFile": "${workspaceFolder}/ESE-311/Week10/UART/CMSIS/Device/stm32u575xx.svd"
-        }
-    ]
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug UART (OpenOCD)",
+      "type": "cortex-debug",
+      "request": "launch",
+      "servertype": "openocd",
+      "cwd": "${workspaceFolder}",
+      "executable": "${workspaceFolder}/build/uart.elf",
+      "gdbPath": "arm-none-eabi-gdb",
+      "serverpath": "openocd",
+      "configFiles": [
+        "interface/stlink.cfg",
+        "target/stm32u5x.cfg"
+      ],
+      "liveWatch": {
+        "enabled": true
+      },
+      "preLaunchTask": "cmake: build",
+      "runToEntryPoint": "main",
+      "showDevDebugOutput": false
+    }
+  ]
 }

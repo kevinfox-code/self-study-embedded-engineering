@@ -1,6 +1,10 @@
-# Week 2 — Machine Inductances, Torque & Core Losses
+# ECE-452 Week 02 — Clarke and Park Transforms
 
-**Reading:** Krishnan Ch. 1, pp. 84–134 (§1.6.8, §1.7, §1.8, §1.10, §1.11)
+**Reading:** Krishnan Ch. 1, pp. 84–134 (§1.6.8, §1.7, §1.8, §1.10, §1.11) —
+machine inductances, core and resistive losses, and cogging torque.
+
+**Lab deliverable:** amplitude-invariant Clarke and Park transforms in C, with a
+hand derivation and a test harness.
 
 ---
 

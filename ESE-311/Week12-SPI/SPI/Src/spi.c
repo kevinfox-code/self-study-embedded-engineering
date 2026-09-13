@@ -1,4 +1,11 @@
 /*
+ * SPDX-License-Identifier: MIT
+ * Author:      Kevin Fox
+ * Description: Bare-metal SPI1 master driver — configures PA5/PA6/PA7 as AF5 and PD14 as a software
+ *              chip select, then runs 8-bit full-duplex Mode 3 transfers using TSIZE/CSTART with
+ *              polled TXP, RXP, and EOT flags. The block below documents the registers involved.
+ */
+/*
     For NUCLEO-U575ZI-Q, this module implements:
     - SPI1: SCK=PA5, MISO=PA6, MOSI=PA7
     - CS(GPIO): PD14

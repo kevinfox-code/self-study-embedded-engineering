@@ -1,10 +1,10 @@
 /*
+ * SPDX-License-Identifier: MIT
  * Author:      Kevin Fox
- * Description: UART driver header for STM32U575 — blocking and interrupt-driven character I/O.
- *
- * Supports blocking and non-blocking (DMA/interrupt) modes via FEATURE_UART_DMA.
- * Blocking mode: synchronous send/recv with bounded timeouts.
- * Non-blocking mode: interrupt-driven with callbacks (when FEATURE_UART_DMA=1).
+ * Book:        Bare-Metal Embedded C Programming
+ *              by Israel Gbati — Packt, 2024
+ * Description: UART driver API for the STM32U575 — blocking character and string I/O, with optional
+ *              interrupt-driven operation behind FEATURE_UART_DMA.
  */
 #ifndef UART_H
 #define UART_H

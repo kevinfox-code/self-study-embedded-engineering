@@ -1,6 +1,6 @@
-# STM32U575 Register Manipulation Notes
+# RegisterManipulation — STM32U575 Register Notes
 
-This example matches the bare-metal logic in [Core/Src/main.c](RegisterManipulation/Core/Src/main.c): enable the GPIOB clock, configure PB7 as a general-purpose output, and drive PB7 high.
+This example matches the bare-metal logic in [Core/Src/main.c](Core/Src/main.c): enable the GPIOB clock, configure PB7 as a general-purpose output, and drive PB7 high.
 
 ## Address Map Used By The Code
 

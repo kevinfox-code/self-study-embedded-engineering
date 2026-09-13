@@ -1,4 +1,4 @@
-# ESE-301 Homework 5: Publish-Subscribe Pattern UML
+# ESE-301 Homework 5 — Publish/Subscribe Pattern UML
 
 
 ```mermaid

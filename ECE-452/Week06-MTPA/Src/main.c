@@ -1,13 +1,15 @@
 /*
+ * SPDX-License-Identifier: MIT
  * Author:      Kevin Fox
- * Description: Main application entry point for the STM32U575 bare-metal starter project.
+ * Description: Bare-metal starter entry point retained from the ESE-311 SPI project. The motor-control
+ *              work for this week lives in App/ and foc-lib/, not in this tree.
  */
 #include "main.h"
 #include "uart.h"
 #include "gpio.h"
 #include "systick.h"
 #include "spi.h"
-#include "adx1345.h"
+#include "adxl345.h"
 #include <stdint.h>
 #include <stdio.h>
 

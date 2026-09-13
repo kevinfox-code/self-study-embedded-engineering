@@ -1,8 +1,10 @@
 /*
+ * SPDX-License-Identifier: MIT
  * Author:      Kevin Fox
  * Book:        Bare-Metal Embedded C Programming
  *              by Israel Gbati — Packt, 2024
- * Description: Bare-metal GPIO driver implementation for Week 8 — same LED and button register-level setup as Week 7, reused here to focus the week's exercise on SysTick timing.
+ * Description: Bare-metal GPIO driver — configures the Nucleo RGB LED pins as outputs and the user
+ *              button as an input using direct register writes, and provides the LED/button helpers.
  */
 #include "gpio.h"
 

@@ -1,9 +1,10 @@
 /*
+ * SPDX-License-Identifier: MIT
  * Author:      Kevin Fox
- * Description: GPIO driver header for STM32U575 — register-level LED and user button control.
- *
- * Provides status codes for all GPIO operations (init, state changes).
- * All functions return GPIO_OK on success or error code on failure.
+ * Book:        Bare-Metal Embedded C Programming
+ *              by Israel Gbati — Packt, 2024
+ * Description: Bare-metal GPIO driver API — led_init, button_init, per-LED on/off/toggle helpers, and
+ *              get_button_state, all implemented without the STM32 HAL.
  */
 #ifndef GPIO_H
 #define GPIO_H

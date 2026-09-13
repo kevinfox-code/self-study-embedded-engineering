@@ -1,8 +1,9 @@
 /*
+ * SPDX-License-Identifier: MIT
  * Author:      Kevin Fox
  * Book:        Bare-Metal Embedded C Programming
  *              by Israel Gbati — Packt, 2024
- * Description: Declares systick_msec_delay — a blocking millisecond delay function implemented using the ARM Cortex-M SysTick timer configured at the core clock frequency, with no HAL dependency.
+ * Description: SysTick timer driver API — declares init and blocking millisecond delay functions.
  */
 #ifndef SYSTICK_H
 #define SYSTICK_H

@@ -3,7 +3,8 @@
  * Author:      Kevin Fox
  * Book:        Bare-Metal Embedded C Programming
  *              by Israel Gbati — Packt, 2024
- * Description: Main application for Week 10 UART project.
+ * Description: Application entry point — starts a continuous ADC1 conversion and prints each raw count
+ *              over UART every 250 ms while toggling the green LED.
  */
 #include "main.h"
 #include "gpio.h"

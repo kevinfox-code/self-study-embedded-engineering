@@ -1,11 +1,10 @@
 /*
+ * SPDX-License-Identifier: MIT
  * Author:      Kevin Fox
- * Description: ADC driver for STM32U575 — single-channel polling conversion on ADC1_IN8 (PA3, Zio
- * AO).
- *
- * Assumptions:
- * - ADC1_IN8 is mapped to PA3 (Zio AO connector)
- * - No other code modifies ADC1 or GPIOA clock/config
+ * Book:        Bare-Metal Embedded C Programming
+ *              by Israel Gbati — Packt, 2024
+ * Description: Bare-metal ADC1 driver — enables the ADC12 clock and the VDDA analog supply, calibrates
+ *              the converter, and configures ADC1_IN8 (PA3) with an explicit sample time.
  */
 #include "adc.h"
 #include "main.h"

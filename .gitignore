@@ -1,25 +1,38 @@
 # macOS
 .DS_Store
 
-# Local reference material (keep private/local unless intentionally versioned)
-ECE-452/*.pdf
-ESE-311/*.pdf
+# Reference material kept locally, not redistributed.
+# See each course's <COURSE-ID>_References.md for official download links.
+ESE-301/books/
+ESE-311/books/
+ECE-452/books/
+*.pdf
 
-# STM32CubeIDE / CubeMX build outputs
-ESE-311/Week2/RegisterManipulation/Debug/
-ESE-311/Week2/RegisterManipulation/Release/
-ESE-311/books/9781835460818.pdf
-
-# build outputs
+# Build directories
 build/
+build-*/
+Debug/
+Release/
+
+# Build artifacts
 *.elf
 *.bin
 *.hex
 *.map
 *.o
 *.d
+*.a
+*.su
+*.lst
+compile_commands.json
 
-# language server caches
+# Host-built test executables
+ECE-452/Week02-Clarke-Park-Transforms/test_transforms
+ECE-452/Week04-SVPWM/test_svpwm
+ESE-301/Week05-Interrupt-Design-Patterns/ESE-301_hw5/Tests/test_pubsub
+
+# Archives
+*.zip
+
+# Language server / tooling caches
 .cache/
-# foc-lib host build output
-ECE-452/Week06-MTPA/foc-lib/build_host/

@@ -1,6 +1,7 @@
 /*
+ * SPDX-License-Identifier: MIT
  * Author:      Kevin Fox
- * Description: SysTick timer driver header — declares init and millisecond delay functions.
+ * Description: SysTick timer driver API — declares init and blocking millisecond delay functions.
  */
 #ifndef SYSTICK_H
 #define SYSTICK_H

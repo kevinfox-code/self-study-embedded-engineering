@@ -1,78 +1,86 @@
 # Self-Study Embedded Engineering
 
-Self-directed, college-level embedded systems curriculum with a focus on:
+A self-directed, college-level embedded systems curriculum covering firmware
+architecture, bare-metal ARM/C development, and sensorless motor control.
 
-- practical firmware architecture
-- bare-metal ARM/C development
-- sensorless motor control implementation
+All firmware targets the **NUCLEO-U575ZI-Q** (STM32U575ZIT6Q, Arm Cortex-M33).
 
-The repository is organized for traceability and professional documentation standards.
+## Courses
 
-## Contents
+| Course | Focus | Primary text |
+|---|---|---|
+| [ESE-301](ESE-301) | Embedded systems design and engineering patterns | Elecia White, *Making Embedded Systems* |
+| [ESE-311](ESE-311) | Bare-metal embedded C on Arm Cortex-M | Israel Gbati, *Bare-Metal Embedded C Programming* |
+| [ECE-452](ECE-452) | Electric motor drives and sensorless field-oriented control | R. Krishnan, *PMSM and Brushless DC Motor Drives* |
 
-- [ESE-301](ESE-301): Embedded systems design and engineering patterns
-- [ESE-311](ESE-311): Bare-metal embedded C programming on ARM Cortex-M
-- [ESE-311/Week11-ADC-Driver/ADC](ESE-311/Week11-ADC-Driver/ADC): bare-metal STM32U575 ADC example with explicit sample-time setup
-- [ECE-452](ECE-452): Electric motor drives and field-oriented control
-- [ECE-452/Week05-dq-Model-FOC](ECE-452/Week05-dq-Model-FOC): Week 5 dq-model notes and closed-loop FOC simulation materials
-- [embedded-engineering-course-schedule.ics](embedded-engineering-course-schedule.ics): course calendar
+Each course directory holds its syllabus, a reference-documentation index, and
+one folder per week. Each week folder has a README covering objectives, what was
+built, key concepts, and how to build and run it.
 
-## Environment Setup
+## Course Materials
 
-- [ESE-301/Week01-Introduction/blinky/ESE-301_Environment-Setup.md](ESE-301/Week01-Introduction/blinky/ESE-301_Environment-Setup.md): environment variable setup for STM32CubeIDE tools (macOS + Windows + Linux)
+| Course | Syllabus | Vendor docs and datasheets |
+|---|---|---|
+| ESE-301 | [Markdown](ESE-301/ESE-301_Making-Embedded-Systems_Syllabus.md) · [.docx](ESE-301/ESE-301_Making-Embedded-Systems_Syllabus.docx) | [ESE-301_References.md](ESE-301/ESE-301_References.md) |
+| ESE-311 | [Markdown](ESE-311/ESE-311_Bare-Metal-Embedded-C-Programming_Syllabus.md) · [.docx](ESE-311/ESE-311_Bare-Metal-Embedded-C-Programming_Syllabus.docx) | [ESE-311_References.md](ESE-311/ESE-311_References.md) |
+| ECE-452 | [Markdown](ECE-452/ECE-452_Sensorless-FOC-STM32-Implementation-in-C_Syllabus.md) · [.docx](ECE-452/ECE-452_Sensorless-FOC-STM32-Implementation-in-C_Syllabus.docx) | [ECE-452_References.md](ECE-452/ECE-452_References.md) |
 
-## Course Syllabus Files
+Vendor reference manuals and datasheets are **not stored in this repository** —
+each course's references file links to the official download for every document.
 
-The current syllabus documents are stored as Word (`.docx`) files. If they do not preview well in your browser, download and open them in Microsoft Word or LibreOffice. For easier review in pull requests, prefer exporting syllabus updates to PDF or Markdown alongside the `.docx` source when possible.
-- [ESE-301/ESE-301_Making-Embedded-Systems_Syllabus.docx](ESE-301/ESE-301_Making-Embedded-Systems_Syllabus.docx)
-- [ESE-311/ESE-311_Bare-Metal-Embedded-C-Programming_Syllabus.docx](ESE-311/ESE-311_Bare-Metal-Embedded-C-Programming_Syllabus.docx)
-- [ECE-452/ECE-452_Sensorless-FOC-STM32-Implementation-in-C_Syllabus.docx](ECE-452/ECE-452_Sensorless-FOC-STM32-Implementation-in-C_Syllabus.docx)
-- [ECE-452/ECE-452_Sensorless-FOC-STM32-Implementation-in-C_Syllabus.md](ECE-452/ECE-452_Sensorless-FOC-STM32-Implementation-in-C_Syllabus.md)
+## Highlights
 
-## Naming Conventions
+- [ESE-311/Week12-SPI](ESE-311/Week12-SPI) — bare-metal STM32U575 SPI driver and
+  an ADXL345 accelerometer driver, no HAL and no DMA.
+- [ESE-311/Week11-ADC](ESE-311/Week11-ADC) — register-level ADC bring-up,
+  including the STM32U5 analog-supply and calibration sequence.
+- [ECE-452/Week06-MTPA/foc-lib](ECE-452/Week06-MTPA/foc-lib) — integer-only
+  sensorless FOC library with an STM32U5 + DRV8323 port layer and a 12-test host
+  suite.
+- [ECE-452/Week05-dq-Model-FOC](ECE-452/Week05-dq-Model-FOC) — closed-loop FOC
+  simulation in GNU Octave with a flux observer, PLL, and SVPWM.
+- [ESE-301/Week06-State-Machines](ESE-301/Week06-State-Machines) — an LED FSM
+  decoupled from its HAL, exercised against a mock in CTest and a host HAL in a
+  sandbox.
 
-This repository follows a simple, predictable naming scheme:
+## Toolchain
 
-- Directories: `UPPER-###` for course identifiers (example: `ESE-301`)
-- Document files: `COURSEID_Descriptive-Name.ext`
-- Shared project files: lowercase kebab-case (example: `embedded-engineering-course-schedule.ics`)
+Firmware projects build with CMake and the Arm GNU toolchain, and flash with
+OpenOCD:
 
-## License And Attribution
+```bash
+cd <project directory>
+cmake -B build
+cmake --build build
+cmake --build build --target flash
+```
+
+Requires `arm-none-eabi-gcc`, `cmake`, and `openocd` on `PATH`. A few projects
+use a hand-written Makefile (`make`, `make load`) or STM32CubeIDE instead; each
+project README says which. Host-side test harnesses build with the system
+compiler.
+
+Environment variables for the STM32CubeIDE debug flow are documented in
+[ESE-301/Week01-Introduction/blinky/ESE-301_Environment-Setup.md](ESE-301/Week01-Introduction/blinky/ESE-301_Environment-Setup.md).
+
+## Repository Conventions
+
+- **Course directories**: `AAA-###` (`ESE-301`, `ESE-311`, `ECE-452`)
+- **Week directories**: `Week##-Topic-Name` (`Week12-SPI`)
+- **Document files**: `COURSEID_Descriptive-Name.ext`
+  (`ESE-311_References.md`)
+- **Headings**: week READMEs open with `# COURSE-ID Week NN — Topic`
+- **Source headers**: hand-written C files carry an SPDX line, author, the course
+  text where relevant, and a description of what the file does. Week attribution
+  lives in the week README, not in every driver header.
+- **Vendor and generated code** (CMSIS, STM32 HAL, CubeMX output) is left in its
+  original form and is not held to these conventions.
+
+## License and Attribution
 
 - Project license: [LICENSE](LICENSE) (MIT)
 - AI transparency and attribution policy: [NOTICE.md](NOTICE.md)
 - Contribution expectations and content policy: [CONTRIBUTING.md](CONTRIBUTING.md)
 
-## Notes
-
-- This repository may include references to third-party books and course material for educational context.
-- Rights for third-party content remain with original owners.
-
-## Reusable Skills
-
-- [lesson-content-standards](.github/skills/lesson-content-standards/SKILL.md): keep lesson READMEs, code headers, and teaching comments aligned with the correct course week.
-- [week-folder-readme-alignment](.github/skills/week-folder-readme-alignment/SKILL.md): keep each week folder, its README, and commit summary aligned when content changes.
-
-## Workspace Instructions
-
-- [college-lesson-code-comments](.github/instructions/college-lesson-code-comments.instructions.md): enforce college-level lesson code headers and instructional comments in C source/header files across course folders.
-- [college-lesson-readme](.github/instructions/college-lesson-readme.instructions.md): enforce college-level lesson README structure, instructional tone, and accurate course/week context.
-
-## Agentic Workflow (interactive)
-
-This repository supports an interactive, agent-assisted workflow using the Copilot/VS Code prompts found under `.github/prompts/` and a lightweight CI workflow that validates builds and repository hygiene on PRs.
-
-- **Local flow (typical)**: create a branch using the `{course-lowercase}-week{NN}` pattern, run `sessionstart.prompt.md` in Copilot to orient the agent, use `new-week.prompt.md` to scaffold work, build/tests locally, commit with AI disclosure in the commit body, push and open a PR.
-- **Publish flow (work to PR)**: run `work2pr.prompt.md` to convert completed local work into a compliant branch, scoped commit, push, and PR using the repository template/checklists.
-- **Automated checks**: the `Agentic CI` GitHub Actions workflow runs on `push` and `pull_request` to `main` and will attempt to build detected `Makefile` and `CMakeLists.txt` projects, run a forbidden-artifact check, and lint scripts.
-- **Where to look**: See `AGENTS.md` for agent role descriptions and `.github/pull_request_template.md` for required PR disclosure.
-
-Example minimal workflow (developer):
-
-1. Create a branch: `git checkout -b ese301-week07`
-2. Start a Copilot session: open Copilot Chat and run `sessionstart.prompt.md` (select the prompt from `.github/prompts/`).
-3. Use prompts to generate or scaffold files (e.g., `new-week.prompt.md`).
-4. Build and run tests locally (for CMake projects: `mkdir -p build && cd build && cmake .. && cmake --build . && ctest`; for Makefile projects: `make`).
-5. Commit with AI disclosure in the commit body per [.github/copilot-instructions.md](.github/copilot-instructions.md).
-6. Push and open a PR; CI will run and report build/test status.
-
+Third-party books, vendor hardware documentation, and course materials are
+referenced for educational context only; rights remain with their owners.

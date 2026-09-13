@@ -1,10 +1,8 @@
 /*
+ * SPDX-License-Identifier: MIT
  * Author:      Kevin Fox
- * Description: Debug module — declares a fatal error handler that blinks all
- *              LEDs rapidly to signal an unrecoverable fault condition.
- *
- * Provides assert-style macros for development (only active if DEBUG_ENABLED=1).
- * Use UART_ASSERT() to verify preconditions; assert failures trigger error handler.
+ * Description: Debug module — declares the fatal error handler and the assert-style macros that are
+ *              active only when DEBUG_ENABLED is set.
  */
 #ifndef DEBUG_H
 #define DEBUG_H

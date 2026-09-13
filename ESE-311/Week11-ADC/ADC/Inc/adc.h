@@ -1,9 +1,11 @@
 /*
-    * adc.h
-    *
-    *  Created on: May 26, 2026
-    AHB2 - ADC12 (ADC1_IN8 PA3 - AO on Zio connector) clock enable bit 0 for GPIOA
-*/
+ * SPDX-License-Identifier: MIT
+ * Author:      Kevin Fox
+ * Book:        Bare-Metal Embedded C Programming
+ *              by Israel Gbati — Packt, 2024
+ * Description: ADC1 driver API — ADC_Init, Start_Conversion, and ADC_Read for single-channel
+ *              conversions on ADC1_IN8 (PA3).
+ */
 
 #ifndef ADC_H
 #define ADC_H

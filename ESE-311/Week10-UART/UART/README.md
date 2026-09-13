@@ -1,33 +1,16 @@
-# UART Module
+# UART — USART1 Driver (STM32U575)
 
-## Objectives
-
-- Implement UART driver for STM32U575
-- Character-based serial communication
-- Blocking send/receive operations
-
-## What Was Built
-
-- UART initialization and clock configuration
-- Character transmit/receive functions
-- String transmission helper
-
-## Key Concepts
-
-- USART peripheral configuration
-- Baud rate and clock calculations
-- TX/RX buffer handling
+Blocking USART1 driver on PA9/PA10 (AF7), routed to the ST-LINK V3E virtual COM
+port at 115200 8N1. Week context and concept notes: [../README.md](../README.md).
 
 ## Build
 
 ```bash
-cd ESE-311/Week10-UART-Driver/UART
-rm -rf build
 cmake -B build
 cmake --build build
 ```
 
-## Build and Flash
+## Flash
 
 ```bash
 cmake --build build --target flash
@@ -36,13 +19,9 @@ cmake --build build --target flash
 ## VS Code Debug
 
 1. Install the Cortex-Debug extension.
-2. Make sure `arm-none-eabi-gdb` and `openocd` are on your `PATH`.
-3. Connect the board with ST-LINK.
-4. Open the Run and Debug view and select `Debug UART (OpenOCD)`.
+2. Put `arm-none-eabi-gdb` and `openocd` on your `PATH`.
+3. Connect the board over ST-LINK.
+4. Open this folder as the workspace and run **Debug UART (OpenOCD)**.
 
-The debug launch uses `build/uart.elf` and the same OpenOCD setup as the `flash` target.
-
-## References
-
-- Bare-Metal Embedded C Programming, Ch. 10
-- STM32U575 Reference Manual (USART section)
+The launch configuration uses `build/uart.elf` and the same OpenOCD setup as the
+`flash` target.

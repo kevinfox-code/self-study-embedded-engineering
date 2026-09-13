@@ -1,7 +1,10 @@
 /*
+ * SPDX-License-Identifier: MIT
  * Author:      Kevin Fox
- * Description: Debug module — declares a fatal error handler that blinks all
- *              LEDs rapidly to signal an unrecoverable fault condition.
+ * Book:        Bare-Metal Embedded C Programming
+ *              by Israel Gbati — Packt, 2024
+ * Description: Debug module — declares the fatal error handler and the assert-style macros that are
+ *              active only when DEBUG_ENABLED is set.
  */
 #ifndef DEBUG_H
 #define DEBUG_H

@@ -1,13 +1,17 @@
 /*
+ * SPDX-License-Identifier: MIT
  * Author:      Kevin Fox
- * Description: Main application entry point for the STM32U575 bare-metal starter project.
+ * Book:        Bare-Metal Embedded C Programming
+ *              by Israel Gbati — Packt, 2024
+ * Description: Application entry point — carried over from the Week 12 SPI project as the starting point
+ *              for the I2C exercise; currently still drives the ADXL345 over SPI.
  */
 #include "main.h"
 #include "uart.h"
 #include "gpio.h"
 #include "systick.h"
 #include "spi.h"
-#include "adx1345.h"
+#include "adxl345.h"
 #include <stdint.h>
 #include <stdio.h>
 

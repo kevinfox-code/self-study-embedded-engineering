@@ -1,8 +1,10 @@
 /*
+ * SPDX-License-Identifier: MIT
  * Author:      Kevin Fox
  * Book:        Bare-Metal Embedded C Programming
  *              by Israel Gbati — Packt, 2024
- * Description: GPIO driver header for the Week 8 SysTick project — re-exports the same LED and button API as Week 7 so the SysTick delay module can drive the LEDs independently of GPIO details.
+ * Description: Bare-metal GPIO driver API — led_init, button_init, per-LED on/off/toggle helpers, and
+ *              get_button_state, all implemented without the STM32 HAL.
  */
 #ifndef GPIO_H
 #define GPIO_H

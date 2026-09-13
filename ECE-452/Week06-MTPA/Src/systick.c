@@ -1,11 +1,8 @@
 /*
+ * SPDX-License-Identifier: MIT
  * Author:      Kevin Fox
- * Description: SysTick driver for STM32U575 — configures the ARM Cortex-M SysTick timer for
- *              millisecond blocking delays using the 16 MHz HSI16 processor clock.
- *
- * Assumptions:
- * - System clock (HSI16) is 16 MHz at runtime
- * - Blocking delay; caller must account for execution time
+ * Description: Implements the SysTick millisecond delay — configures the ARM Cortex-M SysTick timer
+ *              against the internal 16 MHz processor clock and polls COUNTFLAG, with no HAL dependency.
  */
 #include "systick.h"
 /*By default the CPU is 16MHz*/

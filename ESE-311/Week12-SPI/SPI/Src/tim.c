@@ -1,10 +1,10 @@
 /*
+ * SPDX-License-Identifier: MIT
  * Author:      Kevin Fox
- * Description: TIM2 driver for STM32U575 — configures TIM2 as a 1 Hz update event source.
- *
- * Assumptions:
- * - APB1 clock is 16 MHz (HSI16, no prescaler)
- * - TIM2 is not used by any other module
+ * Book:        Bare-Metal Embedded C Programming
+ *              by Israel Gbati — Packt, 2024
+ * Description: Bare-metal TIM2 driver — configures TIM2 as a 1 Hz general-purpose timer from the APB1
+ *              clock and exposes update-event poll and clear helpers.
  */
 #include "tim.h"
 

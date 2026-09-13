@@ -1,8 +1,10 @@
 /*
+ * SPDX-License-Identifier: MIT
  * Author:      Kevin Fox
  * Book:        Bare-Metal Embedded C Programming
  *              by Israel Gbati — Packt, 2024
- * Description: Implements systick_msec_delay — configures the ARM Cortex-M SysTick timer to use the internal 16 MHz processor clock and polls the COUNTFLAG bit to produce an accurate millisecond blocking delay without using any HAL.
+ * Description: Implements the SysTick millisecond delay — configures the ARM Cortex-M SysTick timer
+ *              against the internal 16 MHz processor clock and polls COUNTFLAG, with no HAL dependency.
  */
 #include "systick.h"
 

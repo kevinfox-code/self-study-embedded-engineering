@@ -1,8 +1,10 @@
 /*
+ * SPDX-License-Identifier: MIT
  * Author:      Kevin Fox
  * Book:        Bare-Metal Embedded C Programming
  *              by Israel Gbati — Packt, 2024
- * Description: Application for Week 8 — uses the SysTick-based delay to time LED toggling and button polling, demonstrating how to replace busy-wait loops with a calibrated hardware timer delay function.
+ * Description: Application entry point — uses the SysTick-based delay to time LED toggling and button
+ *              polling, demonstrating how to replace busy-wait loops with a calibrated hardware timer.
  */
 #include "main.h"
 #include "gpio.h"

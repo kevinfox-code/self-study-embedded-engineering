@@ -7,7 +7,7 @@
       "request": "launch",
       "servertype": "openocd",
       "cwd": "${workspaceFolder}",
-      "executable": "${workspaceFolder}/build/PROJECT_NAME.elf",
+      "executable": "${workspaceFolder}/build/spi.elf",
       "gdbPath": "arm-none-eabi-gdb",
       "serverpath": "openocd",
       "configFiles": [
@@ -17,7 +17,7 @@
       "liveWatch": {
         "enabled": true
       },
-      "preLaunchTask": "cmake: build",
+      "preLaunchTask": "build-spi",
       "runToEntryPoint": "main",
       "showDevDebugOutput": false
     }

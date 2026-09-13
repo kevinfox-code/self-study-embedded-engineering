@@ -1,8 +1,10 @@
 /*
+ * SPDX-License-Identifier: MIT
  * Author:      Kevin Fox
  * Book:        Bare-Metal Embedded C Programming
  *              by Israel Gbati — Packt, 2024
- * Description: Main application for Week 10 UART project.
+ * Description: Application entry point — initialises the USART and transmits a greeting every 250 ms
+ *              while toggling the green LED, exercising the blocking UART driver.
  */
 #include "main.h"
 #include "gpio.h"

@@ -1,5 +1,13 @@
-#ifndef __SPI_H
-#define __SPI_H
+/*
+ * SPDX-License-Identifier: MIT
+ * Author:      Kevin Fox
+ * Book:        Bare-Metal Embedded C Programming
+ *              by Israel Gbati — Packt, 2024
+ * Description: SPI1 master driver API — GPIO and peripheral init, polled transmit/receive, and software
+ *              chip-select control.
+ */
+#ifndef SPI_H
+#define SPI_H
 
 #include "stm32u575xx.h"
 #include <stdint.h>
@@ -13,4 +21,4 @@ spi_status_t spi1_receive(uint8_t *data, uint32_t size);
 void cs_enable(void);
 void cs_disable(void);
 
-#endif /* __SPI_H */
+#endif /* SPI_H */

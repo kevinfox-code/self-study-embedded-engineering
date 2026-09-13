@@ -1,3 +1,11 @@
+/*
+ * SPDX-License-Identifier: MIT
+ * Author:      Kevin Fox
+ * Book:        Bare-Metal Embedded C Programming
+ *              by Israel Gbati — Packt, 2024
+ * Description: Bare-metal TIM2 driver — configures TIM2 as a 1 Hz general-purpose timer from the APB1
+ *              clock and exposes update-event poll and clear helpers.
+ */
 #include "tim.h"
 
 void tim2_1hz_init(void) {

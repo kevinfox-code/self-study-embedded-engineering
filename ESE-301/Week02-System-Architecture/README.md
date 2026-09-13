@@ -1,4 +1,4 @@
-# ESE 301 - Week 2
+# ESE-301 Week 02 — System Architecture
 
 ## Temp to SD Card: Drivers and Abstractions
 

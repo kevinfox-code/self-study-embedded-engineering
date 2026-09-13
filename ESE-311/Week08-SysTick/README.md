@@ -1,31 +1,57 @@
-# ESE-311 Week08: System Tick (SysTick) Timer
+# ESE-311 Week 08 — SysTick Timer
 
 ## Objectives
 
-- Introduce the ARM Cortex-M SysTick timer and its common use cases.
-- Explore the SysTick registers and how the timer is configured.
-- Build a small SysTick driver for timing and scheduling tasks.
+- Understand the Arm Cortex-M SysTick timer as a core resource, not an STM32
+  peripheral.
+- Configure `SYST_RVR` / `SYST_CSR` and poll `COUNTFLAG` to build a calibrated
+  blocking delay.
+- Replace the software busy-wait loops used in Week 7 with real timing.
 
 ## What Was Built
 
-- Chapter 8 notes and examples centered on the SysTick timer.
-- Add the SysTick driver implementation and any supporting examples here.
+- [`Systick/Src/systick.c`](Systick/Src/systick.c) — `systick_init` and
+  `systick_msec_delay`, driving SysTick from the internal 16 MHz processor clock
+  and polling `COUNTFLAG` for millisecond ticks. No HAL, no interrupt.
+- [`Systick/Src/main.c`](Systick/Src/main.c) — times LED toggling and button
+  polling against the new delay.
+- [`Systick/Src/debug.c`](Systick/Src/debug.c) — fatal error handler that blinks
+  all LEDs, wired to `Error_Handler`.
+- GPIO driver carried forward from Week 7.
 
 ## Key Concepts
 
-- SysTick timer basics on ARM Cortex-M microcontrollers.
-- Core timer registers and configuration flow.
-- Driver design for periodic timing and tick generation.
+- **Core peripheral, not vendor peripheral.** SysTick lives in the Cortex-M
+  system address space, so the same code works on any Cortex-M part.
+- **Reload value.** `SYST_RVR` holds *ticks − 1*; the counter is 24-bit, which
+  caps a single reload at ~1 s at 16 MHz.
+- **`COUNTFLAG` is read-to-clear.** Reading `SYST_CSR` clears it, so a stray
+  debug read of the register inside the wait loop silently eats a tick.
+- **Clock source select.** `SYST_CSR.CLKSOURCE` picks the processor clock or the
+  implementation-defined reference clock; the delay calibration depends on it.
+
+## Build and Run
+
+```bash
+cd ESE-311/Week08-SysTick/Systick
+cmake -B build
+cmake --build build
+cmake --build build --target flash
+```
+
+## VS Code Debug
+
+Requires the Cortex-Debug extension, with `arm-none-eabi-gdb` and `openocd` on
+`PATH`. Open the `Systick/` folder as the workspace and launch
+**Debug Systick (OpenOCD)**, which builds `build/systick.elf` via the
+`cmake: build` task.
 
 ## References
 
-- Chapter 8: System Tick (SysTick) Timer.
-- ARM Cortex-M reference materials and the STM32U5 CMSIS headers.
-
-## Build / Run
-
-- Add build and flash instructions once the SysTick example project is added.
+- Israel Gbati, *Bare-Metal Embedded C Programming* — SysTick chapter
+- Arm Cortex-M33 Devices Generic User Guide (Arm 100235) — SysTick registers
+- See [ESE-311_References.md](../ESE-311_References.md) for download links
 
 ## AI Assistance
 
-Copilot used to scaffold the week README, then reviewed for repository conventions.
+None.

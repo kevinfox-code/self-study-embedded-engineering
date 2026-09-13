@@ -15,14 +15,14 @@ set(CMAKE_C_COMPILER_ID GNU)
 
 set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
 
-project(i2c VERSION 0.1.0 LANGUAGES C ASM)
+project(mtpa_foc VERSION 0.1.0 LANGUAGES C ASM)
 
 # Feature toggles (compile-time)
 option(DEBUG_ENABLED "Enable debug output and assertions" OFF)
 option(FEATURE_UART_DMA "Enable interrupt-driven UART with DMA/ring buffers (non-blocking API)" OFF)
 option(ENABLE_LINT "Enable static analysis with arm-none-eabi-gcc warnings" OFF)
 
-set(TARGET i2c)
+set(TARGET mtpa_foc)
 set(LINKER_SCRIPT ${CMAKE_CURRENT_SOURCE_DIR}/STM32U575ZITXQ_FLASH.ld)
 
 # Build artifact directories
@@ -54,8 +54,7 @@ add_executable(${TARGET}
     Src/adc.c
     Src/tim.c
     Src/spi.c
-    Src/i2c.c
-    Src/adx1345.c
+    Src/adxl345.c
     Src/ringbuffer.c
     Src/systick.c
     Src/debug.c

@@ -1,9 +1,11 @@
 /*
-    * adc.c
+ * SPDX-License-Identifier: MIT
+ * Author:      Kevin Fox
  * Book:        Bare-Metal Embedded C Programming
  *              by Israel Gbati — Packt, 2024
-    AHB2 - ADC12 (ADC1_IN8 PA3 - AO on Zio connector) clock enable bit 0 for GPIOA
-*/
+ * Description: Bare-metal ADC1 driver — enables the ADC12 clock and the VDDA analog supply, calibrates
+ *              the converter, and configures ADC1_IN8 (PA3) with an explicit sample time.
+ */
 #include "adc.h"
 #include "main.h"
 
