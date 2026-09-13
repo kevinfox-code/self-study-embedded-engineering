@@ -11,7 +11,9 @@ portfolio: accurate, consistently named, and free of stale scaffolding.
 These are enforced by review, not by tooling. They apply to original content only —
 vendor and generated code (CMSIS, STM32 HAL, CubeMX output) is left as-is.
 
-- **Course directories**: `AAA-###` — `ESE-301`, `ESE-311`, `ECE-452`
+- **Course directories**: `AAA-###_Subject-Name` — the course identifier followed
+  by a short subject name, e.g. `ESE-311_Bare-Metal-C`. The subject name names
+  the engineering topic, not the textbook, so it survives a change of text.
 - **Week directories**: `Week##-Topic-Name` — `Week12-SPI`
 - **Document files**: `COURSEID_Descriptive-Name.ext` — `ESE-311_References.md`
 - **Project directories**: name after what they build, matching the CMake target

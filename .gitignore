@@ -3,9 +3,9 @@
 
 # Reference material kept locally, not redistributed.
 # See each course's <COURSE-ID>_References.md for official download links.
-ESE-301/books/
-ESE-311/books/
-ECE-452/books/
+ESE-301_Embedded-Systems-Design/books/
+ESE-311_Bare-Metal-C/books/
+ECE-452_Sensorless-FOC/books/
 *.pdf
 
 # Build directories
@@ -27,9 +27,9 @@ Release/
 compile_commands.json
 
 # Host-built test executables
-ECE-452/Week02-Clarke-Park-Transforms/test_transforms
-ECE-452/Week04-SVPWM/test_svpwm
-ESE-301/Week05-Interrupt-Design-Patterns/ESE-301_hw5/Tests/test_pubsub
+ECE-452_Sensorless-FOC/Week02-Clarke-Park-Transforms/test_transforms
+ECE-452_Sensorless-FOC/Week04-SVPWM/test_svpwm
+ESE-301_Embedded-Systems-Design/Week05-Interrupt-Design-Patterns/ESE-301_hw5/Tests/test_pubsub
 
 # Archives
 *.zip
