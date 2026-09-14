@@ -1,52 +1,35 @@
 /*
  * SPDX-License-Identifier: MIT
  * Author:      Kevin Fox
- * Book:        Bare-Metal Embedded C Programming
- *              by Israel Gbati — Packt, 2024
- * Description: ADXL345 accelerometer driver — configures ±4 g range and measurement mode, then burst-reads
- *              the six acceleration data registers (0x32–0x37) in a single chip-select window.
+ * Description: ADXL345 identity check, full-resolution +/-4 g configuration and burst read.
  */
 #include "adxl345.h"
-#include "uart.h"
-
-void adxl_read(uint8_t address, uint8_t *rxdata)
+#include <string.h>
+i2c_status_t adxl_write(uint8_t address, uint8_t value)
 {
-    /*Set read operation*/
-    address |= ADXL345_READ_OPERATION;
-    /*Enable multi-byte*/
-    address |= ADXL345_MULTI_BYTE_ENABLE;
-    /*Pull cs line low to enable slave*/
-    cs_enable();
-    /*Send address*/
-    (void)spi1_transmit(&address, 1U);
-    /*Read 6 bytes */
-    (void)spi1_receive(rxdata, 6U);
-    /*Pull cs line high to disable slave*/
-    cs_disable();
+    const uint8_t data[] = {address, value};
+    return i2c1_write(ADXL345_I2C_ADDRESS, data, sizeof data);
 }
-
-void adxl_write(uint8_t address, uint8_t value)
+i2c_status_t adxl_read(uint8_t address, uint8_t *rxdata)
 {
-    uint8_t data[2];
-    /*Place address into buffer*/
-    data[0] = address;
-    /*Place data into buffer*/
-    data[1] = value;
-    /*Pull cs line low to enable slave*/
-    cs_enable();
-    /*Transmit data and address*/
-    (void)spi1_transmit(data, 2U);
-    /*Pull cs line high to disable slave*/
-    cs_disable();
+    if (!rxdata) return I2C_INVALID_ARGUMENT;
+    uint8_t data[6];
+    i2c_status_t status = i2c1_read_register(ADXL345_I2C_ADDRESS, address, data, sizeof data);
+    if (status == I2C_OK) memcpy(rxdata, data, sizeof data);
+    return status;
 }
-
-void adxl_init(void)
+i2c_status_t adxl_init(void)
 {
-    (void)uart_send_string("write DATA_FORMAT\r\n");
-    adxl_write(ADXL345_REG_DATA_FORMAT, ADXL345_RANGE_4G);
-    (void)uart_send_string("write POWER_CTL reset\r\n");
-    adxl_write(ADXL345_REG_POWER_CTL, ADXL345_RESET);
-    (void)uart_send_string("write POWER_CTL measure\r\n");
-    adxl_write(ADXL345_REG_POWER_CTL, ADXL345_MEASURE_BIT);
-    (void)uart_send_string("adxl writes done\r\n");
+    uint8_t id;
+    i2c_status_t status = i2c1_read_register(ADXL345_I2C_ADDRESS,
+                                           ADXL345_REG_DEVID, &id, 1);
+    if (status != I2C_OK) return status;
+    if (id != 0xe5U) return I2C_DEVICE_ID;
+    status = adxl_write(ADXL345_REG_POWER_CTL, 0); /* Standby. */
+    if (status != I2C_OK) return status;
+    status = adxl_write(ADXL345_REG_DATA_FORMAT, 0x09U); /* FULL_RES, +/-4 g. */
+    if (status != I2C_OK) return status;
+    status = adxl_write(ADXL345_REG_BW_RATE, 0x0aU); /* 100 Hz. */
+    if (status != I2C_OK) return status;
+    return adxl_write(ADXL345_REG_POWER_CTL, 0x08U); /* Measurement mode. */
 }
