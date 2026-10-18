@@ -5,6 +5,7 @@
 # See each course's <COURSE-ID>_References.md for official download links.
 ESE-301_Embedded-Systems-Design/books/
 ESE-311_Bare-Metal-C/books/
+ECE-340_Feedback-Systems/books/
 ECE-452_Sensorless-FOC/books/
 *.pdf
 

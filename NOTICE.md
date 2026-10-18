@@ -25,6 +25,7 @@ see each course's references file:
 
 - [ESE-301_References.md](ESE-301_Embedded-Systems-Design/ESE-301_References.md)
 - [ESE-311_References.md](ESE-311_Bare-Metal-C/ESE-311_References.md)
+- [ECE-340_References.md](ECE-340_Feedback-Systems/ECE-340_References.md)
 - [ECE-452_References.md](ECE-452_Sensorless-FOC/ECE-452_References.md)
 
 Vendor-supplied source that *is* present — CMSIS headers, the STM32 HAL drivers,
